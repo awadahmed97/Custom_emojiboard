@@ -28,12 +28,24 @@ class CustomEmojiApp extends StatelessWidget
           backgroundColor: Colors.blue[200],
 
           title: Text('Custom Emojiboard') //
-
         ),
 
 
         body: null,  //TODO: IMPLEMENT BODY WIDGETS
 
+        
+        
+        floatingActionButton: FloatingActionButton
+        (
+          onPressed: () 
+          {
+            //TODO: add onpressed code
+          },
+
+          child: Icon(Icons.add),
+
+          backgroundColor: Colors.deepPurple,
+        ),
 
       ),
 
