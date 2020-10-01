@@ -45,6 +45,36 @@ class CustomEmojiApp extends StatelessWidget
           child: Icon(Icons.add),
 
           backgroundColor: Colors.deepPurple,
+          
+          
+          
+          
+          
+          //bottom navbar
+        bottomNavigationBar: BottomNavigationBar(
+
+          backgroundColor: Colors.yellowAccent,
+          
+          items: 
+          [
+            BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('HOME'),
+
+            ),
+
+
+
+            BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            title: Text('HOME'),
+
+            )
+
+          ],
+
+        ),
+
         ),
 
       ),
