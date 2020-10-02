@@ -28,17 +28,10 @@ class CustomEmojiApp extends StatelessWidget
             backgroundColor: Colors.blue[200],
             title: Text('Custom Emojiboard') //
         ),
-<<<<<<< HEAD
 
 
         body: null,  //TODO: IMPLEMENT BODY WIDGETS
 
-=======
-
-
-        body: null,  //TODO: IMPLEMENT BODY WIDGETS
-
->>>>>>> master
 
 
         floatingActionButton: FloatingActionButton
@@ -51,17 +44,10 @@ class CustomEmojiApp extends StatelessWidget
           backgroundColor: Colors.deepPurple,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 
 
 
-          //bottom navbar
-          bottomNavigationBar: BottomNavigationBar(
 
-<<<<<<< HEAD
         //bottom navbar
         bottomNavigationBar: BottomNavigationBar(
 
@@ -91,35 +77,5 @@ class CustomEmojiApp extends StatelessWidget
 
     );
 
-=======
-            backgroundColor: Colors.blue[200],
-
-            items:
-            [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                title: Text('HOME'),
-
-              ),
-
-
-
-              BottomNavigationBarItem(
-                icon: Icon(Icons.school),
-                title: Text('HOME'),
-
-              )
-
-            ],
-
-          ),
-
-        ),
-
-      );
-
->>>>>>> master
   }
 }
-
-
