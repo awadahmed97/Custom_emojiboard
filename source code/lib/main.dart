@@ -2,10 +2,9 @@
 //
 //
 
-
 import 'package:flutter/material.dart';
-
-
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 void main()
 {
@@ -30,7 +29,15 @@ class CustomEmojiApp extends StatelessWidget
         ),
 
 
-        body: null,  //TODO: IMPLEMENT BODY WIDGETS
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/bulbs.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: null /* add child content here */,
+        ),
 
 
 
@@ -65,7 +72,7 @@ class CustomEmojiApp extends StatelessWidget
 
             BottomNavigationBarItem(
               icon: Icon(Icons.school),
-              title: Text('HOME'),
+              title: Text('ABOUT'),
 
             )
 
@@ -79,3 +86,5 @@ class CustomEmojiApp extends StatelessWidget
 
   }
 }
+
+
