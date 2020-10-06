@@ -1,84 +1,121 @@
-//
-//
-//
-
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'dart:io';
-
-void main()
-{
-  runApp(CustomEmojiApp());
+void main() {
+  runApp(new MaterialApp(
+    title: "Camera App",
+    home: LandingScreen(),
+  ));
 }
 
+class LandingScreen extends StatefulWidget {
+  @override
+  _LandingScreenState createState() => _LandingScreenState();
+}
 
+class _LandingScreenState extends State<LandingScreen> {
 
-class CustomEmojiApp extends StatelessWidget
-{
+  File imageFile;
+
+  _openGallery(BuildContext context) async{
+    var picture =  await ImagePicker.pickImage(source: ImageSource.gallery);
+    this.setState(() {
+      imageFile = picture;
+    });
+    Navigator.of(context).pop();
+  }
+
+  _openCamera(BuildContext context) async{
+    var picture =  await ImagePicker.pickImage(source: ImageSource.camera);
+    this.setState(() {
+      imageFile = picture;
+    });
+    Navigator.of(context).pop();
+  }
+
+  Future<void> _showChoiceDialog(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text("Make a Choice!"),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  GestureDetector(
+                    child: Text("Gallery"),
+                    onTap: () {
+                      _openGallery(context);
+                    },
+                  ),
+                  Padding(padding: EdgeInsets.all(8.0)),
+                  GestureDetector(
+                    child: Text("Camera"),
+                    onTap: () {
+                      _openCamera(context);
+                    },
+                  )
+                ],
+              ),
+            ),
+          );
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
-
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.white,
-
-        appBar: AppBar(
-            backgroundColor: Colors.blue[200],
-            title: Text('Custom Emojiboard') //
-        ),
-
-
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/bulbs.jpg"),
-              fit: BoxFit.cover,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Custom Emojiboard"),
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/bulbs.jpg"),
+            fit: BoxFit.cover,
           ),
-          child: null /* add child content here */,
         ),
+        child: null /* add child content here */,
+      ),
 
 
 
-        floatingActionButton: FloatingActionButton
-          (
-          onPressed: ()
-          {
-            //TODO: add onpressed code
-          },
-          child: Icon(Icons.add),
-          backgroundColor: Colors.deepPurple,
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton
+        (
+        onPressed: ()
+        {
+          _showChoiceDialog(context);
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.deepPurple,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
 
 
 
-        //bottom navbar
-        bottomNavigationBar: BottomNavigationBar(
+      //bottom navbar
+      bottomNavigationBar: BottomNavigationBar(
 
-          backgroundColor: Colors.blue[200],
+        backgroundColor: Colors.blue[200],
 
-          items:
-          [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('HOME'),
+        items:
+        [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('HOME'),
 
-            ),
+          ),
 
 
 
-            BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              title: Text('ABOUT'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            title: Text('ABOUT'),
 
-            )
+          )
 
-          ],
-
-        ),
+        ],
 
       ),
 
@@ -86,5 +123,3 @@ class CustomEmojiApp extends StatelessWidget
 
   }
 }
-
-
