@@ -1,66 +1,34 @@
-import 'dart:io';
+//
+//
+//
+
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-void main() {
-  runApp(new MaterialApp(
-    title: "Camera App",
-    home: LandingScreen(),
-  ));
+
+
+import 'ImageSelect.dart';
+
+void main()
+{
+  runApp(CustomEmojiApp());
 }
 
-class LandingScreen extends StatefulWidget {
-  @override
-  _LandingScreenState createState() => _LandingScreenState();
-}
+// Widget viewSelectedImage(context)
+//   {
+        
+//      if (imageFile == null)
+//       {
+//         return Text('No Image Selected');  //placeholder for now
+//       }
+//       else
+//       {
+//         return Image.file(imageFile, width: 400, height: 400); 
+//       }
+//   }
 
-class _LandingScreenState extends State<LandingScreen> {
 
-  File imageFile;
-
-  _openGallery(BuildContext context) async{
-    var picture =  await ImagePicker.pickImage(source: ImageSource.gallery);
-    this.setState(() {
-      imageFile = picture;
-    });
-    Navigator.of(context).pop();
-  }
-
-  _openCamera(BuildContext context) async{
-    var picture =  await ImagePicker.pickImage(source: ImageSource.camera);
-    this.setState(() {
-      imageFile = picture;
-    });
-    Navigator.of(context).pop();
-  }
-
-  Future<void> _showChoiceDialog(BuildContext context) {
-    return showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("Make a Choice!"),
-            content: SingleChildScrollView(
-              child: ListBody(
-                children: <Widget>[
-                  GestureDetector(
-                    child: Text("Gallery"),
-                    onTap: () {
-                      _openGallery(context);
-                    },
-                  ),
-                  Padding(padding: EdgeInsets.all(8.0)),
-                  GestureDetector(
-                    child: Text("Camera"),
-                    onTap: () {
-                      _openCamera(context);
-                    },
-                  )
-                ],
-              ),
-            ),
-          );
-        });
-  }
+class CustomEmojiApp extends StatelessWidget
+{
+  
 
 
 
@@ -75,58 +43,84 @@ class _LandingScreenState extends State<LandingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Custom Emojiboard"),
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/bulbs.jpg"),
-            fit: BoxFit.cover,
-          ),
+    
+
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.white,
+
+        appBar: AppBar(
+            backgroundColor: Colors.blue[200],
+            title: Text('Custom Emojiboard') //
         ),
+
+
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/bulbs.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+
+          child: null
+          // Center(
+          //   child: Column(
+          //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+          //     children: <Widget>
+          //     [
+          //       viewSelectedImage(context)
+          //     ],
+          //   )
+          // ),
+        ),
+<<<<<<< HEAD
         child: Center(
             child: _decideImageView()
         )/* add child content here */,
       ),
+=======
+>>>>>>> 4a8daed10056668dc437f187a102530b260f316c
+
+          
+
+        floatingActionButton: ImageSelect(),
+        
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
 
 
-      floatingActionButton: FloatingActionButton
-        (
-        onPressed: ()
-        {
-          _showChoiceDialog(context);
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Colors.deepPurple,
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
-
+<<<<<<< HEAD
       //bottom navbar
       bottomNavigationBar: BottomNavigationBar(
+=======
 
-        backgroundColor: Colors.blue[200],
+        //bottom navbar
+        bottomNavigationBar: BottomNavigationBar(
 
-        items:
-        [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('HOME'),
+          backgroundColor: Colors.blue[200],
+>>>>>>> 4a8daed10056668dc437f187a102530b260f316c
 
-          ),
+          items:
+          [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('HOME'),
+
+            ),
 
 
 
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            title: Text('ABOUT'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              title: Text('ABOUT'),
 
-          )
+            )
 
-        ],
+          ],
+
+        ),
 
       ),
 
@@ -134,4 +128,10 @@ class _LandingScreenState extends State<LandingScreen> {
     );
 
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+
+>>>>>>> 4a8daed10056668dc437f187a102530b260f316c
