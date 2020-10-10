@@ -12,18 +12,18 @@ void main()
   runApp(CustomEmojiApp());
 }
 
-Widget viewSelectedImage(context)
-  {
+// Widget viewSelectedImage(context)
+//   {
         
-     if (imageFile == null)
-      {
-        return Text('No Image Selected');  //placeholder for now
-      }
-      else
-      {
-        return Image.file(imageFile, width: 400, height: 400); 
-      }
-  }
+//      if (imageFile == null)
+//       {
+//         return Text('No Image Selected');  //placeholder for now
+//       }
+//       else
+//       {
+//         return Image.file(imageFile, width: 400, height: 400); 
+//       }
+//   }
 
 
 class CustomEmojiApp extends StatelessWidget
@@ -52,17 +52,17 @@ class CustomEmojiApp extends StatelessWidget
             ),
           ),
 
-          child: 
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: null
+          // Center(
+          //   child: Column(
+          //     mainAxisAlignment: MainAxisAlignment.spaceAround,
 
-              children: <Widget>
-              [
-                viewSelectedImage(context)
-              ],
-            )
-          ),
+          //     children: <Widget>
+          //     [
+          //       viewSelectedImage(context)
+          //     ],
+          //   )
+          // ),
         ),
 
           

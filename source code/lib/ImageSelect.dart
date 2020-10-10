@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-//global for now
-File imageFile;
+// //global for now
+// File imageFile;
 
 
 
@@ -27,7 +27,7 @@ class _ImageSelectState extends State<ImageSelect>
 {
 
   //A reference to a file on the file system
-  // File imageFile;
+  File imageFile;
   
   
   //openGallery and openCamera funtion definitions
