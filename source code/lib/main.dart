@@ -62,6 +62,17 @@ class _LandingScreenState extends State<LandingScreen> {
         });
   }
 
+
+
+  Widget _decideImageView() {
+    if(imageFile == null) {
+      return Text("No Image Selected!");
+    } else {
+      var image = Image.file(imageFile,width: 400,height: 400);
+      return image;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +86,9 @@ class _LandingScreenState extends State<LandingScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: null /* add child content here */,
+        child: Center(
+            child: _decideImageView()
+        )/* add child content here */,
       ),
 
 
@@ -90,8 +103,6 @@ class _LandingScreenState extends State<LandingScreen> {
         backgroundColor: Colors.deepPurple,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
-
 
 
       //bottom navbar
@@ -118,6 +129,7 @@ class _LandingScreenState extends State<LandingScreen> {
         ],
 
       ),
+
 
     );
 
