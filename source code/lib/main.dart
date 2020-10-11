@@ -1,84 +1,198 @@
-import 'dart:io';
+//
+//
+//
+
 import 'package:flutter/material.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
-void main() {
-  runApp(new MaterialApp(
-    title: "Camera App",
-    home: LandingScreen(),
+import 'dart:io';
+
+
+
+
+void main()
+{
+  
+  runApp(MaterialApp(
+    title: "CustomEmojiApp",
+    home: HomePage(),
   ));
 }
 
-class LandingScreen extends StatefulWidget {
+
+
+
+class HomePage extends StatefulWidget
+{
+  
   @override
-  _LandingScreenState createState() => _LandingScreenState();
+  State<StatefulWidget> createState() {
+    
+    return _HomePageState();
+  }
 }
 
-class _LandingScreenState extends State<LandingScreen> {
 
-  File imageFile;
 
-  _openGallery(BuildContext context) async{
-    var picture =  await ImagePicker.pickImage(source: ImageSource.gallery);
+
+
+
+
+class _HomePageState extends State<HomePage>
+{
+
+
+  //A reference to a file(image) on the file system(Phone Gallery)
+  File _imageFile;
+
+  //openGallery funtion definition
+  /**
+   * 
+   * 
+   * 
+   */
+  _openGallery(BuildContext context) async  //Tells app to wait untill user selects image, however long that takes them to complete that action.
+  {
+    var picture = await ImagePicker.pickImage(source: ImageSource.gallery);
     this.setState(() {
-      imageFile = picture;
+      _imageFile = picture;
     });
+
+    //Close the dialogbox after image is selected
     Navigator.of(context).pop();
   }
 
-  _openCamera(BuildContext context) async{
-    var picture =  await ImagePicker.pickImage(source: ImageSource.camera);
+ 
+  //openCamera funtion definition
+  /**
+   * 
+   * 
+   * 
+   */
+  _openCamera(BuildContext context) async
+  {
+    var picture = await ImagePicker.pickImage(source: ImageSource.camera);
     this.setState(() {
-      imageFile = picture;
+      _imageFile = picture;
     });
+
+    //Close the dialogbox after image is selected
     Navigator.of(context).pop();
   }
 
-  Future<void> _showChoiceDialog(BuildContext context) {
-    return showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("Make a Choice!"),
-            content: SingleChildScrollView(
-              child: ListBody(
-                children: <Widget>[
-                  GestureDetector(
-                    child: Text("Gallery"),
-                    onTap: () {
-                      _openGallery(context);
-                    },
-                  ),
-                  Padding(padding: EdgeInsets.all(8.0)),
-                  GestureDetector(
-                    child: Text("Camera"),
-                    onTap: () {
-                      _openCamera(context);
-                    },
-                  )
-                ],
+
+  //image cropper function
+  /**
+   * 
+   * 
+   * 
+   */
+  Future<void> _cropImage() async
+  {
+    var cropped = await ImageCropper.cropImage(
+      sourcePath: _imageFile.path,
+      maxWidth: 512,
+      maxHeight: 512,
+
+      //Cropper UI widget settings
+      androidUiSettings: AndroidUiSettings
+      (
+        toolbarTitle: 'Crop Emoji Image',
+        toolbarColor: Colors.purple,
+        toolbarWidgetColor: Colors.white,
+      )
+    );
+
+    this.setState(() {
+      _imageFile = cropped ?? _imageFile;  
+      //Dart's null aware "double questionmark" operator
+      //if user cancels cropping, cropped = null
+      // '??' => if _imageFile is null, cropped = _imageFile 
+    });
+  }
+
+
+  
+  //clear [option for user to clear image after an image is picked]
+  /**
+   * 
+   * 
+   * 
+   */
+  void _clear()
+  {
+    setState(() {
+      _imageFile = null;
+    });
+  }
+
+
+
+
+
+  /**
+   * 
+   * 
+   * 
+   */
+  Future<void> showChoiceDialog(BuildContext context) 
+  {
+    return showDialog(context: context, builder: (BuildContext context)
+    {
+      return AlertDialog(
+        title: Text('Select Image Source'),
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: <Widget>
+            [
+              GestureDetector(
+                child: Text('Gallery'), 
+
+                onTap:()
+                {
+                  _openGallery(context);
+                }
+
               ),
-            ),
-          );
-        });
+
+              Padding(padding: EdgeInsets.all (10.0)),
+
+              GestureDetector(
+                child: Text('Camera'),
+                onTap:()
+                {
+                  _openCamera(context);
+                }
+
+              )
+            ]
+          )
+        )
+      );
+    });
   }
 
 
 
-  Widget _decideImageView() {
-    if(imageFile == null) {
-      return Text("No Image Selected!");
-    } else {
-      var image = Image.file(imageFile,width: 400,height: 400);
-      return image;
-    }
-  }
 
+
+
+  /**
+   * 
+   * 
+   * 
+   */
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
+      backgroundColor: Colors.white,
+
       appBar: AppBar(
-        title: Text("Custom Emojiboard"),
+          backgroundColor: Colors.blue[200],
+          title: Text('Custom Emojiboard') //
       ),
+
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -86,28 +200,58 @@ class _LandingScreenState extends State<LandingScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Center(
-            child: _decideImageView()
-        )/* add child content here */,
+    
+        child: ListView(
+          children: <Widget>
+          [
+            // if imageFile is NOT null, Body will show below children widgets. 
+            // Else, just the above children widgets
+            if (_imageFile != null) ...
+            [
+              Image.file(_imageFile),
+
+              Row(
+                children: <Widget>
+                [
+                  FlatButton(
+                    child: Icon(Icons.crop),
+                    onPressed: _cropImage,
+                  ),
+
+                  FlatButton(
+                    child: Icon(Icons.refresh),
+                    onPressed: _clear,
+                  )
+                ],
+              ),
+
+
+              // Uploader(file: _imageFile)
+
+            ],  
+          ],
+        ),
       ),
 
 
-
-      floatingActionButton: FloatingActionButton
-        (
+        
+      //Floating action bar
+      floatingActionButton: FloatingActionButton(
         onPressed: ()
         {
-          _showChoiceDialog(context);
+          showChoiceDialog(context);            
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.deepPurple,
       ),
+      
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
 
-      //bottom navbar
-      bottomNavigationBar: BottomNavigationBar(
 
+
+      //Bottom navbar
+      bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue[200],
 
         items:
@@ -115,23 +259,15 @@ class _LandingScreenState extends State<LandingScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text('HOME'),
-
           ),
-
-
 
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
             title: Text('ABOUT'),
-
+            backgroundColor: Colors.white,
           )
-
         ],
-
       ),
-
-
     );
-
   }
 }
