@@ -53,7 +53,15 @@ class _HomePageState extends State<HomePage>
    */
   _openGallery(BuildContext context) async  //Tells app to wait untill user selects image, however long that takes them to complete that action.
   {
+<<<<<<< HEAD
     var picture = await ImagePicker.pickImage(source: ImageSource.gallery);
+=======
+    var picture = await ImagePicker.pickImage(
+      source: ImageSource.gallery, 
+      maxWidth: 512, 
+      maxHeight: 512,
+    );
+>>>>>>> development
     this.setState(() {
       _imageFile = picture;
     });
@@ -71,7 +79,15 @@ class _HomePageState extends State<HomePage>
    */
   _openCamera(BuildContext context) async
   {
+<<<<<<< HEAD
     var picture = await ImagePicker.pickImage(source: ImageSource.camera);
+=======
+    var picture = await ImagePicker.pickImage(
+      source: ImageSource.camera, 
+    maxWidth: 512, 
+    maxHeight: 512,
+  );
+>>>>>>> development
     this.setState(() {
       _imageFile = picture;
     });
@@ -205,6 +221,7 @@ class _HomePageState extends State<HomePage>
           children: <Widget>
           [
             // if imageFile is NOT null, Body will show below children widgets. 
+<<<<<<< HEAD
             // Else, just the above children widgets
             if (_imageFile != null) ...
             [
@@ -234,6 +251,43 @@ class _HomePageState extends State<HomePage>
       ),
 
 
+=======
+            // Else, just the above container widgets
+            if (_imageFile != null) ...
+            [
+              Image.file(_imageFile),
+
+              Row(
+                children: <Widget>
+                [
+                  RaisedButton(
+                    child: Icon(Icons.crop),
+                    color: Colors.deepPurple,
+                    textColor: Colors.white,
+                    onPressed: _cropImage,
+                  ),
+
+                  Padding(padding: EdgeInsets.all (10.0)),
+
+                  RaisedButton(
+                    child: Icon(Icons.clear),
+                    color: Colors.deepPurple,
+                    textColor: Colors.white,
+                    onPressed: _clear,
+                  )
+                ],
+              ),
+
+
+              // Uploader(file: _imageFile)
+
+            ],  
+          ],
+        ),
+      ),
+
+
+>>>>>>> development
         
       //Floating action bar
       floatingActionButton: FloatingActionButton(
