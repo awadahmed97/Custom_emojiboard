@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CustKey</string>
+    <string name="simple_ime">CustKey IME</string>
+    <string name="subtype_en_US">English (US)</string>
+</resources>
