@@ -1,4 +1,6 @@
 # This is a generated file; do not edit or check into version control.
-flutter_plugin_android_lifecycle=C:\\CS Programs\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_plugin_android_lifecycle-1.0.11\\
-image_cropper=C:\\CS Programs\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_cropper-1.3.1\\
-image_picker=C:\\CS Programs\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker-0.6.7+11\\
+firebase_core=/Users/awadahmed/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.0+8/
+firebase_storage=/Users/awadahmed/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.0.4/
+flutter_plugin_android_lifecycle=/Users/awadahmed/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.11/
+image_cropper=/Users/awadahmed/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/image_cropper-1.3.1/
+image_picker=/Users/awadahmed/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+12/

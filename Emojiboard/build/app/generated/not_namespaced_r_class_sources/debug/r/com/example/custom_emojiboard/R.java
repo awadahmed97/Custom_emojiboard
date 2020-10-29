@@ -622,13 +622,30 @@ public final class R {
      */
     public static final int buttonPanelSideLayout=0x7f020040;
     /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>icon_only</td><td>2</td><td></td></tr>
+     * <tr><td>standard</td><td>0</td><td></td></tr>
+     * <tr><td>wide</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int buttonSize=0x7f020041;
+    /**
      * Normal Button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonStyle=0x7f020041;
+    public static final int buttonStyle=0x7f020042;
     /**
      * Small Button style.
      * <p>May be a reference to another resource, in the form
@@ -636,14 +653,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonStyleSmall=0x7f020042;
+    public static final int buttonStyleSmall=0x7f020043;
     /**
      * Tint to apply to the button drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int buttonTint=0x7f020043;
+    public static final int buttonTint=0x7f020044;
     /**
      * Blending mode used to apply the button tint.
      * <p>Must be one of the following constant values.</p>
@@ -665,7 +682,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int buttonTintMode=0x7f020044;
+    public static final int buttonTintMode=0x7f020045;
     /**
      * Default Checkbox style.
      * <p>May be a reference to another resource, in the form
@@ -673,7 +690,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int checkboxStyle=0x7f020045;
+    public static final int checkboxStyle=0x7f020046;
     /**
      * Default CheckedTextView style.
      * <p>May be a reference to another resource, in the form
@@ -681,7 +698,12 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int checkedTextViewStyle=0x7f020046;
+    public static final int checkedTextViewStyle=0x7f020047;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int circleCrop=0x7f020048;
     /**
      * Close button icon
      * <p>May be a reference to another resource, in the form
@@ -689,7 +711,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int closeIcon=0x7f020047;
+    public static final int closeIcon=0x7f020049;
     /**
      * Specifies a layout to use for the "close" item at the starting edge.
      * <p>May be a reference to another resource, in the form
@@ -697,13 +719,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int closeItemLayout=0x7f020048;
+    public static final int closeItemLayout=0x7f02004a;
     /**
      * Text to set as the content description for the collapse button.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int collapseContentDescription=0x7f020049;
+    public static final int collapseContentDescription=0x7f02004b;
     /**
      * Icon drawable to use for the collapse button.
      * <p>May be a reference to another resource, in the form
@@ -711,14 +733,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int collapseIcon=0x7f02004a;
+    public static final int collapseIcon=0x7f02004c;
     /**
      * The drawing color for the bars
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int color=0x7f02004b;
+    public static final int color=0x7f02004d;
     /**
      * Bright complement to the primary branding color. By default, this is the color applied
      * to framework controls (via colorControlActivated).
@@ -726,42 +748,42 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorAccent=0x7f02004c;
+    public static final int colorAccent=0x7f02004e;
     /**
      * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorBackgroundFloating=0x7f02004d;
+    public static final int colorBackgroundFloating=0x7f02004f;
     /**
      * The color applied to framework buttons in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorButtonNormal=0x7f02004e;
+    public static final int colorButtonNormal=0x7f020050;
     /**
      * The color applied to framework controls in their activated (ex. checked) state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorControlActivated=0x7f02004f;
+    public static final int colorControlActivated=0x7f020051;
     /**
      * The color applied to framework control highlights (ex. ripples, list selectors).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorControlHighlight=0x7f020050;
+    public static final int colorControlHighlight=0x7f020052;
     /**
      * The color applied to framework controls in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorControlNormal=0x7f020051;
+    public static final int colorControlNormal=0x7f020053;
     /**
      * Color used for error states and things that need to be drawn to
      * the user's attention.
@@ -773,7 +795,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorError=0x7f020052;
+    public static final int colorError=0x7f020054;
     /**
      * The primary branding color for the app. By default, this is the color applied to the
      * action bar background.
@@ -781,7 +803,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorPrimary=0x7f020053;
+    public static final int colorPrimary=0x7f020055;
     /**
      * Dark variant of the primary branding color. By default, this is the color applied to
      * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
@@ -789,14 +811,31 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorPrimaryDark=0x7f020054;
+    public static final int colorPrimaryDark=0x7f020056;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>auto</td><td>2</td><td></td></tr>
+     * <tr><td>dark</td><td>0</td><td></td></tr>
+     * <tr><td>light</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int colorScheme=0x7f020057;
     /**
      * The color applied to framework switch thumbs in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorSwitchThumbNormal=0x7f020055;
+    public static final int colorSwitchThumbNormal=0x7f020058;
     /**
      * Commit icon shown in the query suggestion row
      * <p>May be a reference to another resource, in the form
@@ -804,13 +843,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int commitIcon=0x7f020056;
+    public static final int commitIcon=0x7f020059;
     /**
      * The content description associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int contentDescription=0x7f020057;
+    public static final int contentDescription=0x7f02005a;
     /**
      * Minimum inset for content views within a bar. Navigation buttons and
      * menu views are excepted. Only valid for some themes and configurations.
@@ -820,7 +859,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetEnd=0x7f020058;
+    public static final int contentInsetEnd=0x7f02005b;
     /**
      * Minimum inset for content views within a bar when actions from a menu
      * are present. Only valid for some themes and configurations.
@@ -830,7 +869,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetEndWithActions=0x7f020059;
+    public static final int contentInsetEndWithActions=0x7f02005c;
     /**
      * Minimum inset for content views within a bar. Navigation buttons and
      * menu views are excepted. Only valid for some themes and configurations.
@@ -840,7 +879,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetLeft=0x7f02005a;
+    public static final int contentInsetLeft=0x7f02005d;
     /**
      * Minimum inset for content views within a bar. Navigation buttons and
      * menu views are excepted. Only valid for some themes and configurations.
@@ -850,7 +889,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetRight=0x7f02005b;
+    public static final int contentInsetRight=0x7f02005e;
     /**
      * Minimum inset for content views within a bar. Navigation buttons and
      * menu views are excepted. Only valid for some themes and configurations.
@@ -860,7 +899,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetStart=0x7f02005c;
+    public static final int contentInsetStart=0x7f02005f;
     /**
      * Minimum inset for content views within a bar when a navigation button
      * is present, such as the Up button. Only valid for some themes and configurations.
@@ -870,7 +909,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetStartWithNavigation=0x7f02005d;
+    public static final int contentInsetStartWithNavigation=0x7f020060;
     /**
      * The background used by framework controls.
      * <p>May be a reference to another resource, in the form
@@ -878,7 +917,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int controlBackground=0x7f02005e;
+    public static final int controlBackground=0x7f020061;
     /**
      * Specifies a layout for custom navigation. Overrides navigationMode.
      * <p>May be a reference to another resource, in the form
@@ -886,14 +925,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int customNavigationLayout=0x7f02005f;
+    public static final int customNavigationLayout=0x7f020062;
     /**
      * Default query hint used when {@code queryHint} is undefined and
      * the search view's {@code SearchableInfo} does not provide a hint.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int defaultQueryHint=0x7f020060;
+    public static final int defaultQueryHint=0x7f020063;
     /**
      * Preferred corner radius of dialogs.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -902,7 +941,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int dialogCornerRadius=0x7f020061;
+    public static final int dialogCornerRadius=0x7f020064;
     /**
      * Preferred padding for dialog content.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -911,7 +950,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int dialogPreferredPadding=0x7f020062;
+    public static final int dialogPreferredPadding=0x7f020065;
     /**
      * Theme to use for dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
@@ -919,7 +958,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int dialogTheme=0x7f020063;
+    public static final int dialogTheme=0x7f020066;
     /**
      * Options affecting how the action bar is displayed.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -937,7 +976,7 @@ public final class R {
      * <tr><td>useLogo</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int displayOptions=0x7f020064;
+    public static final int displayOptions=0x7f020067;
     /**
      * Specifies the drawable used for item dividers.
      * <p>May be a reference to another resource, in the form
@@ -945,7 +984,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int divider=0x7f020065;
+    public static final int divider=0x7f020068;
     /**
      * A drawable that may be used as a horizontal divider between visual elements.
      * <p>May be a reference to another resource, in the form
@@ -953,7 +992,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int dividerHorizontal=0x7f020066;
+    public static final int dividerHorizontal=0x7f020069;
     /**
      * Size of padding on either end of a divider.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -962,7 +1001,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int dividerPadding=0x7f020067;
+    public static final int dividerPadding=0x7f02006a;
     /**
      * A drawable that may be used as a vertical divider between visual elements.
      * <p>May be a reference to another resource, in the form
@@ -970,21 +1009,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int dividerVertical=0x7f020068;
+    public static final int dividerVertical=0x7f02006b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int drawableBottomCompat=0x7f020069;
+    public static final int drawableBottomCompat=0x7f02006c;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int drawableEndCompat=0x7f02006a;
+    public static final int drawableEndCompat=0x7f02006d;
     /**
      * Compound drawables allowing the use of vector drawable when running on older versions
      * of the platform.
@@ -993,14 +1032,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int drawableLeftCompat=0x7f02006b;
+    public static final int drawableLeftCompat=0x7f02006e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int drawableRightCompat=0x7f02006c;
+    public static final int drawableRightCompat=0x7f02006f;
     /**
      * The total size of the drawable
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1009,21 +1048,21 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int drawableSize=0x7f02006d;
+    public static final int drawableSize=0x7f020070;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int drawableStartCompat=0x7f02006e;
+    public static final int drawableStartCompat=0x7f020071;
     /**
      * Tint to apply to the compound (left, top, etc.) drawables.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int drawableTint=0x7f02006f;
+    public static final int drawableTint=0x7f020072;
     /**
      * Blending mode used to apply the compound (left, top, etc.) drawables tint.
      * <p>Must be one of the following constant values.</p>
@@ -1045,21 +1084,21 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int drawableTintMode=0x7f020070;
+    public static final int drawableTintMode=0x7f020073;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int drawableTopCompat=0x7f020071;
+    public static final int drawableTopCompat=0x7f020074;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int drawerArrowStyle=0x7f020072;
+    public static final int drawerArrowStyle=0x7f020075;
     /**
      * ListPopupWindow compatibility
      * <p>May be a reference to another resource, in the form
@@ -1067,7 +1106,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int dropDownListViewStyle=0x7f020073;
+    public static final int dropDownListViewStyle=0x7f020076;
     /**
      * The preferred item height for dropdown lists.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1076,7 +1115,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int dropdownListPreferredItemHeight=0x7f020074;
+    public static final int dropdownListPreferredItemHeight=0x7f020077;
     /**
      * EditText background drawable.
      * <p>May be a reference to another resource, in the form
@@ -1084,7 +1123,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int editTextBackground=0x7f020075;
+    public static final int editTextBackground=0x7f020078;
     /**
      * EditText text foreground color.
      * <p>May be a reference to another resource, in the form
@@ -1095,7 +1134,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int editTextColor=0x7f020076;
+    public static final int editTextColor=0x7f020079;
     /**
      * Default EditText style.
      * <p>May be a reference to another resource, in the form
@@ -1103,7 +1142,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int editTextStyle=0x7f020077;
+    public static final int editTextStyle=0x7f02007a;
     /**
      * Elevation for the action bar itself
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1112,7 +1151,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int elevation=0x7f020078;
+    public static final int elevation=0x7f02007b;
     /**
      * The drawable to show in the button for expanding the activities overflow popup.
      * <strong>Note:</strong> Clients would like to set this drawable
@@ -1124,7 +1163,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int expandActivityOverflowButtonDrawable=0x7f020079;
+    public static final int expandActivityOverflowButtonDrawable=0x7f02007c;
     /**
      * Distance from the top of the TextView to the first text baseline. If set, this
      * overrides the value set for paddingTop.
@@ -1134,7 +1173,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int firstBaselineToTopHeight=0x7f02007a;
+    public static final int firstBaselineToTopHeight=0x7f02007d;
     /**
      * The reference to the font file to be used. This should be a file in the res/font folder
      * and should therefore have an R reference value. E.g. @font/myfont
@@ -1143,19 +1182,19 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int font=0x7f02007b;
+    public static final int font=0x7f02007e;
     /**
      * The attribute for the font family.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontFamily=0x7f02007c;
+    public static final int fontFamily=0x7f02007f;
     /**
      * The authority of the Font Provider to be used for the request.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderAuthority=0x7f02007d;
+    public static final int fontProviderAuthority=0x7f020080;
     /**
      * The sets of hashes for the certificates the provider should be signed with. This is
      * used to verify the identity of the provider, and is only required if the provider is not
@@ -1167,7 +1206,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int fontProviderCerts=0x7f02007e;
+    public static final int fontProviderCerts=0x7f020081;
     /**
      * The strategy to be used when fetching font data from a font provider in XML layouts.
      * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
@@ -1194,7 +1233,7 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchStrategy=0x7f02007f;
+    public static final int fontProviderFetchStrategy=0x7f020082;
     /**
      * The length of the timeout during fetching.
      * <p>May be an integer value, such as "<code>100</code>".
@@ -1208,21 +1247,21 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchTimeout=0x7f020080;
+    public static final int fontProviderFetchTimeout=0x7f020083;
     /**
      * The package for the Font Provider to be used for the request. This is used to verify
      * the identity of the provider.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderPackage=0x7f020081;
+    public static final int fontProviderPackage=0x7f020084;
     /**
      * The query to be sent over to the provider. Refer to your font provider's documentation
      * on the format of this string.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderQuery=0x7f020082;
+    public static final int fontProviderQuery=0x7f020085;
     /**
      * The style of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any style information in the font's header tables. If
@@ -1237,7 +1276,7 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f020083;
+    public static final int fontStyle=0x7f020086;
     /**
      * The variation settings to be applied to the font. The string should be in the following
      * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
@@ -1246,7 +1285,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontVariationSettings=0x7f020084;
+    public static final int fontVariationSettings=0x7f020087;
     /**
      * The weight of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any weight information in the font's header tables. Must
@@ -1255,7 +1294,7 @@ public final class R {
      * in the font's header tables will be used.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int fontWeight=0x7f020085;
+    public static final int fontWeight=0x7f020088;
     /**
      * The max gap between the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1264,7 +1303,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int gapBetweenBars=0x7f020086;
+    public static final int gapBetweenBars=0x7f020089;
     /**
      * Go button icon
      * <p>May be a reference to another resource, in the form
@@ -1272,7 +1311,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int goIcon=0x7f020087;
+    public static final int goIcon=0x7f02008a;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -1280,13 +1319,13 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int height=0x7f020088;
+    public static final int height=0x7f02008b;
     /**
      * Set true to hide the action bar on a vertical nested scroll of content.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int hideOnContentScroll=0x7f020089;
+    public static final int hideOnContentScroll=0x7f02008c;
     /**
      * Specifies a drawable to use for the 'home as up' indicator.
      * <p>May be a reference to another resource, in the form
@@ -1294,7 +1333,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int homeAsUpIndicator=0x7f02008a;
+    public static final int homeAsUpIndicator=0x7f02008d;
     /**
      * Specifies a layout to use for the "home" section of the action bar.
      * <p>May be a reference to another resource, in the form
@@ -1302,7 +1341,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int homeLayout=0x7f02008b;
+    public static final int homeLayout=0x7f02008e;
     /**
      * Specifies the drawable used for the application icon.
      * <p>May be a reference to another resource, in the form
@@ -1310,14 +1349,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int icon=0x7f02008c;
+    public static final int icon=0x7f02008f;
     /**
      * Tint to apply to the icon.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int iconTint=0x7f02008d;
+    public static final int iconTint=0x7f020090;
     /**
      * Blending mode used to apply the icon tint.
      * <p>Must be one of the following constant values.</p>
@@ -1339,14 +1378,31 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int iconTintMode=0x7f02008e;
+    public static final int iconTintMode=0x7f020091;
     /**
      * The default state of the SearchView. If true, it will be iconified when not in
      * use and expanded when clicked.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int iconifiedByDefault=0x7f02008f;
+    public static final int iconifiedByDefault=0x7f020092;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int imageAspectRatio=0x7f020093;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>adjust_height</td><td>2</td><td></td></tr>
+     * <tr><td>adjust_width</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int imageAspectRatioAdjust=0x7f020094;
     /**
      * ImageButton background drawable.
      * <p>May be a reference to another resource, in the form
@@ -1354,7 +1410,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int imageButtonStyle=0x7f020090;
+    public static final int imageButtonStyle=0x7f020095;
     /**
      * Specifies a style resource to use for an indeterminate progress spinner.
      * <p>May be a reference to another resource, in the form
@@ -1362,18 +1418,18 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int indeterminateProgressStyle=0x7f020091;
+    public static final int indeterminateProgressStyle=0x7f020096;
     /**
      * The maximal number of items initially shown in the activity list.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int initialActivityCount=0x7f020092;
+    public static final int initialActivityCount=0x7f020097;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int isLightTheme=0x7f020093;
+    public static final int isLightTheme=0x7f020098;
     /**
      * Specifies padding that should be applied to the left and right sides of
      * system-provided items in the bar.
@@ -1383,7 +1439,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int itemPadding=0x7f020094;
+    public static final int itemPadding=0x7f020099;
     /**
      * Distance from the bottom of the TextView to the last text baseline. If set, this
      * overrides the value set for paddingBottom.
@@ -1393,7 +1449,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int lastBaselineToBottomHeight=0x7f020095;
+    public static final int lastBaselineToBottomHeight=0x7f02009a;
     /**
      * The layout to use for the search view.
      * <p>May be a reference to another resource, in the form
@@ -1401,7 +1457,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int layout=0x7f020096;
+    public static final int layout=0x7f02009b;
     /**
      * Explicit height between lines of text. If set, this will override the values set
      * for lineSpacingExtra and lineSpacingMultiplier.
@@ -1411,7 +1467,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int lineHeight=0x7f020097;
+    public static final int lineHeight=0x7f02009c;
     /**
      * Drawable used as a background for selected list items.
      * <p>May be a reference to another resource, in the form
@@ -1419,7 +1475,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listChoiceBackgroundIndicator=0x7f020098;
+    public static final int listChoiceBackgroundIndicator=0x7f02009d;
     /**
      * Animated Drawable to use for single choice indicators.
      * <p>May be a reference to another resource, in the form
@@ -1427,7 +1483,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listChoiceIndicatorMultipleAnimated=0x7f020099;
+    public static final int listChoiceIndicatorMultipleAnimated=0x7f02009e;
     /**
      * Animated Drawable to use for multiple choice indicators.
      * <p>May be a reference to another resource, in the form
@@ -1435,7 +1491,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listChoiceIndicatorSingleAnimated=0x7f02009a;
+    public static final int listChoiceIndicatorSingleAnimated=0x7f02009f;
     /**
      * The list divider used in alert dialogs.
      * <p>May be a reference to another resource, in the form
@@ -1443,21 +1499,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listDividerAlertDialog=0x7f02009b;
+    public static final int listDividerAlertDialog=0x7f0200a0;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listItemLayout=0x7f02009c;
+    public static final int listItemLayout=0x7f0200a1;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listLayout=0x7f02009d;
+    public static final int listLayout=0x7f0200a2;
     /**
      * Default menu-style ListView style.
      * <p>May be a reference to another resource, in the form
@@ -1465,14 +1521,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listMenuViewStyle=0x7f02009e;
+    public static final int listMenuViewStyle=0x7f0200a3;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listPopupWindowStyle=0x7f02009f;
+    public static final int listPopupWindowStyle=0x7f0200a4;
     /**
      * The preferred list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1481,7 +1537,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemHeight=0x7f0200a0;
+    public static final int listPreferredItemHeight=0x7f0200a5;
     /**
      * A larger, more robust list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1490,7 +1546,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemHeightLarge=0x7f0200a1;
+    public static final int listPreferredItemHeightLarge=0x7f0200a6;
     /**
      * A smaller, sleeker list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1499,7 +1555,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemHeightSmall=0x7f0200a2;
+    public static final int listPreferredItemHeightSmall=0x7f0200a7;
     /**
      * The preferred padding along the end edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1508,7 +1564,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemPaddingEnd=0x7f0200a3;
+    public static final int listPreferredItemPaddingEnd=0x7f0200a8;
     /**
      * The preferred padding along the left edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1517,7 +1573,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemPaddingLeft=0x7f0200a4;
+    public static final int listPreferredItemPaddingLeft=0x7f0200a9;
     /**
      * The preferred padding along the right edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1526,7 +1582,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemPaddingRight=0x7f0200a5;
+    public static final int listPreferredItemPaddingRight=0x7f0200aa;
     /**
      * The preferred padding along the start edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1535,7 +1591,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemPaddingStart=0x7f0200a6;
+    public static final int listPreferredItemPaddingStart=0x7f0200ab;
     /**
      * Specifies the drawable used for the application logo.
      * <p>May be a reference to another resource, in the form
@@ -1543,14 +1599,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int logo=0x7f0200a7;
+    public static final int logo=0x7f0200ac;
     /**
      * A content description string to describe the appearance of the
      * associated logo image.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int logoDescription=0x7f0200a8;
+    public static final int logoDescription=0x7f0200ad;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -1558,7 +1614,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int maxButtonHeight=0x7f0200a9;
+    public static final int maxButtonHeight=0x7f0200ae;
     /**
      * When set to true, all children with a weight will be considered having
      * the minimum size of the largest child. If false, all children are
@@ -1566,7 +1622,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int measureWithLargestChild=0x7f0200aa;
+    public static final int measureWithLargestChild=0x7f0200af;
     /**
      * Menu resource to inflate to be shown in the toolbar
      * <p>May be a reference to another resource, in the form
@@ -1574,21 +1630,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int menu=0x7f0200ab;
+    public static final int menu=0x7f0200b0;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int multiChoiceItemLayout=0x7f0200ac;
+    public static final int multiChoiceItemLayout=0x7f0200b1;
     /**
      * Text to set as the content description for the navigation button
      * located at the start of the toolbar.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int navigationContentDescription=0x7f0200ad;
+    public static final int navigationContentDescription=0x7f0200b2;
     /**
      * Icon drawable to use for the navigation button located at
      * the start of the toolbar.
@@ -1597,7 +1653,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int navigationIcon=0x7f0200ae;
+    public static final int navigationIcon=0x7f0200b3;
     /**
      * The type of navigation to use.
      * <p>Must be one of the following constant values.</p>
@@ -1611,7 +1667,7 @@ public final class R {
      * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
      * </table>
      */
-    public static final int navigationMode=0x7f0200af;
+    public static final int navigationMode=0x7f0200b4;
     /**
      * The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
      * keyboard. The values should be kept in sync with KeyEvent
@@ -1629,13 +1685,13 @@ public final class R {
      * <tr><td>SYM</td><td>4</td><td></td></tr>
      * </table>
      */
-    public static final int numericModifiers=0x7f0200b0;
+    public static final int numericModifiers=0x7f0200b5;
     /**
      * Whether the popup window should overlap its anchor view.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int overlapAnchor=0x7f0200b1;
+    public static final int overlapAnchor=0x7f0200b6;
     /**
      * Bottom padding to use when no buttons are present.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1644,7 +1700,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingBottomNoButtons=0x7f0200b2;
+    public static final int paddingBottomNoButtons=0x7f0200b7;
     /**
      * Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1653,7 +1709,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingEnd=0x7f0200b3;
+    public static final int paddingEnd=0x7f0200b8;
     /**
      * Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1662,7 +1718,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingStart=0x7f0200b4;
+    public static final int paddingStart=0x7f0200b9;
     /**
      * Top padding to use when no title is present.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1671,7 +1727,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingTopNoTitle=0x7f0200b5;
+    public static final int paddingTopNoTitle=0x7f0200ba;
     /**
      * The background of a panel when it is inset from the left and right edges of the screen.
      * <p>May be a reference to another resource, in the form
@@ -1679,7 +1735,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int panelBackground=0x7f0200b6;
+    public static final int panelBackground=0x7f0200bb;
     /**
      * Default Panel Menu style.
      * <p>May be a reference to another resource, in the form
@@ -1687,7 +1743,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int panelMenuListTheme=0x7f0200b7;
+    public static final int panelMenuListTheme=0x7f0200bc;
     /**
      * Default Panel Menu width.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1696,7 +1752,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int panelMenuListWidth=0x7f0200b8;
+    public static final int panelMenuListWidth=0x7f0200bd;
     /**
      * Default PopupMenu style.
      * <p>May be a reference to another resource, in the form
@@ -1704,7 +1760,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupMenuStyle=0x7f0200b9;
+    public static final int popupMenuStyle=0x7f0200be;
     /**
      * Reference to a theme that should be used to inflate popups
      * shown by widgets in the action bar.
@@ -1713,7 +1769,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupTheme=0x7f0200ba;
+    public static final int popupTheme=0x7f0200bf;
     /**
      * Default PopupWindow style.
      * <p>May be a reference to another resource, in the form
@@ -1721,13 +1777,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupWindowStyle=0x7f0200bb;
+    public static final int popupWindowStyle=0x7f0200c0;
     /**
      * Whether space should be reserved in layout when an icon is missing.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int preserveIconSpacing=0x7f0200bc;
+    public static final int preserveIconSpacing=0x7f0200c1;
     /**
      * Specifies the horizontal padding on either end for an embedded progress bar.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1736,7 +1792,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int progressBarPadding=0x7f0200bd;
+    public static final int progressBarPadding=0x7f0200c2;
     /**
      * Specifies a style resource to use for an embedded progress bar.
      * <p>May be a reference to another resource, in the form
@@ -1744,7 +1800,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int progressBarStyle=0x7f0200be;
+    public static final int progressBarStyle=0x7f0200c3;
     /**
      * Background for the section containing the search query
      * <p>May be a reference to another resource, in the form
@@ -1752,13 +1808,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int queryBackground=0x7f0200bf;
+    public static final int queryBackground=0x7f0200c4;
     /**
      * An optional user-defined query hint string to be displayed in the empty query field.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int queryHint=0x7f0200c0;
+    public static final int queryHint=0x7f0200c5;
     /**
      * Default RadioButton style.
      * <p>May be a reference to another resource, in the form
@@ -1766,7 +1822,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int radioButtonStyle=0x7f0200c1;
+    public static final int radioButtonStyle=0x7f0200c6;
     /**
      * Default RatingBar style.
      * <p>May be a reference to another resource, in the form
@@ -1774,7 +1830,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyle=0x7f0200c2;
+    public static final int ratingBarStyle=0x7f0200c7;
     /**
      * Indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
@@ -1782,7 +1838,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyleIndicator=0x7f0200c3;
+    public static final int ratingBarStyleIndicator=0x7f0200c8;
     /**
      * Small indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
@@ -1790,7 +1846,16 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyleSmall=0x7f0200c4;
+    public static final int ratingBarStyleSmall=0x7f0200c9;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int scopeUris=0x7f0200ca;
     /**
      * Search icon displayed as a text field hint
      * <p>May be a reference to another resource, in the form
@@ -1798,7 +1863,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchHintIcon=0x7f0200c5;
+    public static final int searchHintIcon=0x7f0200cb;
     /**
      * Search icon
      * <p>May be a reference to another resource, in the form
@@ -1806,7 +1871,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchIcon=0x7f0200c6;
+    public static final int searchIcon=0x7f0200cc;
     /**
      * Style for the search query widget.
      * <p>May be a reference to another resource, in the form
@@ -1814,7 +1879,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchViewStyle=0x7f0200c7;
+    public static final int searchViewStyle=0x7f0200cd;
     /**
      * Default SeekBar style.
      * <p>May be a reference to another resource, in the form
@@ -1822,7 +1887,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int seekBarStyle=0x7f0200c8;
+    public static final int seekBarStyle=0x7f0200ce;
     /**
      * A style that may be applied to buttons or other selectable items
      * that should react to pressed and focus states, but that do not
@@ -1832,7 +1897,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int selectableItemBackground=0x7f0200c9;
+    public static final int selectableItemBackground=0x7f0200cf;
     /**
      * Background drawable for borderless standalone items that need focus/pressed states.
      * <p>May be a reference to another resource, in the form
@@ -1840,7 +1905,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int selectableItemBackgroundBorderless=0x7f0200ca;
+    public static final int selectableItemBackgroundBorderless=0x7f0200d0;
     /**
      * How this item should display in the Action Bar, if present.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -1865,7 +1930,7 @@ public final class R {
      * label with it even if it has an icon representation.</td></tr>
      * </table>
      */
-    public static final int showAsAction=0x7f0200cb;
+    public static final int showAsAction=0x7f0200d1;
     /**
      * Setting for which dividers to show.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -1880,31 +1945,31 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int showDividers=0x7f0200cc;
+    public static final int showDividers=0x7f0200d2;
     /**
      * Whether to draw on/off text.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int showText=0x7f0200cd;
+    public static final int showText=0x7f0200d3;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int showTitle=0x7f0200ce;
+    public static final int showTitle=0x7f0200d4;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int singleChoiceItemLayout=0x7f0200cf;
+    public static final int singleChoiceItemLayout=0x7f0200d5;
     /**
      * Whether bars should rotate or not during transition
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int spinBars=0x7f0200d0;
+    public static final int spinBars=0x7f0200d6;
     /**
      * Default Spinner style.
      * <p>May be a reference to another resource, in the form
@@ -1912,7 +1977,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int spinnerDropDownItemStyle=0x7f0200d1;
+    public static final int spinnerDropDownItemStyle=0x7f0200d7;
     /**
      * Default Spinner style.
      * <p>May be a reference to another resource, in the form
@@ -1920,13 +1985,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int spinnerStyle=0x7f0200d2;
+    public static final int spinnerStyle=0x7f0200d8;
     /**
      * Whether to split the track and leave a gap for the thumb drawable.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int splitTrack=0x7f0200d3;
+    public static final int splitTrack=0x7f0200d9;
     /**
      * Sets a drawable as the content of this ImageView. Allows the use of vector drawable
      * when running on older versions of the platform.
@@ -1935,13 +2000,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int srcCompat=0x7f0200d4;
+    public static final int srcCompat=0x7f0200da;
     /**
      * State identifier indicating the popup will be above the anchor.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_above_anchor=0x7f0200d5;
+    public static final int state_above_anchor=0x7f0200db;
     /**
      * Drawable for the arrow icon indicating a particular item is a submenu.
      * <p>May be a reference to another resource, in the form
@@ -1949,7 +2014,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subMenuArrow=0x7f0200d6;
+    public static final int subMenuArrow=0x7f0200dc;
     /**
      * Background for the section containing the action (e.g. voice search)
      * <p>May be a reference to another resource, in the form
@@ -1957,27 +2022,27 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int submitBackground=0x7f0200d7;
+    public static final int submitBackground=0x7f0200dd;
     /**
      * Specifies subtitle text used for navigationMode="normal"
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int subtitle=0x7f0200d8;
+    public static final int subtitle=0x7f0200de;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subtitleTextAppearance=0x7f0200d9;
+    public static final int subtitleTextAppearance=0x7f0200df;
     /**
      * A color to apply to the subtitle string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int subtitleTextColor=0x7f0200da;
+    public static final int subtitleTextColor=0x7f0200e0;
     /**
      * Specifies a style to use for subtitle text.
      * <p>May be a reference to another resource, in the form
@@ -1985,7 +2050,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subtitleTextStyle=0x7f0200db;
+    public static final int subtitleTextStyle=0x7f0200e1;
     /**
      * Layout for query suggestion rows
      * <p>May be a reference to another resource, in the form
@@ -1993,7 +2058,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int suggestionRowLayout=0x7f0200dc;
+    public static final int suggestionRowLayout=0x7f0200e2;
     /**
      * Minimum width for the switch component
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2002,7 +2067,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int switchMinWidth=0x7f0200dd;
+    public static final int switchMinWidth=0x7f0200e3;
     /**
      * Minimum space between the switch and caption text
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2011,7 +2076,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int switchPadding=0x7f0200de;
+    public static final int switchPadding=0x7f0200e4;
     /**
      * Default style for the Switch widget.
      * <p>May be a reference to another resource, in the form
@@ -2019,7 +2084,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int switchStyle=0x7f0200df;
+    public static final int switchStyle=0x7f0200e5;
     /**
      * TextAppearance style for text displayed on the switch thumb.
      * <p>May be a reference to another resource, in the form
@@ -2027,7 +2092,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int switchTextAppearance=0x7f0200e0;
+    public static final int switchTextAppearance=0x7f0200e6;
     /**
      * Present the text in ALL CAPS. This may use a small-caps form when available.
      * <p>May be a reference to another resource, in the form
@@ -2037,7 +2102,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int textAllCaps=0x7f0200e1;
+    public static final int textAllCaps=0x7f0200e7;
     /**
      * Text color, typeface, size, and style for the text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
@@ -2045,7 +2110,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceLargePopupMenu=0x7f0200e2;
+    public static final int textAppearanceLargePopupMenu=0x7f0200e8;
     /**
      * The preferred TextAppearance for the primary text of list items.
      * <p>May be a reference to another resource, in the form
@@ -2053,7 +2118,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceListItem=0x7f0200e3;
+    public static final int textAppearanceListItem=0x7f0200e9;
     /**
      * The preferred TextAppearance for the secondary text of list items.
      * <p>May be a reference to another resource, in the form
@@ -2061,7 +2126,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceListItemSecondary=0x7f0200e4;
+    public static final int textAppearanceListItemSecondary=0x7f0200ea;
     /**
      * The preferred TextAppearance for the primary text of small list items.
      * <p>May be a reference to another resource, in the form
@@ -2069,7 +2134,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceListItemSmall=0x7f0200e5;
+    public static final int textAppearanceListItemSmall=0x7f0200eb;
     /**
      * Text color, typeface, size, and style for header text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
@@ -2077,7 +2142,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearancePopupMenuHeader=0x7f0200e6;
+    public static final int textAppearancePopupMenuHeader=0x7f0200ec;
     /**
      * Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color.
      * <p>May be a reference to another resource, in the form
@@ -2085,7 +2150,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceSearchResultSubtitle=0x7f0200e7;
+    public static final int textAppearanceSearchResultSubtitle=0x7f0200ed;
     /**
      * Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color.
      * <p>May be a reference to another resource, in the form
@@ -2093,7 +2158,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceSearchResultTitle=0x7f0200e8;
+    public static final int textAppearanceSearchResultTitle=0x7f0200ee;
     /**
      * Text color, typeface, size, and style for small text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
@@ -2101,7 +2166,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceSmallPopupMenu=0x7f0200e9;
+    public static final int textAppearanceSmallPopupMenu=0x7f0200ef;
     /**
      * Color of list item text in alert dialogs.
      * <p>May be a reference to another resource, in the form
@@ -2112,7 +2177,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int textColorAlertDialogListItem=0x7f0200ea;
+    public static final int textColorAlertDialogListItem=0x7f0200f0;
     /**
      * Text color for urls in search suggestions, used by things like global search
      * <p>May be a reference to another resource, in the form
@@ -2123,7 +2188,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int textColorSearchUrl=0x7f0200eb;
+    public static final int textColorSearchUrl=0x7f0200f1;
     /**
      * Set the textLocale by a comma-separated language tag string,
      * for example "ja-JP,zh-CN". This attribute only takes effect on API 21 and above.
@@ -2133,7 +2198,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int textLocale=0x7f0200ec;
+    public static final int textLocale=0x7f0200f2;
     /**
      * Deprecated.
      * <p>May be a reference to another resource, in the form
@@ -2141,7 +2206,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int theme=0x7f0200ed;
+    public static final int theme=0x7f0200f3;
     /**
      * The thickness (stroke size) for the bar paint
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2150,7 +2215,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int thickness=0x7f0200ee;
+    public static final int thickness=0x7f0200f4;
     /**
      * Amount of padding on either side of text within the switch thumb.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2159,14 +2224,14 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int thumbTextPadding=0x7f0200ef;
+    public static final int thumbTextPadding=0x7f0200f5;
     /**
      * Tint to apply to the thumb drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int thumbTint=0x7f0200f0;
+    public static final int thumbTint=0x7f0200f6;
     /**
      * Blending mode used to apply the thumb tint.
      * <p>Must be one of the following constant values.</p>
@@ -2188,7 +2253,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int thumbTintMode=0x7f0200f1;
+    public static final int thumbTintMode=0x7f0200f7;
     /**
      * Drawable displayed at each progress position on a seekbar.
      * <p>May be a reference to another resource, in the form
@@ -2196,14 +2261,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tickMark=0x7f0200f2;
+    public static final int tickMark=0x7f0200f8;
     /**
      * Tint to apply to the tick mark drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tickMarkTint=0x7f0200f3;
+    public static final int tickMarkTint=0x7f0200f9;
     /**
      * Blending mode used to apply the tick mark tint.
      * <p>Must be one of the following constant values.</p>
@@ -2225,14 +2290,14 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int tickMarkTintMode=0x7f0200f4;
+    public static final int tickMarkTintMode=0x7f0200fa;
     /**
      * Tint to apply to the image source.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tint=0x7f0200f5;
+    public static final int tint=0x7f0200fb;
     /**
      * Blending mode used to apply the image source tint.
      * <p>Must be one of the following constant values.</p>
@@ -2254,12 +2319,12 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int tintMode=0x7f0200f6;
+    public static final int tintMode=0x7f0200fc;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int title=0x7f0200f7;
+    public static final int title=0x7f0200fd;
     /**
      * Specifies extra space on the left, start, right and end sides
      * of the toolbar's title. Margin values should be positive.
@@ -2269,7 +2334,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMargin=0x7f0200f8;
+    public static final int titleMargin=0x7f0200fe;
     /**
      * Specifies extra space on the bottom side of the toolbar's title.
      * If both this attribute and titleMargin are specified, then this
@@ -2280,7 +2345,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginBottom=0x7f0200f9;
+    public static final int titleMarginBottom=0x7f0200ff;
     /**
      * Specifies extra space on the end side of the toolbar's title.
      * If both this attribute and titleMargin are specified, then this
@@ -2291,7 +2356,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginEnd=0x7f0200fa;
+    public static final int titleMarginEnd=0x7f020100;
     /**
      * Specifies extra space on the start side of the toolbar's title.
      * If both this attribute and titleMargin are specified, then this
@@ -2302,7 +2367,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginStart=0x7f0200fb;
+    public static final int titleMarginStart=0x7f020101;
     /**
      * Specifies extra space on the top side of the toolbar's title.
      * If both this attribute and titleMargin are specified, then this
@@ -2313,7 +2378,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginTop=0x7f0200fc;
+    public static final int titleMarginTop=0x7f020102;
     /**
      * {@deprecated Use titleMargin}
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2323,21 +2388,21 @@ public final class R {
      * mm (millimeters).
      */
     @Deprecated
-    public static final int titleMargins=0x7f0200fd;
+    public static final int titleMargins=0x7f020103;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int titleTextAppearance=0x7f0200fe;
+    public static final int titleTextAppearance=0x7f020104;
     /**
      * A color to apply to the title string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int titleTextColor=0x7f0200ff;
+    public static final int titleTextColor=0x7f020105;
     /**
      * Specifies a style to use for title text.
      * <p>May be a reference to another resource, in the form
@@ -2345,7 +2410,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int titleTextStyle=0x7f020100;
+    public static final int titleTextStyle=0x7f020106;
     /**
      * Default Toolar NavigationButtonStyle
      * <p>May be a reference to another resource, in the form
@@ -2353,7 +2418,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarNavigationButtonStyle=0x7f020101;
+    public static final int toolbarNavigationButtonStyle=0x7f020107;
     /**
      * Default Toolbar style.
      * <p>May be a reference to another resource, in the form
@@ -2361,7 +2426,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarStyle=0x7f020102;
+    public static final int toolbarStyle=0x7f020108;
     /**
      * Foreground color to use for tooltips
      * <p>May be a reference to another resource, in the form
@@ -2372,7 +2437,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tooltipForegroundColor=0x7f020103;
+    public static final int tooltipForegroundColor=0x7f020109;
     /**
      * Background to use for tooltips
      * <p>May be a reference to another resource, in the form
@@ -2380,13 +2445,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tooltipFrameBackground=0x7f020104;
+    public static final int tooltipFrameBackground=0x7f02010a;
     /**
      * The tooltip text associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int tooltipText=0x7f020105;
+    public static final int tooltipText=0x7f02010b;
     /**
      * Drawable to use as the "track" that the switch thumb slides within.
      * <p>May be a reference to another resource, in the form
@@ -2394,14 +2459,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int track=0x7f020106;
+    public static final int track=0x7f02010c;
     /**
      * Tint to apply to the track.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int trackTint=0x7f020107;
+    public static final int trackTint=0x7f02010d;
     /**
      * Blending mode used to apply the track tint.
      * <p>Must be one of the following constant values.</p>
@@ -2423,52 +2488,52 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int trackTintMode=0x7f020108;
+    public static final int trackTintMode=0x7f02010e;
     /**
      * The index of the font in the tcc font file. If the font file referenced is not in the
      * tcc format, this attribute needs not be specified.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ttcIndex=0x7f020109;
+    public static final int ttcIndex=0x7f02010f;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int ucrop_artv_ratio_title=0x7f02010a;
+    public static final int ucrop_artv_ratio_title=0x7f020110;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int ucrop_artv_ratio_x=0x7f02010b;
+    public static final int ucrop_artv_ratio_x=0x7f020111;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int ucrop_artv_ratio_y=0x7f02010c;
+    public static final int ucrop_artv_ratio_y=0x7f020112;
     /**
      * Crop image view
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int ucrop_aspect_ratio_x=0x7f02010d;
+    public static final int ucrop_aspect_ratio_x=0x7f020113;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int ucrop_aspect_ratio_y=0x7f02010e;
+    public static final int ucrop_aspect_ratio_y=0x7f020114;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int ucrop_circle_dimmed_layer=0x7f02010f;
+    public static final int ucrop_circle_dimmed_layer=0x7f020115;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int ucrop_dimmed_color=0x7f020110;
+    public static final int ucrop_dimmed_color=0x7f020116;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int ucrop_frame_color=0x7f020111;
+    public static final int ucrop_frame_color=0x7f020117;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2476,21 +2541,21 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int ucrop_frame_stroke_size=0x7f020112;
+    public static final int ucrop_frame_stroke_size=0x7f020118;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int ucrop_grid_color=0x7f020113;
+    public static final int ucrop_grid_color=0x7f020119;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ucrop_grid_column_count=0x7f020114;
+    public static final int ucrop_grid_column_count=0x7f02011a;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ucrop_grid_row_count=0x7f020115;
+    public static final int ucrop_grid_row_count=0x7f02011b;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2498,28 +2563,28 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int ucrop_grid_stroke_size=0x7f020116;
+    public static final int ucrop_grid_stroke_size=0x7f02011c;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int ucrop_show_frame=0x7f020117;
+    public static final int ucrop_show_frame=0x7f02011d;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int ucrop_show_grid=0x7f020118;
+    public static final int ucrop_show_grid=0x7f02011e;
     /**
      * Overlay view
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int ucrop_show_oval_crop_frame=0x7f020119;
+    public static final int ucrop_show_oval_crop_frame=0x7f02011f;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int viewInflaterClass=0x7f02011a;
+    public static final int viewInflaterClass=0x7f020120;
     /**
      * Voice button icon
      * <p>May be a reference to another resource, in the form
@@ -2527,14 +2592,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int voiceIcon=0x7f02011b;
+    public static final int voiceIcon=0x7f020121;
     /**
      * Flag indicating whether this window should have an Action Bar
      * in place of the usual title bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBar=0x7f02011c;
+    public static final int windowActionBar=0x7f020122;
     /**
      * Flag indicating whether this window's Action Bar should overlay
      * application content. Does nothing if the window would not
@@ -2542,14 +2607,14 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBarOverlay=0x7f02011d;
+    public static final int windowActionBarOverlay=0x7f020123;
     /**
      * Flag indicating whether action modes should overlay window content
      * when there is not reserved space for their UI (such as an Action Bar).
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionModeOverlay=0x7f02011e;
+    public static final int windowActionModeOverlay=0x7f020124;
     /**
      * A fixed height for the window along the major axis of the screen,
      * that is, when in portrait. Can be either an absolute dimension
@@ -2564,7 +2629,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMajor=0x7f02011f;
+    public static final int windowFixedHeightMajor=0x7f020125;
     /**
      * A fixed height for the window along the minor axis of the screen,
      * that is, when in landscape. Can be either an absolute dimension
@@ -2579,7 +2644,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMinor=0x7f020120;
+    public static final int windowFixedHeightMinor=0x7f020126;
     /**
      * A fixed width for the window along the major axis of the screen,
      * that is, when in landscape. Can be either an absolute dimension
@@ -2594,7 +2659,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMajor=0x7f020121;
+    public static final int windowFixedWidthMajor=0x7f020127;
     /**
      * A fixed width for the window along the minor axis of the screen,
      * that is, when in portrait. Can be either an absolute dimension
@@ -2609,7 +2674,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMinor=0x7f020122;
+    public static final int windowFixedWidthMinor=0x7f020128;
     /**
      * The minimum width the window is allowed to be, along the major
      * axis of the screen.  That is, when in landscape.  Can be either
@@ -2625,7 +2690,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMajor=0x7f020123;
+    public static final int windowMinWidthMajor=0x7f020129;
     /**
      * The minimum width the window is allowed to be, along the minor
      * axis of the screen.  That is, when in portrait.  Can be either
@@ -2641,13 +2706,13 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMinor=0x7f020124;
+    public static final int windowMinWidthMinor=0x7f02012a;
     /**
      * Flag indicating whether there should be no title on this window.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowNoTitle=0x7f020125;
+    public static final int windowNoTitle=0x7f02012b;
   }
   public static final class bool {
     public static final int abc_action_bar_embed_tabs=0x7f030000;
@@ -2693,77 +2758,88 @@ public final class R {
     public static final int bright_foreground_material_light=0x7f040023;
     public static final int button_material_dark=0x7f040024;
     public static final int button_material_light=0x7f040025;
-    public static final int dim_foreground_disabled_material_dark=0x7f040026;
-    public static final int dim_foreground_disabled_material_light=0x7f040027;
-    public static final int dim_foreground_material_dark=0x7f040028;
-    public static final int dim_foreground_material_light=0x7f040029;
-    public static final int error_color_material_dark=0x7f04002a;
-    public static final int error_color_material_light=0x7f04002b;
-    public static final int foreground_material_dark=0x7f04002c;
-    public static final int foreground_material_light=0x7f04002d;
-    public static final int highlighted_text_material_dark=0x7f04002e;
-    public static final int highlighted_text_material_light=0x7f04002f;
-    public static final int material_blue_grey_800=0x7f040030;
-    public static final int material_blue_grey_900=0x7f040031;
-    public static final int material_blue_grey_950=0x7f040032;
-    public static final int material_deep_teal_200=0x7f040033;
-    public static final int material_deep_teal_500=0x7f040034;
-    public static final int material_grey_100=0x7f040035;
-    public static final int material_grey_300=0x7f040036;
-    public static final int material_grey_50=0x7f040037;
-    public static final int material_grey_600=0x7f040038;
-    public static final int material_grey_800=0x7f040039;
-    public static final int material_grey_850=0x7f04003a;
-    public static final int material_grey_900=0x7f04003b;
-    public static final int notification_action_color_filter=0x7f04003c;
-    public static final int notification_icon_bg_color=0x7f04003d;
-    public static final int primary_dark_material_dark=0x7f04003e;
-    public static final int primary_dark_material_light=0x7f04003f;
-    public static final int primary_material_dark=0x7f040040;
-    public static final int primary_material_light=0x7f040041;
-    public static final int primary_text_default_material_dark=0x7f040042;
-    public static final int primary_text_default_material_light=0x7f040043;
-    public static final int primary_text_disabled_material_dark=0x7f040044;
-    public static final int primary_text_disabled_material_light=0x7f040045;
-    public static final int ripple_material_dark=0x7f040046;
-    public static final int ripple_material_light=0x7f040047;
-    public static final int secondary_text_default_material_dark=0x7f040048;
-    public static final int secondary_text_default_material_light=0x7f040049;
-    public static final int secondary_text_disabled_material_dark=0x7f04004a;
-    public static final int secondary_text_disabled_material_light=0x7f04004b;
-    public static final int switch_thumb_disabled_material_dark=0x7f04004c;
-    public static final int switch_thumb_disabled_material_light=0x7f04004d;
-    public static final int switch_thumb_material_dark=0x7f04004e;
-    public static final int switch_thumb_material_light=0x7f04004f;
-    public static final int switch_thumb_normal_material_dark=0x7f040050;
-    public static final int switch_thumb_normal_material_light=0x7f040051;
-    public static final int tooltip_background_dark=0x7f040052;
-    public static final int tooltip_background_light=0x7f040053;
-    public static final int ucrop_color_active_aspect_ratio=0x7f040054;
-    public static final int ucrop_color_active_controls_color=0x7f040055;
-    public static final int ucrop_color_black=0x7f040056;
-    public static final int ucrop_color_blaze_orange=0x7f040057;
-    public static final int ucrop_color_crop_background=0x7f040058;
-    public static final int ucrop_color_default_crop_frame=0x7f040059;
-    public static final int ucrop_color_default_crop_grid=0x7f04005a;
-    public static final int ucrop_color_default_dimmed=0x7f04005b;
-    public static final int ucrop_color_default_logo=0x7f04005c;
-    public static final int ucrop_color_ebony_clay=0x7f04005d;
-    public static final int ucrop_color_heather=0x7f04005e;
-    public static final int ucrop_color_inactive_aspect_ratio=0x7f04005f;
-    public static final int ucrop_color_inactive_controls_color=0x7f040060;
-    public static final int ucrop_color_progress_wheel_line=0x7f040061;
-    public static final int ucrop_color_statusbar=0x7f040062;
-    public static final int ucrop_color_toolbar=0x7f040063;
-    public static final int ucrop_color_toolbar_widget=0x7f040064;
-    public static final int ucrop_color_white=0x7f040065;
-    public static final int ucrop_color_widget=0x7f040066;
-    public static final int ucrop_color_widget_active=0x7f040067;
-    public static final int ucrop_color_widget_background=0x7f040068;
-    public static final int ucrop_color_widget_rotate_angle=0x7f040069;
-    public static final int ucrop_color_widget_rotate_mid_line=0x7f04006a;
-    public static final int ucrop_color_widget_text=0x7f04006b;
-    public static final int ucrop_scale_text_view_selector=0x7f04006c;
+    public static final int common_google_signin_btn_text_dark=0x7f040026;
+    public static final int common_google_signin_btn_text_dark_default=0x7f040027;
+    public static final int common_google_signin_btn_text_dark_disabled=0x7f040028;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f040029;
+    public static final int common_google_signin_btn_text_dark_pressed=0x7f04002a;
+    public static final int common_google_signin_btn_text_light=0x7f04002b;
+    public static final int common_google_signin_btn_text_light_default=0x7f04002c;
+    public static final int common_google_signin_btn_text_light_disabled=0x7f04002d;
+    public static final int common_google_signin_btn_text_light_focused=0x7f04002e;
+    public static final int common_google_signin_btn_text_light_pressed=0x7f04002f;
+    public static final int common_google_signin_btn_tint=0x7f040030;
+    public static final int dim_foreground_disabled_material_dark=0x7f040031;
+    public static final int dim_foreground_disabled_material_light=0x7f040032;
+    public static final int dim_foreground_material_dark=0x7f040033;
+    public static final int dim_foreground_material_light=0x7f040034;
+    public static final int error_color_material_dark=0x7f040035;
+    public static final int error_color_material_light=0x7f040036;
+    public static final int foreground_material_dark=0x7f040037;
+    public static final int foreground_material_light=0x7f040038;
+    public static final int highlighted_text_material_dark=0x7f040039;
+    public static final int highlighted_text_material_light=0x7f04003a;
+    public static final int material_blue_grey_800=0x7f04003b;
+    public static final int material_blue_grey_900=0x7f04003c;
+    public static final int material_blue_grey_950=0x7f04003d;
+    public static final int material_deep_teal_200=0x7f04003e;
+    public static final int material_deep_teal_500=0x7f04003f;
+    public static final int material_grey_100=0x7f040040;
+    public static final int material_grey_300=0x7f040041;
+    public static final int material_grey_50=0x7f040042;
+    public static final int material_grey_600=0x7f040043;
+    public static final int material_grey_800=0x7f040044;
+    public static final int material_grey_850=0x7f040045;
+    public static final int material_grey_900=0x7f040046;
+    public static final int notification_action_color_filter=0x7f040047;
+    public static final int notification_icon_bg_color=0x7f040048;
+    public static final int primary_dark_material_dark=0x7f040049;
+    public static final int primary_dark_material_light=0x7f04004a;
+    public static final int primary_material_dark=0x7f04004b;
+    public static final int primary_material_light=0x7f04004c;
+    public static final int primary_text_default_material_dark=0x7f04004d;
+    public static final int primary_text_default_material_light=0x7f04004e;
+    public static final int primary_text_disabled_material_dark=0x7f04004f;
+    public static final int primary_text_disabled_material_light=0x7f040050;
+    public static final int ripple_material_dark=0x7f040051;
+    public static final int ripple_material_light=0x7f040052;
+    public static final int secondary_text_default_material_dark=0x7f040053;
+    public static final int secondary_text_default_material_light=0x7f040054;
+    public static final int secondary_text_disabled_material_dark=0x7f040055;
+    public static final int secondary_text_disabled_material_light=0x7f040056;
+    public static final int switch_thumb_disabled_material_dark=0x7f040057;
+    public static final int switch_thumb_disabled_material_light=0x7f040058;
+    public static final int switch_thumb_material_dark=0x7f040059;
+    public static final int switch_thumb_material_light=0x7f04005a;
+    public static final int switch_thumb_normal_material_dark=0x7f04005b;
+    public static final int switch_thumb_normal_material_light=0x7f04005c;
+    public static final int tooltip_background_dark=0x7f04005d;
+    public static final int tooltip_background_light=0x7f04005e;
+    public static final int ucrop_color_active_aspect_ratio=0x7f04005f;
+    public static final int ucrop_color_active_controls_color=0x7f040060;
+    public static final int ucrop_color_black=0x7f040061;
+    public static final int ucrop_color_blaze_orange=0x7f040062;
+    public static final int ucrop_color_crop_background=0x7f040063;
+    public static final int ucrop_color_default_crop_frame=0x7f040064;
+    public static final int ucrop_color_default_crop_grid=0x7f040065;
+    public static final int ucrop_color_default_dimmed=0x7f040066;
+    public static final int ucrop_color_default_logo=0x7f040067;
+    public static final int ucrop_color_ebony_clay=0x7f040068;
+    public static final int ucrop_color_heather=0x7f040069;
+    public static final int ucrop_color_inactive_aspect_ratio=0x7f04006a;
+    public static final int ucrop_color_inactive_controls_color=0x7f04006b;
+    public static final int ucrop_color_progress_wheel_line=0x7f04006c;
+    public static final int ucrop_color_statusbar=0x7f04006d;
+    public static final int ucrop_color_toolbar=0x7f04006e;
+    public static final int ucrop_color_toolbar_widget=0x7f04006f;
+    public static final int ucrop_color_white=0x7f040070;
+    public static final int ucrop_color_widget=0x7f040071;
+    public static final int ucrop_color_widget_active=0x7f040072;
+    public static final int ucrop_color_widget_background=0x7f040073;
+    public static final int ucrop_color_widget_rotate_angle=0x7f040074;
+    public static final int ucrop_color_widget_rotate_mid_line=0x7f040075;
+    public static final int ucrop_color_widget_text=0x7f040076;
+    public static final int ucrop_scale_text_view_selector=0x7f040077;
   }
   public static final class dimen {
     public static final int abc_action_bar_content_inset_material=0x7f050000;
@@ -3001,40 +3077,61 @@ public final class R {
     public static final int btn_radio_off_to_on_mtrl_animation=0x7f06005b;
     public static final int btn_radio_on_mtrl=0x7f06005c;
     public static final int btn_radio_on_to_off_mtrl_animation=0x7f06005d;
-    public static final int launch_background=0x7f06005e;
-    public static final int notification_action_background=0x7f06005f;
-    public static final int notification_bg=0x7f060060;
-    public static final int notification_bg_low=0x7f060061;
-    public static final int notification_bg_low_normal=0x7f060062;
-    public static final int notification_bg_low_pressed=0x7f060063;
-    public static final int notification_bg_normal=0x7f060064;
-    public static final int notification_bg_normal_pressed=0x7f060065;
-    public static final int notification_icon_background=0x7f060066;
-    public static final int notification_template_icon_bg=0x7f060067;
-    public static final int notification_template_icon_low_bg=0x7f060068;
-    public static final int notification_tile_bg=0x7f060069;
-    public static final int notify_panel_notification_icon_bg=0x7f06006a;
-    public static final int tooltip_frame_dark=0x7f06006b;
-    public static final int tooltip_frame_light=0x7f06006c;
-    public static final int ucrop_crop=0x7f06006d;
-    public static final int ucrop_ic_angle=0x7f06006e;
-    public static final int ucrop_ic_crop=0x7f06006f;
-    public static final int ucrop_ic_crop_unselected=0x7f060070;
-    public static final int ucrop_ic_cross=0x7f060071;
-    public static final int ucrop_ic_done=0x7f060072;
-    public static final int ucrop_ic_next=0x7f060073;
-    public static final int ucrop_ic_reset=0x7f060074;
-    public static final int ucrop_ic_rotate=0x7f060075;
-    public static final int ucrop_ic_rotate_unselected=0x7f060076;
-    public static final int ucrop_ic_scale=0x7f060077;
-    public static final int ucrop_ic_scale_unselected=0x7f060078;
-    public static final int ucrop_rotate=0x7f060079;
-    public static final int ucrop_scale=0x7f06007a;
-    public static final int ucrop_shadow_upside=0x7f06007b;
-    public static final int ucrop_vector_ic_crop=0x7f06007c;
-    public static final int ucrop_vector_loader=0x7f06007d;
-    public static final int ucrop_vector_loader_animated=0x7f06007e;
-    public static final int ucrop_wrapper_controls_shape=0x7f06007f;
+    public static final int common_full_open_on_phone=0x7f06005e;
+    public static final int common_google_signin_btn_icon_dark=0x7f06005f;
+    public static final int common_google_signin_btn_icon_dark_focused=0x7f060060;
+    public static final int common_google_signin_btn_icon_dark_normal=0x7f060061;
+    public static final int common_google_signin_btn_icon_dark_normal_background=0x7f060062;
+    public static final int common_google_signin_btn_icon_disabled=0x7f060063;
+    public static final int common_google_signin_btn_icon_light=0x7f060064;
+    public static final int common_google_signin_btn_icon_light_focused=0x7f060065;
+    public static final int common_google_signin_btn_icon_light_normal=0x7f060066;
+    public static final int common_google_signin_btn_icon_light_normal_background=0x7f060067;
+    public static final int common_google_signin_btn_text_dark=0x7f060068;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f060069;
+    public static final int common_google_signin_btn_text_dark_normal=0x7f06006a;
+    public static final int common_google_signin_btn_text_dark_normal_background=0x7f06006b;
+    public static final int common_google_signin_btn_text_disabled=0x7f06006c;
+    public static final int common_google_signin_btn_text_light=0x7f06006d;
+    public static final int common_google_signin_btn_text_light_focused=0x7f06006e;
+    public static final int common_google_signin_btn_text_light_normal=0x7f06006f;
+    public static final int common_google_signin_btn_text_light_normal_background=0x7f060070;
+    public static final int googleg_disabled_color_18=0x7f060071;
+    public static final int googleg_standard_color_18=0x7f060072;
+    public static final int launch_background=0x7f060073;
+    public static final int notification_action_background=0x7f060074;
+    public static final int notification_bg=0x7f060075;
+    public static final int notification_bg_low=0x7f060076;
+    public static final int notification_bg_low_normal=0x7f060077;
+    public static final int notification_bg_low_pressed=0x7f060078;
+    public static final int notification_bg_normal=0x7f060079;
+    public static final int notification_bg_normal_pressed=0x7f06007a;
+    public static final int notification_icon_background=0x7f06007b;
+    public static final int notification_template_icon_bg=0x7f06007c;
+    public static final int notification_template_icon_low_bg=0x7f06007d;
+    public static final int notification_tile_bg=0x7f06007e;
+    public static final int notify_panel_notification_icon_bg=0x7f06007f;
+    public static final int tooltip_frame_dark=0x7f060080;
+    public static final int tooltip_frame_light=0x7f060081;
+    public static final int ucrop_crop=0x7f060082;
+    public static final int ucrop_ic_angle=0x7f060083;
+    public static final int ucrop_ic_crop=0x7f060084;
+    public static final int ucrop_ic_crop_unselected=0x7f060085;
+    public static final int ucrop_ic_cross=0x7f060086;
+    public static final int ucrop_ic_done=0x7f060087;
+    public static final int ucrop_ic_next=0x7f060088;
+    public static final int ucrop_ic_reset=0x7f060089;
+    public static final int ucrop_ic_rotate=0x7f06008a;
+    public static final int ucrop_ic_rotate_unselected=0x7f06008b;
+    public static final int ucrop_ic_scale=0x7f06008c;
+    public static final int ucrop_ic_scale_unselected=0x7f06008d;
+    public static final int ucrop_rotate=0x7f06008e;
+    public static final int ucrop_scale=0x7f06008f;
+    public static final int ucrop_shadow_upside=0x7f060090;
+    public static final int ucrop_vector_ic_crop=0x7f060091;
+    public static final int ucrop_vector_loader=0x7f060092;
+    public static final int ucrop_vector_loader_animated=0x7f060093;
+    public static final int ucrop_wrapper_controls_shape=0x7f060094;
   }
   public static final class id {
     public static final int ALT=0x7f070000;
@@ -3096,160 +3193,169 @@ public final class R {
     public static final int actions=0x7f070038;
     public static final int activity_chooser_view_content=0x7f070039;
     public static final int add=0x7f07003a;
-    public static final int alertTitle=0x7f07003b;
-    public static final int always=0x7f07003c;
-    public static final int async=0x7f07003d;
-    public static final int beginning=0x7f07003e;
-    public static final int blocking=0x7f07003f;
-    public static final int bottom=0x7f070040;
-    public static final int buttonPanel=0x7f070041;
-    public static final int center_vertical=0x7f070042;
-    public static final int checkbox=0x7f070043;
-    public static final int checked=0x7f070044;
-    public static final int chronometer=0x7f070045;
-    public static final int collapseActionView=0x7f070046;
-    public static final int content=0x7f070047;
-    public static final int contentPanel=0x7f070048;
-    public static final int controls_shadow=0x7f070049;
-    public static final int controls_wrapper=0x7f07004a;
-    public static final int custom=0x7f07004b;
-    public static final int customPanel=0x7f07004c;
-    public static final int decor_content_parent=0x7f07004d;
-    public static final int default_activity_button=0x7f07004e;
-    public static final int dialog_button=0x7f07004f;
-    public static final int disableHome=0x7f070050;
-    public static final int edit_query=0x7f070051;
-    public static final int end=0x7f070052;
-    public static final int expand_activities_button=0x7f070053;
-    public static final int expanded_menu=0x7f070054;
-    public static final int forever=0x7f070055;
-    public static final int ghost_view=0x7f070056;
-    public static final int ghost_view_holder=0x7f070057;
-    public static final int group_divider=0x7f070058;
-    public static final int home=0x7f070059;
-    public static final int homeAsUp=0x7f07005a;
-    public static final int icon=0x7f07005b;
-    public static final int icon_group=0x7f07005c;
-    public static final int ifRoom=0x7f07005d;
-    public static final int image=0x7f07005e;
-    public static final int image_view_crop=0x7f07005f;
-    public static final int image_view_logo=0x7f070060;
-    public static final int image_view_state_aspect_ratio=0x7f070061;
-    public static final int image_view_state_rotate=0x7f070062;
-    public static final int image_view_state_scale=0x7f070063;
-    public static final int info=0x7f070064;
-    public static final int italic=0x7f070065;
-    public static final int layout_aspect_ratio=0x7f070066;
-    public static final int layout_rotate_wheel=0x7f070067;
-    public static final int layout_scale_wheel=0x7f070068;
-    public static final int line1=0x7f070069;
-    public static final int line3=0x7f07006a;
-    public static final int listMode=0x7f07006b;
-    public static final int list_item=0x7f07006c;
-    public static final int menu_crop=0x7f07006d;
-    public static final int menu_loader=0x7f07006e;
-    public static final int message=0x7f07006f;
-    public static final int middle=0x7f070070;
-    public static final int multiply=0x7f070071;
-    public static final int never=0x7f070072;
-    public static final int none=0x7f070073;
-    public static final int normal=0x7f070074;
-    public static final int notification_background=0x7f070075;
-    public static final int notification_main_column=0x7f070076;
-    public static final int notification_main_column_container=0x7f070077;
-    public static final int off=0x7f070078;
-    public static final int on=0x7f070079;
-    public static final int parentPanel=0x7f07007a;
-    public static final int parent_matrix=0x7f07007b;
-    public static final int progress_circular=0x7f07007c;
-    public static final int progress_horizontal=0x7f07007d;
-    public static final int radio=0x7f07007e;
-    public static final int right_icon=0x7f07007f;
-    public static final int right_side=0x7f070080;
-    public static final int rotate_scroll_wheel=0x7f070081;
-    public static final int save_non_transition_alpha=0x7f070082;
-    public static final int save_overlay_view=0x7f070083;
-    public static final int scale_scroll_wheel=0x7f070084;
-    public static final int screen=0x7f070085;
-    public static final int scrollIndicatorDown=0x7f070086;
-    public static final int scrollIndicatorUp=0x7f070087;
-    public static final int scrollView=0x7f070088;
-    public static final int search_badge=0x7f070089;
-    public static final int search_bar=0x7f07008a;
-    public static final int search_button=0x7f07008b;
-    public static final int search_close_btn=0x7f07008c;
-    public static final int search_edit_frame=0x7f07008d;
-    public static final int search_go_btn=0x7f07008e;
-    public static final int search_mag_icon=0x7f07008f;
-    public static final int search_plate=0x7f070090;
-    public static final int search_src_text=0x7f070091;
-    public static final int search_voice_btn=0x7f070092;
-    public static final int select_dialog_listview=0x7f070093;
-    public static final int shortcut=0x7f070094;
-    public static final int showCustom=0x7f070095;
-    public static final int showHome=0x7f070096;
-    public static final int showTitle=0x7f070097;
-    public static final int spacer=0x7f070098;
-    public static final int split_action_bar=0x7f070099;
-    public static final int src_atop=0x7f07009a;
-    public static final int src_in=0x7f07009b;
-    public static final int src_over=0x7f07009c;
-    public static final int state_aspect_ratio=0x7f07009d;
-    public static final int state_rotate=0x7f07009e;
-    public static final int state_scale=0x7f07009f;
-    public static final int submenuarrow=0x7f0700a0;
-    public static final int submit_area=0x7f0700a1;
-    public static final int tabMode=0x7f0700a2;
-    public static final int tag_accessibility_actions=0x7f0700a3;
-    public static final int tag_accessibility_clickable_spans=0x7f0700a4;
-    public static final int tag_accessibility_heading=0x7f0700a5;
-    public static final int tag_accessibility_pane_title=0x7f0700a6;
-    public static final int tag_screen_reader_focusable=0x7f0700a7;
-    public static final int tag_transition_group=0x7f0700a8;
-    public static final int tag_unhandled_key_event_manager=0x7f0700a9;
-    public static final int tag_unhandled_key_listeners=0x7f0700aa;
-    public static final int text=0x7f0700ab;
-    public static final int text2=0x7f0700ac;
-    public static final int textSpacerNoButtons=0x7f0700ad;
-    public static final int textSpacerNoTitle=0x7f0700ae;
-    public static final int text_view_crop=0x7f0700af;
-    public static final int text_view_rotate=0x7f0700b0;
-    public static final int text_view_scale=0x7f0700b1;
-    public static final int time=0x7f0700b2;
-    public static final int title=0x7f0700b3;
-    public static final int titleDividerNoCustom=0x7f0700b4;
-    public static final int title_template=0x7f0700b5;
-    public static final int toolbar=0x7f0700b6;
-    public static final int toolbar_title=0x7f0700b7;
-    public static final int top=0x7f0700b8;
-    public static final int topPanel=0x7f0700b9;
-    public static final int transition_current_scene=0x7f0700ba;
-    public static final int transition_layout_save=0x7f0700bb;
-    public static final int transition_position=0x7f0700bc;
-    public static final int transition_scene_layoutid_cache=0x7f0700bd;
-    public static final int transition_transform=0x7f0700be;
-    public static final int ucrop=0x7f0700bf;
-    public static final int ucrop_frame=0x7f0700c0;
-    public static final int ucrop_photobox=0x7f0700c1;
-    public static final int unchecked=0x7f0700c2;
-    public static final int uniform=0x7f0700c3;
-    public static final int up=0x7f0700c4;
-    public static final int useLogo=0x7f0700c5;
-    public static final int view_overlay=0x7f0700c6;
-    public static final int withText=0x7f0700c7;
-    public static final int wrap_content=0x7f0700c8;
-    public static final int wrapper_controls=0x7f0700c9;
-    public static final int wrapper_reset_rotate=0x7f0700ca;
-    public static final int wrapper_rotate_by_angle=0x7f0700cb;
-    public static final int wrapper_states=0x7f0700cc;
+    public static final int adjust_height=0x7f07003b;
+    public static final int adjust_width=0x7f07003c;
+    public static final int alertTitle=0x7f07003d;
+    public static final int always=0x7f07003e;
+    public static final int async=0x7f07003f;
+    public static final int auto=0x7f070040;
+    public static final int beginning=0x7f070041;
+    public static final int blocking=0x7f070042;
+    public static final int bottom=0x7f070043;
+    public static final int buttonPanel=0x7f070044;
+    public static final int center_vertical=0x7f070045;
+    public static final int checkbox=0x7f070046;
+    public static final int checked=0x7f070047;
+    public static final int chronometer=0x7f070048;
+    public static final int collapseActionView=0x7f070049;
+    public static final int content=0x7f07004a;
+    public static final int contentPanel=0x7f07004b;
+    public static final int controls_shadow=0x7f07004c;
+    public static final int controls_wrapper=0x7f07004d;
+    public static final int custom=0x7f07004e;
+    public static final int customPanel=0x7f07004f;
+    public static final int dark=0x7f070050;
+    public static final int decor_content_parent=0x7f070051;
+    public static final int default_activity_button=0x7f070052;
+    public static final int dialog_button=0x7f070053;
+    public static final int disableHome=0x7f070054;
+    public static final int edit_query=0x7f070055;
+    public static final int end=0x7f070056;
+    public static final int expand_activities_button=0x7f070057;
+    public static final int expanded_menu=0x7f070058;
+    public static final int forever=0x7f070059;
+    public static final int ghost_view=0x7f07005a;
+    public static final int ghost_view_holder=0x7f07005b;
+    public static final int group_divider=0x7f07005c;
+    public static final int home=0x7f07005d;
+    public static final int homeAsUp=0x7f07005e;
+    public static final int icon=0x7f07005f;
+    public static final int icon_group=0x7f070060;
+    public static final int icon_only=0x7f070061;
+    public static final int ifRoom=0x7f070062;
+    public static final int image=0x7f070063;
+    public static final int image_view_crop=0x7f070064;
+    public static final int image_view_logo=0x7f070065;
+    public static final int image_view_state_aspect_ratio=0x7f070066;
+    public static final int image_view_state_rotate=0x7f070067;
+    public static final int image_view_state_scale=0x7f070068;
+    public static final int info=0x7f070069;
+    public static final int italic=0x7f07006a;
+    public static final int layout_aspect_ratio=0x7f07006b;
+    public static final int layout_rotate_wheel=0x7f07006c;
+    public static final int layout_scale_wheel=0x7f07006d;
+    public static final int light=0x7f07006e;
+    public static final int line1=0x7f07006f;
+    public static final int line3=0x7f070070;
+    public static final int listMode=0x7f070071;
+    public static final int list_item=0x7f070072;
+    public static final int menu_crop=0x7f070073;
+    public static final int menu_loader=0x7f070074;
+    public static final int message=0x7f070075;
+    public static final int middle=0x7f070076;
+    public static final int multiply=0x7f070077;
+    public static final int never=0x7f070078;
+    public static final int none=0x7f070079;
+    public static final int normal=0x7f07007a;
+    public static final int notification_background=0x7f07007b;
+    public static final int notification_main_column=0x7f07007c;
+    public static final int notification_main_column_container=0x7f07007d;
+    public static final int off=0x7f07007e;
+    public static final int on=0x7f07007f;
+    public static final int parentPanel=0x7f070080;
+    public static final int parent_matrix=0x7f070081;
+    public static final int progress_circular=0x7f070082;
+    public static final int progress_horizontal=0x7f070083;
+    public static final int radio=0x7f070084;
+    public static final int right_icon=0x7f070085;
+    public static final int right_side=0x7f070086;
+    public static final int rotate_scroll_wheel=0x7f070087;
+    public static final int save_non_transition_alpha=0x7f070088;
+    public static final int save_overlay_view=0x7f070089;
+    public static final int scale_scroll_wheel=0x7f07008a;
+    public static final int screen=0x7f07008b;
+    public static final int scrollIndicatorDown=0x7f07008c;
+    public static final int scrollIndicatorUp=0x7f07008d;
+    public static final int scrollView=0x7f07008e;
+    public static final int search_badge=0x7f07008f;
+    public static final int search_bar=0x7f070090;
+    public static final int search_button=0x7f070091;
+    public static final int search_close_btn=0x7f070092;
+    public static final int search_edit_frame=0x7f070093;
+    public static final int search_go_btn=0x7f070094;
+    public static final int search_mag_icon=0x7f070095;
+    public static final int search_plate=0x7f070096;
+    public static final int search_src_text=0x7f070097;
+    public static final int search_voice_btn=0x7f070098;
+    public static final int select_dialog_listview=0x7f070099;
+    public static final int shortcut=0x7f07009a;
+    public static final int showCustom=0x7f07009b;
+    public static final int showHome=0x7f07009c;
+    public static final int showTitle=0x7f07009d;
+    public static final int spacer=0x7f07009e;
+    public static final int split_action_bar=0x7f07009f;
+    public static final int src_atop=0x7f0700a0;
+    public static final int src_in=0x7f0700a1;
+    public static final int src_over=0x7f0700a2;
+    public static final int standard=0x7f0700a3;
+    public static final int state_aspect_ratio=0x7f0700a4;
+    public static final int state_rotate=0x7f0700a5;
+    public static final int state_scale=0x7f0700a6;
+    public static final int submenuarrow=0x7f0700a7;
+    public static final int submit_area=0x7f0700a8;
+    public static final int tabMode=0x7f0700a9;
+    public static final int tag_accessibility_actions=0x7f0700aa;
+    public static final int tag_accessibility_clickable_spans=0x7f0700ab;
+    public static final int tag_accessibility_heading=0x7f0700ac;
+    public static final int tag_accessibility_pane_title=0x7f0700ad;
+    public static final int tag_screen_reader_focusable=0x7f0700ae;
+    public static final int tag_transition_group=0x7f0700af;
+    public static final int tag_unhandled_key_event_manager=0x7f0700b0;
+    public static final int tag_unhandled_key_listeners=0x7f0700b1;
+    public static final int text=0x7f0700b2;
+    public static final int text2=0x7f0700b3;
+    public static final int textSpacerNoButtons=0x7f0700b4;
+    public static final int textSpacerNoTitle=0x7f0700b5;
+    public static final int text_view_crop=0x7f0700b6;
+    public static final int text_view_rotate=0x7f0700b7;
+    public static final int text_view_scale=0x7f0700b8;
+    public static final int time=0x7f0700b9;
+    public static final int title=0x7f0700ba;
+    public static final int titleDividerNoCustom=0x7f0700bb;
+    public static final int title_template=0x7f0700bc;
+    public static final int toolbar=0x7f0700bd;
+    public static final int toolbar_title=0x7f0700be;
+    public static final int top=0x7f0700bf;
+    public static final int topPanel=0x7f0700c0;
+    public static final int transition_current_scene=0x7f0700c1;
+    public static final int transition_layout_save=0x7f0700c2;
+    public static final int transition_position=0x7f0700c3;
+    public static final int transition_scene_layoutid_cache=0x7f0700c4;
+    public static final int transition_transform=0x7f0700c5;
+    public static final int ucrop=0x7f0700c6;
+    public static final int ucrop_frame=0x7f0700c7;
+    public static final int ucrop_photobox=0x7f0700c8;
+    public static final int unchecked=0x7f0700c9;
+    public static final int uniform=0x7f0700ca;
+    public static final int up=0x7f0700cb;
+    public static final int useLogo=0x7f0700cc;
+    public static final int view_overlay=0x7f0700cd;
+    public static final int wide=0x7f0700ce;
+    public static final int withText=0x7f0700cf;
+    public static final int wrap_content=0x7f0700d0;
+    public static final int wrapper_controls=0x7f0700d1;
+    public static final int wrapper_reset_rotate=0x7f0700d2;
+    public static final int wrapper_rotate_by_angle=0x7f0700d3;
+    public static final int wrapper_states=0x7f0700d4;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f080000;
     public static final int abc_config_activityShortDur=0x7f080001;
     public static final int cancel_button_image_alpha=0x7f080002;
     public static final int config_tooltipAnimTime=0x7f080003;
-    public static final int status_bar_notification_info_maxnum=0x7f080004;
-    public static final int ucrop_progress_loading_anim_time=0x7f080005;
+    public static final int google_play_services_version=0x7f080004;
+    public static final int status_bar_notification_info_maxnum=0x7f080005;
+    public static final int ucrop_progress_loading_anim_time=0x7f080006;
   }
   public static final class interpolator {
     public static final int btn_checkbox_checked_mtrl_animation_interpolator_0=0x7f090000;
@@ -3342,16 +3448,42 @@ public final class R {
     public static final int abc_shareactionprovider_share_with=0x7f0d0018;
     public static final int abc_shareactionprovider_share_with_application=0x7f0d0019;
     public static final int abc_toolbar_collapse_description=0x7f0d001a;
-    public static final int search_menu_title=0x7f0d001b;
-    public static final int status_bar_notification_info_overflow=0x7f0d001c;
-    public static final int ucrop_crop=0x7f0d001d;
-    public static final int ucrop_error_input_data_is_absent=0x7f0d001e;
-    public static final int ucrop_label_edit_photo=0x7f0d001f;
-    public static final int ucrop_label_original=0x7f0d0020;
-    public static final int ucrop_menu_crop=0x7f0d0021;
-    public static final int ucrop_mutate_exception_hint=0x7f0d0022;
-    public static final int ucrop_rotate=0x7f0d0023;
-    public static final int ucrop_scale=0x7f0d0024;
+    public static final int common_google_play_services_enable_button=0x7f0d001b;
+    public static final int common_google_play_services_enable_text=0x7f0d001c;
+    public static final int common_google_play_services_enable_title=0x7f0d001d;
+    public static final int common_google_play_services_install_button=0x7f0d001e;
+    public static final int common_google_play_services_install_text=0x7f0d001f;
+    public static final int common_google_play_services_install_title=0x7f0d0020;
+    public static final int common_google_play_services_notification_channel_name=0x7f0d0021;
+    public static final int common_google_play_services_notification_ticker=0x7f0d0022;
+    public static final int common_google_play_services_unknown_issue=0x7f0d0023;
+    public static final int common_google_play_services_unsupported_text=0x7f0d0024;
+    public static final int common_google_play_services_update_button=0x7f0d0025;
+    public static final int common_google_play_services_update_text=0x7f0d0026;
+    public static final int common_google_play_services_update_title=0x7f0d0027;
+    public static final int common_google_play_services_updating_text=0x7f0d0028;
+    public static final int common_google_play_services_wear_update_text=0x7f0d0029;
+    public static final int common_open_on_phone=0x7f0d002a;
+    public static final int common_signin_button_text=0x7f0d002b;
+    public static final int common_signin_button_text_long=0x7f0d002c;
+    public static final int default_web_client_id=0x7f0d002d;
+    public static final int firebase_database_url=0x7f0d002e;
+    public static final int gcm_defaultSenderId=0x7f0d002f;
+    public static final int google_api_key=0x7f0d0030;
+    public static final int google_app_id=0x7f0d0031;
+    public static final int google_crash_reporting_api_key=0x7f0d0032;
+    public static final int google_storage_bucket=0x7f0d0033;
+    public static final int project_id=0x7f0d0034;
+    public static final int search_menu_title=0x7f0d0035;
+    public static final int status_bar_notification_info_overflow=0x7f0d0036;
+    public static final int ucrop_crop=0x7f0d0037;
+    public static final int ucrop_error_input_data_is_absent=0x7f0d0038;
+    public static final int ucrop_label_edit_photo=0x7f0d0039;
+    public static final int ucrop_label_original=0x7f0d003a;
+    public static final int ucrop_menu_crop=0x7f0d003b;
+    public static final int ucrop_mutate_exception_hint=0x7f0d003c;
+    public static final int ucrop_rotate=0x7f0d003d;
+    public static final int ucrop_scale=0x7f0d003e;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0e0000;
@@ -3720,39 +3852,39 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionBar_background com.example.custom_emojiboard:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundSplit com.example.custom_emojiboard:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundStacked com.example.custom_emojiboard:backgroundStacked}</code></td><td>Specifies a background drawable for a second stacked row of the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.example.custom_emojiboard:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.example.custom_emojiboard:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
+     * <tr><td><code>{@link #ActionBar_background me.awadahmed.custom_emojiboard:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundSplit me.awadahmed.custom_emojiboard:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundStacked me.awadahmed.custom_emojiboard:backgroundStacked}</code></td><td>Specifies a background drawable for a second stacked row of the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEnd me.awadahmed.custom_emojiboard:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEndWithActions me.awadahmed.custom_emojiboard:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
      * are present.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.example.custom_emojiboard:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetRight com.example.custom_emojiboard:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStart com.example.custom_emojiboard:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.example.custom_emojiboard:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
+     * <tr><td><code>{@link #ActionBar_contentInsetLeft me.awadahmed.custom_emojiboard:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetRight me.awadahmed.custom_emojiboard:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStart me.awadahmed.custom_emojiboard:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation me.awadahmed.custom_emojiboard:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
      * is present, such as the Up button.</td></tr>
-     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.example.custom_emojiboard:customNavigationLayout}</code></td><td>Specifies a layout for custom navigation.</td></tr>
-     * <tr><td><code>{@link #ActionBar_displayOptions com.example.custom_emojiboard:displayOptions}</code></td><td>Options affecting how the action bar is displayed.</td></tr>
-     * <tr><td><code>{@link #ActionBar_divider com.example.custom_emojiboard:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
-     * <tr><td><code>{@link #ActionBar_elevation com.example.custom_emojiboard:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
-     * <tr><td><code>{@link #ActionBar_height com.example.custom_emojiboard:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.example.custom_emojiboard:hideOnContentScroll}</code></td><td>Set true to hide the action bar on a vertical nested scroll of content.</td></tr>
-     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.example.custom_emojiboard:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
-     * <tr><td><code>{@link #ActionBar_homeLayout com.example.custom_emojiboard:homeLayout}</code></td><td>Specifies a layout to use for the "home" section of the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_icon com.example.custom_emojiboard:icon}</code></td><td>Specifies the drawable used for the application icon.</td></tr>
-     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.example.custom_emojiboard:indeterminateProgressStyle}</code></td><td>Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
-     * <tr><td><code>{@link #ActionBar_itemPadding com.example.custom_emojiboard:itemPadding}</code></td><td>Specifies padding that should be applied to the left and right sides of
+     * <tr><td><code>{@link #ActionBar_customNavigationLayout me.awadahmed.custom_emojiboard:customNavigationLayout}</code></td><td>Specifies a layout for custom navigation.</td></tr>
+     * <tr><td><code>{@link #ActionBar_displayOptions me.awadahmed.custom_emojiboard:displayOptions}</code></td><td>Options affecting how the action bar is displayed.</td></tr>
+     * <tr><td><code>{@link #ActionBar_divider me.awadahmed.custom_emojiboard:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
+     * <tr><td><code>{@link #ActionBar_elevation me.awadahmed.custom_emojiboard:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #ActionBar_height me.awadahmed.custom_emojiboard:height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_hideOnContentScroll me.awadahmed.custom_emojiboard:hideOnContentScroll}</code></td><td>Set true to hide the action bar on a vertical nested scroll of content.</td></tr>
+     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator me.awadahmed.custom_emojiboard:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
+     * <tr><td><code>{@link #ActionBar_homeLayout me.awadahmed.custom_emojiboard:homeLayout}</code></td><td>Specifies a layout to use for the "home" section of the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_icon me.awadahmed.custom_emojiboard:icon}</code></td><td>Specifies the drawable used for the application icon.</td></tr>
+     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle me.awadahmed.custom_emojiboard:indeterminateProgressStyle}</code></td><td>Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
+     * <tr><td><code>{@link #ActionBar_itemPadding me.awadahmed.custom_emojiboard:itemPadding}</code></td><td>Specifies padding that should be applied to the left and right sides of
      * system-provided items in the bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_logo com.example.custom_emojiboard:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
-     * <tr><td><code>{@link #ActionBar_navigationMode com.example.custom_emojiboard:navigationMode}</code></td><td>The type of navigation to use.</td></tr>
-     * <tr><td><code>{@link #ActionBar_popupTheme com.example.custom_emojiboard:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
+     * <tr><td><code>{@link #ActionBar_logo me.awadahmed.custom_emojiboard:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
+     * <tr><td><code>{@link #ActionBar_navigationMode me.awadahmed.custom_emojiboard:navigationMode}</code></td><td>The type of navigation to use.</td></tr>
+     * <tr><td><code>{@link #ActionBar_popupTheme me.awadahmed.custom_emojiboard:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
      * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarPadding com.example.custom_emojiboard:progressBarPadding}</code></td><td>Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarStyle com.example.custom_emojiboard:progressBarStyle}</code></td><td>Specifies a style resource to use for an embedded progress bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitle com.example.custom_emojiboard:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.example.custom_emojiboard:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
-     * <tr><td><code>{@link #ActionBar_title com.example.custom_emojiboard:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_titleTextStyle com.example.custom_emojiboard:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarPadding me.awadahmed.custom_emojiboard:progressBarPadding}</code></td><td>Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarStyle me.awadahmed.custom_emojiboard:progressBarStyle}</code></td><td>Specifies a style resource to use for an embedded progress bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitle me.awadahmed.custom_emojiboard:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitleTextStyle me.awadahmed.custom_emojiboard:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
+     * <tr><td><code>{@link #ActionBar_title me.awadahmed.custom_emojiboard:title}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_titleTextStyle me.awadahmed.custom_emojiboard:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
      * </table>
      * @see #ActionBar_background
      * @see #ActionBar_backgroundSplit
@@ -3785,14 +3917,14 @@ public final class R {
      * @see #ActionBar_titleTextStyle
      */
     public static final int[] ActionBar={
-      0x7f020031, 0x7f020032, 0x7f020033, 0x7f020058, 
-      0x7f020059, 0x7f02005a, 0x7f02005b, 0x7f02005c, 
-      0x7f02005d, 0x7f02005f, 0x7f020064, 0x7f020065, 
-      0x7f020078, 0x7f020088, 0x7f020089, 0x7f02008a, 
-      0x7f02008b, 0x7f02008c, 0x7f020091, 0x7f020094, 
-      0x7f0200a7, 0x7f0200af, 0x7f0200ba, 0x7f0200bd, 
-      0x7f0200be, 0x7f0200d8, 0x7f0200db, 0x7f0200f7, 
-      0x7f020100
+      0x7f020031, 0x7f020032, 0x7f020033, 0x7f02005b, 
+      0x7f02005c, 0x7f02005d, 0x7f02005e, 0x7f02005f, 
+      0x7f020060, 0x7f020062, 0x7f020067, 0x7f020068, 
+      0x7f02007b, 0x7f02008b, 0x7f02008c, 0x7f02008d, 
+      0x7f02008e, 0x7f02008f, 0x7f020096, 0x7f020099, 
+      0x7f0200ac, 0x7f0200b4, 0x7f0200bf, 0x7f0200c2, 
+      0x7f0200c3, 0x7f0200de, 0x7f0200e1, 0x7f0200fd, 
+      0x7f020106
     };
     /**
      * <p>
@@ -3804,7 +3936,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:background
+     * @attr name me.awadahmed.custom_emojiboard:background
      */
     public static final int ActionBar_background=0;
     /**
@@ -3820,7 +3952,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:backgroundSplit
+     * @attr name me.awadahmed.custom_emojiboard:backgroundSplit
      */
     public static final int ActionBar_backgroundSplit=1;
     /**
@@ -3836,7 +3968,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:backgroundStacked
+     * @attr name me.awadahmed.custom_emojiboard:backgroundStacked
      */
     public static final int ActionBar_backgroundStacked=2;
     /**
@@ -3851,7 +3983,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetEnd
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetEnd
      */
     public static final int ActionBar_contentInsetEnd=3;
     /**
@@ -3866,7 +3998,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetEndWithActions
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetEndWithActions
      */
     public static final int ActionBar_contentInsetEndWithActions=4;
     /**
@@ -3881,7 +4013,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetLeft
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetLeft
      */
     public static final int ActionBar_contentInsetLeft=5;
     /**
@@ -3896,7 +4028,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetRight
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetRight
      */
     public static final int ActionBar_contentInsetRight=6;
     /**
@@ -3911,7 +4043,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetStart
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetStart
      */
     public static final int ActionBar_contentInsetStart=7;
     /**
@@ -3926,7 +4058,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetStartWithNavigation
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetStartWithNavigation
      */
     public static final int ActionBar_contentInsetStartWithNavigation=8;
     /**
@@ -3939,7 +4071,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:customNavigationLayout
+     * @attr name me.awadahmed.custom_emojiboard:customNavigationLayout
      */
     public static final int ActionBar_customNavigationLayout=9;
     /**
@@ -3962,7 +4094,7 @@ public final class R {
      * <tr><td>useLogo</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:displayOptions
+     * @attr name me.awadahmed.custom_emojiboard:displayOptions
      */
     public static final int ActionBar_displayOptions=10;
     /**
@@ -3975,7 +4107,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:divider
+     * @attr name me.awadahmed.custom_emojiboard:divider
      */
     public static final int ActionBar_divider=11;
     /**
@@ -3989,7 +4121,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:elevation
+     * @attr name me.awadahmed.custom_emojiboard:elevation
      */
     public static final int ActionBar_elevation=12;
     /**
@@ -4003,7 +4135,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:height
+     * @attr name me.awadahmed.custom_emojiboard:height
      */
     public static final int ActionBar_height=13;
     /**
@@ -4014,7 +4146,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:hideOnContentScroll
+     * @attr name me.awadahmed.custom_emojiboard:hideOnContentScroll
      */
     public static final int ActionBar_hideOnContentScroll=14;
     /**
@@ -4027,7 +4159,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:homeAsUpIndicator
+     * @attr name me.awadahmed.custom_emojiboard:homeAsUpIndicator
      */
     public static final int ActionBar_homeAsUpIndicator=15;
     /**
@@ -4040,7 +4172,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:homeLayout
+     * @attr name me.awadahmed.custom_emojiboard:homeLayout
      */
     public static final int ActionBar_homeLayout=16;
     /**
@@ -4053,7 +4185,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:icon
+     * @attr name me.awadahmed.custom_emojiboard:icon
      */
     public static final int ActionBar_icon=17;
     /**
@@ -4066,7 +4198,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:indeterminateProgressStyle
+     * @attr name me.awadahmed.custom_emojiboard:indeterminateProgressStyle
      */
     public static final int ActionBar_indeterminateProgressStyle=18;
     /**
@@ -4081,7 +4213,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:itemPadding
+     * @attr name me.awadahmed.custom_emojiboard:itemPadding
      */
     public static final int ActionBar_itemPadding=19;
     /**
@@ -4094,7 +4226,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:logo
+     * @attr name me.awadahmed.custom_emojiboard:logo
      */
     public static final int ActionBar_logo=20;
     /**
@@ -4113,7 +4245,7 @@ public final class R {
      * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:navigationMode
+     * @attr name me.awadahmed.custom_emojiboard:navigationMode
      */
     public static final int ActionBar_navigationMode=21;
     /**
@@ -4127,7 +4259,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:popupTheme
+     * @attr name me.awadahmed.custom_emojiboard:popupTheme
      */
     public static final int ActionBar_popupTheme=22;
     /**
@@ -4141,7 +4273,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:progressBarPadding
+     * @attr name me.awadahmed.custom_emojiboard:progressBarPadding
      */
     public static final int ActionBar_progressBarPadding=23;
     /**
@@ -4154,7 +4286,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:progressBarStyle
+     * @attr name me.awadahmed.custom_emojiboard:progressBarStyle
      */
     public static final int ActionBar_progressBarStyle=24;
     /**
@@ -4165,7 +4297,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:subtitle
+     * @attr name me.awadahmed.custom_emojiboard:subtitle
      */
     public static final int ActionBar_subtitle=25;
     /**
@@ -4178,7 +4310,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:subtitleTextStyle
+     * @attr name me.awadahmed.custom_emojiboard:subtitleTextStyle
      */
     public static final int ActionBar_subtitleTextStyle=26;
     /**
@@ -4189,7 +4321,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:title
+     * @attr name me.awadahmed.custom_emojiboard:title
      */
     public static final int ActionBar_title=27;
     /**
@@ -4202,7 +4334,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:titleTextStyle
+     * @attr name me.awadahmed.custom_emojiboard:titleTextStyle
      */
     public static final int ActionBar_titleTextStyle=28;
     /**
@@ -4284,12 +4416,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionMode_background com.example.custom_emojiboard:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionMode_backgroundSplit com.example.custom_emojiboard:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-     * <tr><td><code>{@link #ActionMode_closeItemLayout com.example.custom_emojiboard:closeItemLayout}</code></td><td>Specifies a layout to use for the "close" item at the starting edge.</td></tr>
-     * <tr><td><code>{@link #ActionMode_height com.example.custom_emojiboard:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.example.custom_emojiboard:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
-     * <tr><td><code>{@link #ActionMode_titleTextStyle com.example.custom_emojiboard:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
+     * <tr><td><code>{@link #ActionMode_background me.awadahmed.custom_emojiboard:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionMode_backgroundSplit me.awadahmed.custom_emojiboard:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
+     * <tr><td><code>{@link #ActionMode_closeItemLayout me.awadahmed.custom_emojiboard:closeItemLayout}</code></td><td>Specifies a layout to use for the "close" item at the starting edge.</td></tr>
+     * <tr><td><code>{@link #ActionMode_height me.awadahmed.custom_emojiboard:height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_subtitleTextStyle me.awadahmed.custom_emojiboard:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
+     * <tr><td><code>{@link #ActionMode_titleTextStyle me.awadahmed.custom_emojiboard:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
      * </table>
      * @see #ActionMode_background
      * @see #ActionMode_backgroundSplit
@@ -4299,8 +4431,8 @@ public final class R {
      * @see #ActionMode_titleTextStyle
      */
     public static final int[] ActionMode={
-      0x7f020031, 0x7f020032, 0x7f020048, 0x7f020088, 
-      0x7f0200db, 0x7f020100
+      0x7f020031, 0x7f020032, 0x7f02004a, 0x7f02008b, 
+      0x7f0200e1, 0x7f020106
     };
     /**
      * <p>
@@ -4312,7 +4444,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:background
+     * @attr name me.awadahmed.custom_emojiboard:background
      */
     public static final int ActionMode_background=0;
     /**
@@ -4328,7 +4460,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:backgroundSplit
+     * @attr name me.awadahmed.custom_emojiboard:backgroundSplit
      */
     public static final int ActionMode_backgroundSplit=1;
     /**
@@ -4341,7 +4473,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:closeItemLayout
+     * @attr name me.awadahmed.custom_emojiboard:closeItemLayout
      */
     public static final int ActionMode_closeItemLayout=2;
     /**
@@ -4355,7 +4487,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:height
+     * @attr name me.awadahmed.custom_emojiboard:height
      */
     public static final int ActionMode_height=3;
     /**
@@ -4368,7 +4500,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:subtitleTextStyle
+     * @attr name me.awadahmed.custom_emojiboard:subtitleTextStyle
      */
     public static final int ActionMode_subtitleTextStyle=4;
     /**
@@ -4381,7 +4513,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:titleTextStyle
+     * @attr name me.awadahmed.custom_emojiboard:titleTextStyle
      */
     public static final int ActionMode_titleTextStyle=5;
     /**
@@ -4391,14 +4523,14 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.example.custom_emojiboard:expandActivityOverflowButtonDrawable}</code></td><td>The drawable to show in the button for expanding the activities overflow popup.</td></tr>
-     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.example.custom_emojiboard:initialActivityCount}</code></td><td>The maximal number of items initially shown in the activity list.</td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable me.awadahmed.custom_emojiboard:expandActivityOverflowButtonDrawable}</code></td><td>The drawable to show in the button for expanding the activities overflow popup.</td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount me.awadahmed.custom_emojiboard:initialActivityCount}</code></td><td>The maximal number of items initially shown in the activity list.</td></tr>
      * </table>
      * @see #ActivityChooserView_expandActivityOverflowButtonDrawable
      * @see #ActivityChooserView_initialActivityCount
      */
     public static final int[] ActivityChooserView={
-      0x7f020079, 0x7f020092
+      0x7f02007c, 0x7f020097
     };
     /**
      * <p>
@@ -4414,7 +4546,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:expandActivityOverflowButtonDrawable
+     * @attr name me.awadahmed.custom_emojiboard:expandActivityOverflowButtonDrawable
      */
     public static final int ActivityChooserView_expandActivityOverflowButtonDrawable=0;
     /**
@@ -4425,7 +4557,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:initialActivityCount
+     * @attr name me.awadahmed.custom_emojiboard:initialActivityCount
      */
     public static final int ActivityChooserView_initialActivityCount=1;
     /**
@@ -4436,13 +4568,13 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_buttonIconDimen com.example.custom_emojiboard:buttonIconDimen}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.example.custom_emojiboard:buttonPanelSideLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_listItemLayout com.example.custom_emojiboard:listItemLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_listLayout com.example.custom_emojiboard:listLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.example.custom_emojiboard:multiChoiceItemLayout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_showTitle com.example.custom_emojiboard:showTitle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.example.custom_emojiboard:singleChoiceItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_buttonIconDimen me.awadahmed.custom_emojiboard:buttonIconDimen}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout me.awadahmed.custom_emojiboard:buttonPanelSideLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_listItemLayout me.awadahmed.custom_emojiboard:listItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_listLayout me.awadahmed.custom_emojiboard:listLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout me.awadahmed.custom_emojiboard:multiChoiceItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_showTitle me.awadahmed.custom_emojiboard:showTitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout me.awadahmed.custom_emojiboard:singleChoiceItemLayout}</code></td><td></td></tr>
      * </table>
      * @see #AlertDialog_android_layout
      * @see #AlertDialog_buttonIconDimen
@@ -4454,8 +4586,8 @@ public final class R {
      * @see #AlertDialog_singleChoiceItemLayout
      */
     public static final int[] AlertDialog={
-      0x010100f2, 0x7f02003f, 0x7f020040, 0x7f02009c, 
-      0x7f02009d, 0x7f0200ac, 0x7f0200ce, 0x7f0200cf
+      0x010100f2, 0x7f02003f, 0x7f020040, 0x7f0200a1, 
+      0x7f0200a2, 0x7f0200b1, 0x7f0200d4, 0x7f0200d5
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout}
@@ -4470,7 +4602,7 @@ public final class R {
      */
     public static final int AlertDialog_android_layout=0;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#buttonIconDimen}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#buttonIconDimen}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -4479,11 +4611,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:buttonIconDimen
+     * @attr name me.awadahmed.custom_emojiboard:buttonIconDimen
      */
     public static final int AlertDialog_buttonIconDimen=1;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#buttonPanelSideLayout}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#buttonPanelSideLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4491,11 +4623,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonPanelSideLayout
+     * @attr name me.awadahmed.custom_emojiboard:buttonPanelSideLayout
      */
     public static final int AlertDialog_buttonPanelSideLayout=2;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#listItemLayout}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#listItemLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4503,11 +4635,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:listItemLayout
+     * @attr name me.awadahmed.custom_emojiboard:listItemLayout
      */
     public static final int AlertDialog_listItemLayout=3;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#listLayout}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#listLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4515,11 +4647,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:listLayout
+     * @attr name me.awadahmed.custom_emojiboard:listLayout
      */
     public static final int AlertDialog_listLayout=4;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#multiChoiceItemLayout}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#multiChoiceItemLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4527,21 +4659,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:multiChoiceItemLayout
+     * @attr name me.awadahmed.custom_emojiboard:multiChoiceItemLayout
      */
     public static final int AlertDialog_multiChoiceItemLayout=5;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#showTitle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#showTitle}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:showTitle
+     * @attr name me.awadahmed.custom_emojiboard:showTitle
      */
     public static final int AlertDialog_showTitle=6;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#singleChoiceItemLayout}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#singleChoiceItemLayout}
      * attribute's value can be found in the {@link #AlertDialog} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -4549,7 +4681,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:singleChoiceItemLayout
+     * @attr name me.awadahmed.custom_emojiboard:singleChoiceItemLayout
      */
     public static final int AlertDialog_singleChoiceItemLayout=7;
     /**
@@ -4773,9 +4905,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatImageView_android_src android:src}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.example.custom_emojiboard:srcCompat}</code></td><td>Sets a drawable as the content of this ImageView.</td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_tint com.example.custom_emojiboard:tint}</code></td><td>Tint to apply to the image source.</td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_tintMode com.example.custom_emojiboard:tintMode}</code></td><td>Blending mode used to apply the image source tint.</td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_srcCompat me.awadahmed.custom_emojiboard:srcCompat}</code></td><td>Sets a drawable as the content of this ImageView.</td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_tint me.awadahmed.custom_emojiboard:tint}</code></td><td>Tint to apply to the image source.</td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_tintMode me.awadahmed.custom_emojiboard:tintMode}</code></td><td>Blending mode used to apply the image source tint.</td></tr>
      * </table>
      * @see #AppCompatImageView_android_src
      * @see #AppCompatImageView_srcCompat
@@ -4783,7 +4915,7 @@ public final class R {
      * @see #AppCompatImageView_tintMode
      */
     public static final int[] AppCompatImageView={
-      0x01010119, 0x7f0200d4, 0x7f0200f5, 0x7f0200f6
+      0x01010119, 0x7f0200da, 0x7f0200fb, 0x7f0200fc
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#src}
@@ -4811,7 +4943,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:srcCompat
+     * @attr name me.awadahmed.custom_emojiboard:srcCompat
      */
     public static final int AppCompatImageView_srcCompat=1;
     /**
@@ -4823,7 +4955,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:tint
+     * @attr name me.awadahmed.custom_emojiboard:tint
      */
     public static final int AppCompatImageView_tint=2;
     /**
@@ -4850,7 +4982,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:tintMode
+     * @attr name me.awadahmed.custom_emojiboard:tintMode
      */
     public static final int AppCompatImageView_tintMode=3;
     /**
@@ -4861,9 +4993,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatSeekBar_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMark com.example.custom_emojiboard:tickMark}</code></td><td>Drawable displayed at each progress position on a seekbar.</td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.example.custom_emojiboard:tickMarkTint}</code></td><td>Tint to apply to the tick mark drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.example.custom_emojiboard:tickMarkTintMode}</code></td><td>Blending mode used to apply the tick mark tint.</td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMark me.awadahmed.custom_emojiboard:tickMark}</code></td><td>Drawable displayed at each progress position on a seekbar.</td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint me.awadahmed.custom_emojiboard:tickMarkTint}</code></td><td>Tint to apply to the tick mark drawable.</td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode me.awadahmed.custom_emojiboard:tickMarkTintMode}</code></td><td>Blending mode used to apply the tick mark tint.</td></tr>
      * </table>
      * @see #AppCompatSeekBar_android_thumb
      * @see #AppCompatSeekBar_tickMark
@@ -4871,7 +5003,7 @@ public final class R {
      * @see #AppCompatSeekBar_tickMarkTintMode
      */
     public static final int[] AppCompatSeekBar={
-      0x01010142, 0x7f0200f2, 0x7f0200f3, 0x7f0200f4
+      0x01010142, 0x7f0200f8, 0x7f0200f9, 0x7f0200fa
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#thumb}
@@ -4895,7 +5027,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:tickMark
+     * @attr name me.awadahmed.custom_emojiboard:tickMark
      */
     public static final int AppCompatSeekBar_tickMark=1;
     /**
@@ -4907,7 +5039,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:tickMarkTint
+     * @attr name me.awadahmed.custom_emojiboard:tickMarkTint
      */
     public static final int AppCompatSeekBar_tickMarkTint=2;
     /**
@@ -4934,7 +5066,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:tickMarkTintMode
+     * @attr name me.awadahmed.custom_emojiboard:tickMarkTintMode
      */
     public static final int AppCompatSeekBar_tickMarkTintMode=3;
     /**
@@ -5074,29 +5206,29 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.example.custom_emojiboard:autoSizeMaxTextSize}</code></td><td>The maximum text size constraint to be used when auto-sizing text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.example.custom_emojiboard:autoSizeMinTextSize}</code></td><td>The minimum text size constraint to be used when auto-sizing text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.example.custom_emojiboard:autoSizePresetSizes}</code></td><td>Resource array of dimensions to be used in conjunction with
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize me.awadahmed.custom_emojiboard:autoSizeMaxTextSize}</code></td><td>The maximum text size constraint to be used when auto-sizing text.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize me.awadahmed.custom_emojiboard:autoSizeMinTextSize}</code></td><td>The minimum text size constraint to be used when auto-sizing text.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes me.awadahmed.custom_emojiboard:autoSizePresetSizes}</code></td><td>Resource array of dimensions to be used in conjunction with
      * <code>autoSizeTextType</code> set to <code>uniform</code>.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.example.custom_emojiboard:autoSizeStepGranularity}</code></td><td>Specify the auto-size step size if <code>autoSizeTextType</code> is set to
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity me.awadahmed.custom_emojiboard:autoSizeStepGranularity}</code></td><td>Specify the auto-size step size if <code>autoSizeTextType</code> is set to
      * <code>uniform</code>.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.example.custom_emojiboard:autoSizeTextType}</code></td><td>Specify the type of auto-size.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableBottomCompat com.example.custom_emojiboard:drawableBottomCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableEndCompat com.example.custom_emojiboard:drawableEndCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableLeftCompat com.example.custom_emojiboard:drawableLeftCompat}</code></td><td>Compound drawables allowing the use of vector drawable when running on older versions
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeTextType me.awadahmed.custom_emojiboard:autoSizeTextType}</code></td><td>Specify the type of auto-size.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableBottomCompat me.awadahmed.custom_emojiboard:drawableBottomCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableEndCompat me.awadahmed.custom_emojiboard:drawableEndCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableLeftCompat me.awadahmed.custom_emojiboard:drawableLeftCompat}</code></td><td>Compound drawables allowing the use of vector drawable when running on older versions
      * of the platform.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableRightCompat com.example.custom_emojiboard:drawableRightCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableStartCompat com.example.custom_emojiboard:drawableStartCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableTint com.example.custom_emojiboard:drawableTint}</code></td><td>Tint to apply to the compound (left, top, etc.) drawables.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableTintMode com.example.custom_emojiboard:drawableTintMode}</code></td><td>Blending mode used to apply the compound (left, top, etc.) drawables tint.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableTopCompat com.example.custom_emojiboard:drawableTopCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_firstBaselineToTopHeight com.example.custom_emojiboard:firstBaselineToTopHeight}</code></td><td>Distance from the top of the TextView to the first text baseline.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_fontFamily com.example.custom_emojiboard:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_fontVariationSettings com.example.custom_emojiboard:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_lastBaselineToBottomHeight com.example.custom_emojiboard:lastBaselineToBottomHeight}</code></td><td>Distance from the bottom of the TextView to the last text baseline.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_lineHeight com.example.custom_emojiboard:lineHeight}</code></td><td>Explicit height between lines of text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.example.custom_emojiboard:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_textLocale com.example.custom_emojiboard:textLocale}</code></td><td>Set the textLocale by a comma-separated language tag string,
+     * <tr><td><code>{@link #AppCompatTextView_drawableRightCompat me.awadahmed.custom_emojiboard:drawableRightCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableStartCompat me.awadahmed.custom_emojiboard:drawableStartCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableTint me.awadahmed.custom_emojiboard:drawableTint}</code></td><td>Tint to apply to the compound (left, top, etc.) drawables.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableTintMode me.awadahmed.custom_emojiboard:drawableTintMode}</code></td><td>Blending mode used to apply the compound (left, top, etc.) drawables tint.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableTopCompat me.awadahmed.custom_emojiboard:drawableTopCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_firstBaselineToTopHeight me.awadahmed.custom_emojiboard:firstBaselineToTopHeight}</code></td><td>Distance from the top of the TextView to the first text baseline.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_fontFamily me.awadahmed.custom_emojiboard:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_fontVariationSettings me.awadahmed.custom_emojiboard:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_lastBaselineToBottomHeight me.awadahmed.custom_emojiboard:lastBaselineToBottomHeight}</code></td><td>Distance from the bottom of the TextView to the last text baseline.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_lineHeight me.awadahmed.custom_emojiboard:lineHeight}</code></td><td>Explicit height between lines of text.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_textAllCaps me.awadahmed.custom_emojiboard:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_textLocale me.awadahmed.custom_emojiboard:textLocale}</code></td><td>Set the textLocale by a comma-separated language tag string,
      * for example "ja-JP,zh-CN".</td></tr>
      * </table>
      * @see #AppCompatTextView_android_textAppearance
@@ -5123,11 +5255,11 @@ public final class R {
      */
     public static final int[] AppCompatTextView={
       0x01010034, 0x7f02002c, 0x7f02002d, 0x7f02002e, 
-      0x7f02002f, 0x7f020030, 0x7f020069, 0x7f02006a, 
-      0x7f02006b, 0x7f02006c, 0x7f02006e, 0x7f02006f, 
-      0x7f020070, 0x7f020071, 0x7f02007a, 0x7f02007c, 
-      0x7f020084, 0x7f020095, 0x7f020097, 0x7f0200e1, 
-      0x7f0200ec
+      0x7f02002f, 0x7f020030, 0x7f02006c, 0x7f02006d, 
+      0x7f02006e, 0x7f02006f, 0x7f020071, 0x7f020072, 
+      0x7f020073, 0x7f020074, 0x7f02007d, 0x7f02007f, 
+      0x7f020087, 0x7f02009a, 0x7f02009c, 0x7f0200e7, 
+      0x7f0200f2
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
@@ -5152,7 +5284,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:autoSizeMaxTextSize
+     * @attr name me.awadahmed.custom_emojiboard:autoSizeMaxTextSize
      */
     public static final int AppCompatTextView_autoSizeMaxTextSize=1;
     /**
@@ -5166,7 +5298,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:autoSizeMinTextSize
+     * @attr name me.awadahmed.custom_emojiboard:autoSizeMinTextSize
      */
     public static final int AppCompatTextView_autoSizeMinTextSize=2;
     /**
@@ -5181,7 +5313,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:autoSizePresetSizes
+     * @attr name me.awadahmed.custom_emojiboard:autoSizePresetSizes
      */
     public static final int AppCompatTextView_autoSizePresetSizes=3;
     /**
@@ -5197,7 +5329,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:autoSizeStepGranularity
+     * @attr name me.awadahmed.custom_emojiboard:autoSizeStepGranularity
      */
     public static final int AppCompatTextView_autoSizeStepGranularity=4;
     /**
@@ -5217,11 +5349,11 @@ public final class R {
      * container.</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:autoSizeTextType
+     * @attr name me.awadahmed.custom_emojiboard:autoSizeTextType
      */
     public static final int AppCompatTextView_autoSizeTextType=5;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#drawableBottomCompat}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#drawableBottomCompat}
      * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5229,11 +5361,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:drawableBottomCompat
+     * @attr name me.awadahmed.custom_emojiboard:drawableBottomCompat
      */
     public static final int AppCompatTextView_drawableBottomCompat=6;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#drawableEndCompat}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#drawableEndCompat}
      * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5241,7 +5373,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:drawableEndCompat
+     * @attr name me.awadahmed.custom_emojiboard:drawableEndCompat
      */
     public static final int AppCompatTextView_drawableEndCompat=7;
     /**
@@ -5255,11 +5387,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:drawableLeftCompat
+     * @attr name me.awadahmed.custom_emojiboard:drawableLeftCompat
      */
     public static final int AppCompatTextView_drawableLeftCompat=8;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#drawableRightCompat}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#drawableRightCompat}
      * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5267,11 +5399,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:drawableRightCompat
+     * @attr name me.awadahmed.custom_emojiboard:drawableRightCompat
      */
     public static final int AppCompatTextView_drawableRightCompat=9;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#drawableStartCompat}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#drawableStartCompat}
      * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5279,7 +5411,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:drawableStartCompat
+     * @attr name me.awadahmed.custom_emojiboard:drawableStartCompat
      */
     public static final int AppCompatTextView_drawableStartCompat=10;
     /**
@@ -5291,7 +5423,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:drawableTint
+     * @attr name me.awadahmed.custom_emojiboard:drawableTint
      */
     public static final int AppCompatTextView_drawableTint=11;
     /**
@@ -5318,11 +5450,11 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:drawableTintMode
+     * @attr name me.awadahmed.custom_emojiboard:drawableTintMode
      */
     public static final int AppCompatTextView_drawableTintMode=12;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#drawableTopCompat}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#drawableTopCompat}
      * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5330,7 +5462,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:drawableTopCompat
+     * @attr name me.awadahmed.custom_emojiboard:drawableTopCompat
      */
     public static final int AppCompatTextView_drawableTopCompat=13;
     /**
@@ -5345,7 +5477,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:firstBaselineToTopHeight
+     * @attr name me.awadahmed.custom_emojiboard:firstBaselineToTopHeight
      */
     public static final int AppCompatTextView_firstBaselineToTopHeight=14;
     /**
@@ -5356,7 +5488,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:fontFamily
+     * @attr name me.awadahmed.custom_emojiboard:fontFamily
      */
     public static final int AppCompatTextView_fontFamily=15;
     /**
@@ -5367,7 +5499,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:fontVariationSettings
+     * @attr name me.awadahmed.custom_emojiboard:fontVariationSettings
      */
     public static final int AppCompatTextView_fontVariationSettings=16;
     /**
@@ -5382,7 +5514,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:lastBaselineToBottomHeight
+     * @attr name me.awadahmed.custom_emojiboard:lastBaselineToBottomHeight
      */
     public static final int AppCompatTextView_lastBaselineToBottomHeight=17;
     /**
@@ -5397,7 +5529,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:lineHeight
+     * @attr name me.awadahmed.custom_emojiboard:lineHeight
      */
     public static final int AppCompatTextView_lineHeight=18;
     /**
@@ -5412,7 +5544,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:textAllCaps
+     * @attr name me.awadahmed.custom_emojiboard:textAllCaps
      */
     public static final int AppCompatTextView_textAllCaps=19;
     /**
@@ -5427,7 +5559,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:textLocale
+     * @attr name me.awadahmed.custom_emojiboard:textLocale
      */
     public static final int AppCompatTextView_textLocale=20;
     /**
@@ -5439,146 +5571,146 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.example.custom_emojiboard:actionBarDivider}</code></td><td>Custom divider drawable to use for elements in the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.example.custom_emojiboard:actionBarItemBackground}</code></td><td>Custom item state list drawable background for action bar items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.example.custom_emojiboard:actionBarPopupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
+     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider me.awadahmed.custom_emojiboard:actionBarDivider}</code></td><td>Custom divider drawable to use for elements in the action bar.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground me.awadahmed.custom_emojiboard:actionBarItemBackground}</code></td><td>Custom item state list drawable background for action bar items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme me.awadahmed.custom_emojiboard:actionBarPopupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
      * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.example.custom_emojiboard:actionBarSize}</code></td><td>Size of the Action Bar, including the contextual
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSize me.awadahmed.custom_emojiboard:actionBarSize}</code></td><td>Size of the Action Bar, including the contextual
      * bar used to present Action Modes.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.example.custom_emojiboard:actionBarSplitStyle}</code></td><td>Reference to a style for the split Action Bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.example.custom_emojiboard:actionBarStyle}</code></td><td>Reference to a style for the Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.example.custom_emojiboard:actionBarTabBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.example.custom_emojiboard:actionBarTabStyle}</code></td><td>Default style for tabs within an action bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.example.custom_emojiboard:actionBarTabTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.example.custom_emojiboard:actionBarTheme}</code></td><td>Reference to a theme that should be used to inflate the
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle me.awadahmed.custom_emojiboard:actionBarSplitStyle}</code></td><td>Reference to a style for the split Action Bar.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle me.awadahmed.custom_emojiboard:actionBarStyle}</code></td><td>Reference to a style for the Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle me.awadahmed.custom_emojiboard:actionBarTabBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle me.awadahmed.custom_emojiboard:actionBarTabStyle}</code></td><td>Default style for tabs within an action bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle me.awadahmed.custom_emojiboard:actionBarTabTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme me.awadahmed.custom_emojiboard:actionBarTheme}</code></td><td>Reference to a theme that should be used to inflate the
      * action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.example.custom_emojiboard:actionBarWidgetTheme}</code></td><td>Reference to a theme that should be used to inflate widgets
+     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme me.awadahmed.custom_emojiboard:actionBarWidgetTheme}</code></td><td>Reference to a theme that should be used to inflate widgets
      * and layouts destined for the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.example.custom_emojiboard:actionButtonStyle}</code></td><td>Default action button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.example.custom_emojiboard:actionDropDownStyle}</code></td><td>Default ActionBar dropdown style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.example.custom_emojiboard:actionMenuTextAppearance}</code></td><td>TextAppearance style that will be applied to text that
+     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle me.awadahmed.custom_emojiboard:actionButtonStyle}</code></td><td>Default action button style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle me.awadahmed.custom_emojiboard:actionDropDownStyle}</code></td><td>Default ActionBar dropdown style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance me.awadahmed.custom_emojiboard:actionMenuTextAppearance}</code></td><td>TextAppearance style that will be applied to text that
      * appears within action menu items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.example.custom_emojiboard:actionMenuTextColor}</code></td><td>Color for text that appears within action menu items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.example.custom_emojiboard:actionModeBackground}</code></td><td>Background drawable to use for action mode UI</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.example.custom_emojiboard:actionModeCloseButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.example.custom_emojiboard:actionModeCloseDrawable}</code></td><td>Drawable to use for the close action mode button</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.example.custom_emojiboard:actionModeCopyDrawable}</code></td><td>Drawable to use for the Copy action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.example.custom_emojiboard:actionModeCutDrawable}</code></td><td>Drawable to use for the Cut action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.example.custom_emojiboard:actionModeFindDrawable}</code></td><td>Drawable to use for the Find action button in WebView selection action modes</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.example.custom_emojiboard:actionModePasteDrawable}</code></td><td>Drawable to use for the Paste action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.example.custom_emojiboard:actionModePopupWindowStyle}</code></td><td>PopupWindow style to use for action modes when showing as a window overlay.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.example.custom_emojiboard:actionModeSelectAllDrawable}</code></td><td>Drawable to use for the Select all action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.example.custom_emojiboard:actionModeShareDrawable}</code></td><td>Drawable to use for the Share action button in WebView selection action modes</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.example.custom_emojiboard:actionModeSplitBackground}</code></td><td>Background drawable to use for action mode UI in the lower split bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.example.custom_emojiboard:actionModeStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.example.custom_emojiboard:actionModeWebSearchDrawable}</code></td><td>Drawable to use for the Web Search action button in WebView selection action modes</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.example.custom_emojiboard:actionOverflowButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.example.custom_emojiboard:actionOverflowMenuStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.example.custom_emojiboard:activityChooserViewStyle}</code></td><td>Default ActivityChooserView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.example.custom_emojiboard:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.example.custom_emojiboard:alertDialogCenterButtons}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.example.custom_emojiboard:alertDialogStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.example.custom_emojiboard:alertDialogTheme}</code></td><td>Theme to use for alert dialogs spawned from this theme.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.example.custom_emojiboard:autoCompleteTextViewStyle}</code></td><td>Default AutoCompleteTextView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.example.custom_emojiboard:borderlessButtonStyle}</code></td><td>Style for buttons without an explicit border, often used in groups.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.example.custom_emojiboard:buttonBarButtonStyle}</code></td><td>Style for buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.example.custom_emojiboard:buttonBarNegativeButtonStyle}</code></td><td>Style for the "negative" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.example.custom_emojiboard:buttonBarNeutralButtonStyle}</code></td><td>Style for the "neutral" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.example.custom_emojiboard:buttonBarPositiveButtonStyle}</code></td><td>Style for the "positive" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.example.custom_emojiboard:buttonBarStyle}</code></td><td>Style for button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.example.custom_emojiboard:buttonStyle}</code></td><td>Normal Button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.example.custom_emojiboard:buttonStyleSmall}</code></td><td>Small Button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.example.custom_emojiboard:checkboxStyle}</code></td><td>Default Checkbox style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.example.custom_emojiboard:checkedTextViewStyle}</code></td><td>Default CheckedTextView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.example.custom_emojiboard:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.example.custom_emojiboard:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.example.custom_emojiboard:colorButtonNormal}</code></td><td>The color applied to framework buttons in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.example.custom_emojiboard:colorControlActivated}</code></td><td>The color applied to framework controls in their activated (ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.example.custom_emojiboard:colorControlHighlight}</code></td><td>The color applied to framework control highlights (ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.example.custom_emojiboard:colorControlNormal}</code></td><td>The color applied to framework controls in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorError com.example.custom_emojiboard:colorError}</code></td><td>Color used for error states and things that need to be drawn to
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor me.awadahmed.custom_emojiboard:actionMenuTextColor}</code></td><td>Color for text that appears within action menu items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground me.awadahmed.custom_emojiboard:actionModeBackground}</code></td><td>Background drawable to use for action mode UI</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle me.awadahmed.custom_emojiboard:actionModeCloseButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable me.awadahmed.custom_emojiboard:actionModeCloseDrawable}</code></td><td>Drawable to use for the close action mode button</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable me.awadahmed.custom_emojiboard:actionModeCopyDrawable}</code></td><td>Drawable to use for the Copy action button in Contextual Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable me.awadahmed.custom_emojiboard:actionModeCutDrawable}</code></td><td>Drawable to use for the Cut action button in Contextual Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable me.awadahmed.custom_emojiboard:actionModeFindDrawable}</code></td><td>Drawable to use for the Find action button in WebView selection action modes</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable me.awadahmed.custom_emojiboard:actionModePasteDrawable}</code></td><td>Drawable to use for the Paste action button in Contextual Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle me.awadahmed.custom_emojiboard:actionModePopupWindowStyle}</code></td><td>PopupWindow style to use for action modes when showing as a window overlay.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable me.awadahmed.custom_emojiboard:actionModeSelectAllDrawable}</code></td><td>Drawable to use for the Select all action button in Contextual Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable me.awadahmed.custom_emojiboard:actionModeShareDrawable}</code></td><td>Drawable to use for the Share action button in WebView selection action modes</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground me.awadahmed.custom_emojiboard:actionModeSplitBackground}</code></td><td>Background drawable to use for action mode UI in the lower split bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeStyle me.awadahmed.custom_emojiboard:actionModeStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable me.awadahmed.custom_emojiboard:actionModeWebSearchDrawable}</code></td><td>Drawable to use for the Web Search action button in WebView selection action modes</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle me.awadahmed.custom_emojiboard:actionOverflowButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle me.awadahmed.custom_emojiboard:actionOverflowMenuStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle me.awadahmed.custom_emojiboard:activityChooserViewStyle}</code></td><td>Default ActivityChooserView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle me.awadahmed.custom_emojiboard:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons me.awadahmed.custom_emojiboard:alertDialogCenterButtons}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogStyle me.awadahmed.custom_emojiboard:alertDialogStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme me.awadahmed.custom_emojiboard:alertDialogTheme}</code></td><td>Theme to use for alert dialogs spawned from this theme.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle me.awadahmed.custom_emojiboard:autoCompleteTextViewStyle}</code></td><td>Default AutoCompleteTextView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle me.awadahmed.custom_emojiboard:borderlessButtonStyle}</code></td><td>Style for buttons without an explicit border, often used in groups.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle me.awadahmed.custom_emojiboard:buttonBarButtonStyle}</code></td><td>Style for buttons within button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle me.awadahmed.custom_emojiboard:buttonBarNegativeButtonStyle}</code></td><td>Style for the "negative" buttons within button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle me.awadahmed.custom_emojiboard:buttonBarNeutralButtonStyle}</code></td><td>Style for the "neutral" buttons within button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle me.awadahmed.custom_emojiboard:buttonBarPositiveButtonStyle}</code></td><td>Style for the "positive" buttons within button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle me.awadahmed.custom_emojiboard:buttonBarStyle}</code></td><td>Style for button bars</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyle me.awadahmed.custom_emojiboard:buttonStyle}</code></td><td>Normal Button style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall me.awadahmed.custom_emojiboard:buttonStyleSmall}</code></td><td>Small Button style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle me.awadahmed.custom_emojiboard:checkboxStyle}</code></td><td>Default Checkbox style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle me.awadahmed.custom_emojiboard:checkedTextViewStyle}</code></td><td>Default CheckedTextView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorAccent me.awadahmed.custom_emojiboard:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating me.awadahmed.custom_emojiboard:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal me.awadahmed.custom_emojiboard:colorButtonNormal}</code></td><td>The color applied to framework buttons in their normal state.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated me.awadahmed.custom_emojiboard:colorControlActivated}</code></td><td>The color applied to framework controls in their activated (ex.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight me.awadahmed.custom_emojiboard:colorControlHighlight}</code></td><td>The color applied to framework control highlights (ex.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal me.awadahmed.custom_emojiboard:colorControlNormal}</code></td><td>The color applied to framework controls in their normal state.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorError me.awadahmed.custom_emojiboard:colorError}</code></td><td>Color used for error states and things that need to be drawn to
      * the user's attention.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.example.custom_emojiboard:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.example.custom_emojiboard:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.example.custom_emojiboard:colorSwitchThumbNormal}</code></td><td>The color applied to framework switch thumbs in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.example.custom_emojiboard:controlBackground}</code></td><td>The background used by framework controls.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius com.example.custom_emojiboard:dialogCornerRadius}</code></td><td>Preferred corner radius of dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.example.custom_emojiboard:dialogPreferredPadding}</code></td><td>Preferred padding for dialog content.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.example.custom_emojiboard:dialogTheme}</code></td><td>Theme to use for dialogs spawned from this theme.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.example.custom_emojiboard:dividerHorizontal}</code></td><td>A drawable that may be used as a horizontal divider between visual elements.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.example.custom_emojiboard:dividerVertical}</code></td><td>A drawable that may be used as a vertical divider between visual elements.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.example.custom_emojiboard:dropDownListViewStyle}</code></td><td>ListPopupWindow compatibility</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.example.custom_emojiboard:dropdownListPreferredItemHeight}</code></td><td>The preferred item height for dropdown lists.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.example.custom_emojiboard:editTextBackground}</code></td><td>EditText background drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.example.custom_emojiboard:editTextColor}</code></td><td>EditText text foreground color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.example.custom_emojiboard:editTextStyle}</code></td><td>Default EditText style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.example.custom_emojiboard:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.example.custom_emojiboard:imageButtonStyle}</code></td><td>ImageButton background drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.example.custom_emojiboard:listChoiceBackgroundIndicator}</code></td><td>Drawable used as a background for selected list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceIndicatorMultipleAnimated com.example.custom_emojiboard:listChoiceIndicatorMultipleAnimated}</code></td><td>Animated Drawable to use for single choice indicators.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceIndicatorSingleAnimated com.example.custom_emojiboard:listChoiceIndicatorSingleAnimated}</code></td><td>Animated Drawable to use for multiple choice indicators.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.example.custom_emojiboard:listDividerAlertDialog}</code></td><td>The list divider used in alert dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.example.custom_emojiboard:listMenuViewStyle}</code></td><td>Default menu-style ListView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.example.custom_emojiboard:listPopupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.example.custom_emojiboard:listPreferredItemHeight}</code></td><td>The preferred list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.example.custom_emojiboard:listPreferredItemHeightLarge}</code></td><td>A larger, more robust list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.example.custom_emojiboard:listPreferredItemHeightSmall}</code></td><td>A smaller, sleeker list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingEnd com.example.custom_emojiboard:listPreferredItemPaddingEnd}</code></td><td>The preferred padding along the end edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.example.custom_emojiboard:listPreferredItemPaddingLeft}</code></td><td>The preferred padding along the left edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.example.custom_emojiboard:listPreferredItemPaddingRight}</code></td><td>The preferred padding along the right edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingStart com.example.custom_emojiboard:listPreferredItemPaddingStart}</code></td><td>The preferred padding along the start edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.example.custom_emojiboard:panelBackground}</code></td><td>The background of a panel when it is inset from the left and right edges of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.example.custom_emojiboard:panelMenuListTheme}</code></td><td>Default Panel Menu style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.example.custom_emojiboard:panelMenuListWidth}</code></td><td>Default Panel Menu width.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.example.custom_emojiboard:popupMenuStyle}</code></td><td>Default PopupMenu style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.example.custom_emojiboard:popupWindowStyle}</code></td><td>Default PopupWindow style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.example.custom_emojiboard:radioButtonStyle}</code></td><td>Default RadioButton style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.example.custom_emojiboard:ratingBarStyle}</code></td><td>Default RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.example.custom_emojiboard:ratingBarStyleIndicator}</code></td><td>Indicator RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.example.custom_emojiboard:ratingBarStyleSmall}</code></td><td>Small indicator RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.example.custom_emojiboard:searchViewStyle}</code></td><td>Style for the search query widget.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.example.custom_emojiboard:seekBarStyle}</code></td><td>Default SeekBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.example.custom_emojiboard:selectableItemBackground}</code></td><td>A style that may be applied to buttons or other selectable items
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimary me.awadahmed.custom_emojiboard:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark me.awadahmed.custom_emojiboard:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal me.awadahmed.custom_emojiboard:colorSwitchThumbNormal}</code></td><td>The color applied to framework switch thumbs in their normal state.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_controlBackground me.awadahmed.custom_emojiboard:controlBackground}</code></td><td>The background used by framework controls.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius me.awadahmed.custom_emojiboard:dialogCornerRadius}</code></td><td>Preferred corner radius of dialogs.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding me.awadahmed.custom_emojiboard:dialogPreferredPadding}</code></td><td>Preferred padding for dialog content.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogTheme me.awadahmed.custom_emojiboard:dialogTheme}</code></td><td>Theme to use for dialogs spawned from this theme.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal me.awadahmed.custom_emojiboard:dividerHorizontal}</code></td><td>A drawable that may be used as a horizontal divider between visual elements.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerVertical me.awadahmed.custom_emojiboard:dividerVertical}</code></td><td>A drawable that may be used as a vertical divider between visual elements.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle me.awadahmed.custom_emojiboard:dropDownListViewStyle}</code></td><td>ListPopupWindow compatibility</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight me.awadahmed.custom_emojiboard:dropdownListPreferredItemHeight}</code></td><td>The preferred item height for dropdown lists.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextBackground me.awadahmed.custom_emojiboard:editTextBackground}</code></td><td>EditText background drawable.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextColor me.awadahmed.custom_emojiboard:editTextColor}</code></td><td>EditText text foreground color.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextStyle me.awadahmed.custom_emojiboard:editTextStyle}</code></td><td>Default EditText style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator me.awadahmed.custom_emojiboard:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle me.awadahmed.custom_emojiboard:imageButtonStyle}</code></td><td>ImageButton background drawable.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator me.awadahmed.custom_emojiboard:listChoiceBackgroundIndicator}</code></td><td>Drawable used as a background for selected list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceIndicatorMultipleAnimated me.awadahmed.custom_emojiboard:listChoiceIndicatorMultipleAnimated}</code></td><td>Animated Drawable to use for single choice indicators.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceIndicatorSingleAnimated me.awadahmed.custom_emojiboard:listChoiceIndicatorSingleAnimated}</code></td><td>Animated Drawable to use for multiple choice indicators.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog me.awadahmed.custom_emojiboard:listDividerAlertDialog}</code></td><td>The list divider used in alert dialogs.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle me.awadahmed.custom_emojiboard:listMenuViewStyle}</code></td><td>Default menu-style ListView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle me.awadahmed.custom_emojiboard:listPopupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight me.awadahmed.custom_emojiboard:listPreferredItemHeight}</code></td><td>The preferred list item height.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge me.awadahmed.custom_emojiboard:listPreferredItemHeightLarge}</code></td><td>A larger, more robust list item height.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall me.awadahmed.custom_emojiboard:listPreferredItemHeightSmall}</code></td><td>A smaller, sleeker list item height.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingEnd me.awadahmed.custom_emojiboard:listPreferredItemPaddingEnd}</code></td><td>The preferred padding along the end edge of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft me.awadahmed.custom_emojiboard:listPreferredItemPaddingLeft}</code></td><td>The preferred padding along the left edge of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight me.awadahmed.custom_emojiboard:listPreferredItemPaddingRight}</code></td><td>The preferred padding along the right edge of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingStart me.awadahmed.custom_emojiboard:listPreferredItemPaddingStart}</code></td><td>The preferred padding along the start edge of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelBackground me.awadahmed.custom_emojiboard:panelBackground}</code></td><td>The background of a panel when it is inset from the left and right edges of the screen.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme me.awadahmed.custom_emojiboard:panelMenuListTheme}</code></td><td>Default Panel Menu style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth me.awadahmed.custom_emojiboard:panelMenuListWidth}</code></td><td>Default Panel Menu width.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle me.awadahmed.custom_emojiboard:popupMenuStyle}</code></td><td>Default PopupMenu style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle me.awadahmed.custom_emojiboard:popupWindowStyle}</code></td><td>Default PopupWindow style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle me.awadahmed.custom_emojiboard:radioButtonStyle}</code></td><td>Default RadioButton style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle me.awadahmed.custom_emojiboard:ratingBarStyle}</code></td><td>Default RatingBar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator me.awadahmed.custom_emojiboard:ratingBarStyleIndicator}</code></td><td>Indicator RatingBar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall me.awadahmed.custom_emojiboard:ratingBarStyleSmall}</code></td><td>Small indicator RatingBar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle me.awadahmed.custom_emojiboard:searchViewStyle}</code></td><td>Style for the search query widget.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle me.awadahmed.custom_emojiboard:seekBarStyle}</code></td><td>Default SeekBar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground me.awadahmed.custom_emojiboard:selectableItemBackground}</code></td><td>A style that may be applied to buttons or other selectable items
      * that should react to pressed and focus states, but that do not
      * have a clear visual border along the edges.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.example.custom_emojiboard:selectableItemBackgroundBorderless}</code></td><td>Background drawable for borderless standalone items that need focus/pressed states.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.example.custom_emojiboard:spinnerDropDownItemStyle}</code></td><td>Default Spinner style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.example.custom_emojiboard:spinnerStyle}</code></td><td>Default Spinner style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.example.custom_emojiboard:switchStyle}</code></td><td>Default style for the Switch widget.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.example.custom_emojiboard:textAppearanceLargePopupMenu}</code></td><td>Text color, typeface, size, and style for the text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.example.custom_emojiboard:textAppearanceListItem}</code></td><td>The preferred TextAppearance for the primary text of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.example.custom_emojiboard:textAppearanceListItemSecondary}</code></td><td>The preferred TextAppearance for the secondary text of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.example.custom_emojiboard:textAppearanceListItemSmall}</code></td><td>The preferred TextAppearance for the primary text of small list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.example.custom_emojiboard:textAppearancePopupMenuHeader}</code></td><td>Text color, typeface, size, and style for header text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.example.custom_emojiboard:textAppearanceSearchResultSubtitle}</code></td><td>Text color, typeface, size, and style for system search result subtitle.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.example.custom_emojiboard:textAppearanceSearchResultTitle}</code></td><td>Text color, typeface, size, and style for system search result title.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.example.custom_emojiboard:textAppearanceSmallPopupMenu}</code></td><td>Text color, typeface, size, and style for small text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.example.custom_emojiboard:textColorAlertDialogListItem}</code></td><td>Color of list item text in alert dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.example.custom_emojiboard:textColorSearchUrl}</code></td><td>Text color for urls in search suggestions, used by things like global search</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.example.custom_emojiboard:toolbarNavigationButtonStyle}</code></td><td>Default Toolar NavigationButtonStyle</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.example.custom_emojiboard:toolbarStyle}</code></td><td>Default Toolbar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.example.custom_emojiboard:tooltipForegroundColor}</code></td><td>Foreground color to use for tooltips</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.example.custom_emojiboard:tooltipFrameBackground}</code></td><td>Background to use for tooltips</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_viewInflaterClass com.example.custom_emojiboard:viewInflaterClass}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.example.custom_emojiboard:windowActionBar}</code></td><td>Flag indicating whether this window should have an Action Bar
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless me.awadahmed.custom_emojiboard:selectableItemBackgroundBorderless}</code></td><td>Background drawable for borderless standalone items that need focus/pressed states.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle me.awadahmed.custom_emojiboard:spinnerDropDownItemStyle}</code></td><td>Default Spinner style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle me.awadahmed.custom_emojiboard:spinnerStyle}</code></td><td>Default Spinner style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_switchStyle me.awadahmed.custom_emojiboard:switchStyle}</code></td><td>Default style for the Switch widget.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu me.awadahmed.custom_emojiboard:textAppearanceLargePopupMenu}</code></td><td>Text color, typeface, size, and style for the text inside of a popup menu.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem me.awadahmed.custom_emojiboard:textAppearanceListItem}</code></td><td>The preferred TextAppearance for the primary text of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary me.awadahmed.custom_emojiboard:textAppearanceListItemSecondary}</code></td><td>The preferred TextAppearance for the secondary text of list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall me.awadahmed.custom_emojiboard:textAppearanceListItemSmall}</code></td><td>The preferred TextAppearance for the primary text of small list items.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader me.awadahmed.custom_emojiboard:textAppearancePopupMenuHeader}</code></td><td>Text color, typeface, size, and style for header text inside of a popup menu.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle me.awadahmed.custom_emojiboard:textAppearanceSearchResultSubtitle}</code></td><td>Text color, typeface, size, and style for system search result subtitle.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle me.awadahmed.custom_emojiboard:textAppearanceSearchResultTitle}</code></td><td>Text color, typeface, size, and style for system search result title.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu me.awadahmed.custom_emojiboard:textAppearanceSmallPopupMenu}</code></td><td>Text color, typeface, size, and style for small text inside of a popup menu.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem me.awadahmed.custom_emojiboard:textColorAlertDialogListItem}</code></td><td>Color of list item text in alert dialogs.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl me.awadahmed.custom_emojiboard:textColorSearchUrl}</code></td><td>Text color for urls in search suggestions, used by things like global search</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle me.awadahmed.custom_emojiboard:toolbarNavigationButtonStyle}</code></td><td>Default Toolar NavigationButtonStyle</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle me.awadahmed.custom_emojiboard:toolbarStyle}</code></td><td>Default Toolbar style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor me.awadahmed.custom_emojiboard:tooltipForegroundColor}</code></td><td>Foreground color to use for tooltips</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground me.awadahmed.custom_emojiboard:tooltipFrameBackground}</code></td><td>Background to use for tooltips</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_viewInflaterClass me.awadahmed.custom_emojiboard:viewInflaterClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBar me.awadahmed.custom_emojiboard:windowActionBar}</code></td><td>Flag indicating whether this window should have an Action Bar
      * in place of the usual title bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.example.custom_emojiboard:windowActionBarOverlay}</code></td><td>Flag indicating whether this window's Action Bar should overlay
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay me.awadahmed.custom_emojiboard:windowActionBarOverlay}</code></td><td>Flag indicating whether this window's Action Bar should overlay
      * application content.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.example.custom_emojiboard:windowActionModeOverlay}</code></td><td>Flag indicating whether action modes should overlay window content
+     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay me.awadahmed.custom_emojiboard:windowActionModeOverlay}</code></td><td>Flag indicating whether action modes should overlay window content
      * when there is not reserved space for their UI (such as an Action Bar).</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.example.custom_emojiboard:windowFixedHeightMajor}</code></td><td>A fixed height for the window along the major axis of the screen,
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor me.awadahmed.custom_emojiboard:windowFixedHeightMajor}</code></td><td>A fixed height for the window along the major axis of the screen,
      * that is, when in portrait.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.example.custom_emojiboard:windowFixedHeightMinor}</code></td><td>A fixed height for the window along the minor axis of the screen,
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor me.awadahmed.custom_emojiboard:windowFixedHeightMinor}</code></td><td>A fixed height for the window along the minor axis of the screen,
      * that is, when in landscape.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.example.custom_emojiboard:windowFixedWidthMajor}</code></td><td>A fixed width for the window along the major axis of the screen,
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor me.awadahmed.custom_emojiboard:windowFixedWidthMajor}</code></td><td>A fixed width for the window along the major axis of the screen,
      * that is, when in landscape.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.example.custom_emojiboard:windowFixedWidthMinor}</code></td><td>A fixed width for the window along the minor axis of the screen,
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor me.awadahmed.custom_emojiboard:windowFixedWidthMinor}</code></td><td>A fixed width for the window along the minor axis of the screen,
      * that is, when in portrait.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.example.custom_emojiboard:windowMinWidthMajor}</code></td><td>The minimum width the window is allowed to be, along the major
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor me.awadahmed.custom_emojiboard:windowMinWidthMajor}</code></td><td>The minimum width the window is allowed to be, along the major
      * axis of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.example.custom_emojiboard:windowMinWidthMinor}</code></td><td>The minimum width the window is allowed to be, along the minor
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor me.awadahmed.custom_emojiboard:windowMinWidthMinor}</code></td><td>The minimum width the window is allowed to be, along the minor
      * axis of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.example.custom_emojiboard:windowNoTitle}</code></td><td>Flag indicating whether there should be no title on this window.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle me.awadahmed.custom_emojiboard:windowNoTitle}</code></td><td>Flag indicating whether there should be no title on this window.</td></tr>
      * </table>
      * @see #AppCompatTheme_android_windowIsFloating
      * @see #AppCompatTheme_android_windowAnimationStyle
@@ -5718,27 +5850,27 @@ public final class R {
       0x7f020021, 0x7f020022, 0x7f020023, 0x7f020024, 
       0x7f020025, 0x7f02002b, 0x7f020037, 0x7f020038, 
       0x7f020039, 0x7f02003a, 0x7f02003b, 0x7f02003c, 
-      0x7f020041, 0x7f020042, 0x7f020045, 0x7f020046, 
-      0x7f02004c, 0x7f02004d, 0x7f02004e, 0x7f02004f, 
-      0x7f020050, 0x7f020051, 0x7f020052, 0x7f020053, 
-      0x7f020054, 0x7f020055, 0x7f02005e, 0x7f020061, 
-      0x7f020062, 0x7f020063, 0x7f020066, 0x7f020068, 
-      0x7f020073, 0x7f020074, 0x7f020075, 0x7f020076, 
-      0x7f020077, 0x7f02008a, 0x7f020090, 0x7f020098, 
-      0x7f020099, 0x7f02009a, 0x7f02009b, 0x7f02009e, 
-      0x7f02009f, 0x7f0200a0, 0x7f0200a1, 0x7f0200a2, 
-      0x7f0200a3, 0x7f0200a4, 0x7f0200a5, 0x7f0200a6, 
-      0x7f0200b6, 0x7f0200b7, 0x7f0200b8, 0x7f0200b9, 
-      0x7f0200bb, 0x7f0200c1, 0x7f0200c2, 0x7f0200c3, 
-      0x7f0200c4, 0x7f0200c7, 0x7f0200c8, 0x7f0200c9, 
-      0x7f0200ca, 0x7f0200d1, 0x7f0200d2, 0x7f0200df, 
-      0x7f0200e2, 0x7f0200e3, 0x7f0200e4, 0x7f0200e5, 
-      0x7f0200e6, 0x7f0200e7, 0x7f0200e8, 0x7f0200e9, 
-      0x7f0200ea, 0x7f0200eb, 0x7f020101, 0x7f020102, 
-      0x7f020103, 0x7f020104, 0x7f02011a, 0x7f02011c, 
-      0x7f02011d, 0x7f02011e, 0x7f02011f, 0x7f020120, 
-      0x7f020121, 0x7f020122, 0x7f020123, 0x7f020124, 
-      0x7f020125
+      0x7f020042, 0x7f020043, 0x7f020046, 0x7f020047, 
+      0x7f02004e, 0x7f02004f, 0x7f020050, 0x7f020051, 
+      0x7f020052, 0x7f020053, 0x7f020054, 0x7f020055, 
+      0x7f020056, 0x7f020058, 0x7f020061, 0x7f020064, 
+      0x7f020065, 0x7f020066, 0x7f020069, 0x7f02006b, 
+      0x7f020076, 0x7f020077, 0x7f020078, 0x7f020079, 
+      0x7f02007a, 0x7f02008d, 0x7f020095, 0x7f02009d, 
+      0x7f02009e, 0x7f02009f, 0x7f0200a0, 0x7f0200a3, 
+      0x7f0200a4, 0x7f0200a5, 0x7f0200a6, 0x7f0200a7, 
+      0x7f0200a8, 0x7f0200a9, 0x7f0200aa, 0x7f0200ab, 
+      0x7f0200bb, 0x7f0200bc, 0x7f0200bd, 0x7f0200be, 
+      0x7f0200c0, 0x7f0200c6, 0x7f0200c7, 0x7f0200c8, 
+      0x7f0200c9, 0x7f0200cd, 0x7f0200ce, 0x7f0200cf, 
+      0x7f0200d0, 0x7f0200d7, 0x7f0200d8, 0x7f0200e5, 
+      0x7f0200e8, 0x7f0200e9, 0x7f0200ea, 0x7f0200eb, 
+      0x7f0200ec, 0x7f0200ed, 0x7f0200ee, 0x7f0200ef, 
+      0x7f0200f0, 0x7f0200f1, 0x7f020107, 0x7f020108, 
+      0x7f020109, 0x7f02010a, 0x7f020120, 0x7f020122, 
+      0x7f020123, 0x7f020124, 0x7f020125, 0x7f020126, 
+      0x7f020127, 0x7f020128, 0x7f020129, 0x7f02012a, 
+      0x7f02012b
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
@@ -5772,7 +5904,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarDivider
+     * @attr name me.awadahmed.custom_emojiboard:actionBarDivider
      */
     public static final int AppCompatTheme_actionBarDivider=2;
     /**
@@ -5785,7 +5917,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarItemBackground
+     * @attr name me.awadahmed.custom_emojiboard:actionBarItemBackground
      */
     public static final int AppCompatTheme_actionBarItemBackground=3;
     /**
@@ -5799,7 +5931,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarPopupTheme
+     * @attr name me.awadahmed.custom_emojiboard:actionBarPopupTheme
      */
     public static final int AppCompatTheme_actionBarPopupTheme=4;
     /**
@@ -5822,7 +5954,7 @@ public final class R {
      * <tr><td>wrap_content</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:actionBarSize
+     * @attr name me.awadahmed.custom_emojiboard:actionBarSize
      */
     public static final int AppCompatTheme_actionBarSize=5;
     /**
@@ -5838,7 +5970,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarSplitStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionBarSplitStyle
      */
     public static final int AppCompatTheme_actionBarSplitStyle=6;
     /**
@@ -5851,11 +5983,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionBarStyle
      */
     public static final int AppCompatTheme_actionBarStyle=7;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#actionBarTabBarStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#actionBarTabBarStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5863,7 +5995,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarTabBarStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionBarTabBarStyle
      */
     public static final int AppCompatTheme_actionBarTabBarStyle=8;
     /**
@@ -5876,11 +6008,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarTabStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionBarTabStyle
      */
     public static final int AppCompatTheme_actionBarTabStyle=9;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#actionBarTabTextStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#actionBarTabTextStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -5888,7 +6020,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarTabTextStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionBarTabTextStyle
      */
     public static final int AppCompatTheme_actionBarTabTextStyle=10;
     /**
@@ -5903,7 +6035,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarTheme
+     * @attr name me.awadahmed.custom_emojiboard:actionBarTheme
      */
     public static final int AppCompatTheme_actionBarTheme=11;
     /**
@@ -5922,7 +6054,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionBarWidgetTheme
+     * @attr name me.awadahmed.custom_emojiboard:actionBarWidgetTheme
      */
     public static final int AppCompatTheme_actionBarWidgetTheme=12;
     /**
@@ -5935,7 +6067,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionButtonStyle
      */
     public static final int AppCompatTheme_actionButtonStyle=13;
     /**
@@ -5948,7 +6080,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionDropDownStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionDropDownStyle
      */
     public static final int AppCompatTheme_actionDropDownStyle=14;
     /**
@@ -5962,7 +6094,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionMenuTextAppearance
+     * @attr name me.awadahmed.custom_emojiboard:actionMenuTextAppearance
      */
     public static final int AppCompatTheme_actionMenuTextAppearance=15;
     /**
@@ -5978,7 +6110,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionMenuTextColor
+     * @attr name me.awadahmed.custom_emojiboard:actionMenuTextColor
      */
     public static final int AppCompatTheme_actionMenuTextColor=16;
     /**
@@ -5991,11 +6123,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeBackground
+     * @attr name me.awadahmed.custom_emojiboard:actionModeBackground
      */
     public static final int AppCompatTheme_actionModeBackground=17;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#actionModeCloseButtonStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#actionModeCloseButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6003,7 +6135,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeCloseButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionModeCloseButtonStyle
      */
     public static final int AppCompatTheme_actionModeCloseButtonStyle=18;
     /**
@@ -6016,7 +6148,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeCloseDrawable
+     * @attr name me.awadahmed.custom_emojiboard:actionModeCloseDrawable
      */
     public static final int AppCompatTheme_actionModeCloseDrawable=19;
     /**
@@ -6029,7 +6161,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeCopyDrawable
+     * @attr name me.awadahmed.custom_emojiboard:actionModeCopyDrawable
      */
     public static final int AppCompatTheme_actionModeCopyDrawable=20;
     /**
@@ -6042,7 +6174,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeCutDrawable
+     * @attr name me.awadahmed.custom_emojiboard:actionModeCutDrawable
      */
     public static final int AppCompatTheme_actionModeCutDrawable=21;
     /**
@@ -6055,7 +6187,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeFindDrawable
+     * @attr name me.awadahmed.custom_emojiboard:actionModeFindDrawable
      */
     public static final int AppCompatTheme_actionModeFindDrawable=22;
     /**
@@ -6068,7 +6200,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModePasteDrawable
+     * @attr name me.awadahmed.custom_emojiboard:actionModePasteDrawable
      */
     public static final int AppCompatTheme_actionModePasteDrawable=23;
     /**
@@ -6081,7 +6213,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModePopupWindowStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionModePopupWindowStyle
      */
     public static final int AppCompatTheme_actionModePopupWindowStyle=24;
     /**
@@ -6094,7 +6226,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeSelectAllDrawable
+     * @attr name me.awadahmed.custom_emojiboard:actionModeSelectAllDrawable
      */
     public static final int AppCompatTheme_actionModeSelectAllDrawable=25;
     /**
@@ -6107,7 +6239,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeShareDrawable
+     * @attr name me.awadahmed.custom_emojiboard:actionModeShareDrawable
      */
     public static final int AppCompatTheme_actionModeShareDrawable=26;
     /**
@@ -6120,11 +6252,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeSplitBackground
+     * @attr name me.awadahmed.custom_emojiboard:actionModeSplitBackground
      */
     public static final int AppCompatTheme_actionModeSplitBackground=27;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#actionModeStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#actionModeStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6132,7 +6264,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionModeStyle
      */
     public static final int AppCompatTheme_actionModeStyle=28;
     /**
@@ -6145,11 +6277,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionModeWebSearchDrawable
+     * @attr name me.awadahmed.custom_emojiboard:actionModeWebSearchDrawable
      */
     public static final int AppCompatTheme_actionModeWebSearchDrawable=29;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#actionOverflowButtonStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#actionOverflowButtonStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6157,11 +6289,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionOverflowButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionOverflowButtonStyle
      */
     public static final int AppCompatTheme_actionOverflowButtonStyle=30;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#actionOverflowMenuStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#actionOverflowMenuStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6169,7 +6301,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionOverflowMenuStyle
+     * @attr name me.awadahmed.custom_emojiboard:actionOverflowMenuStyle
      */
     public static final int AppCompatTheme_actionOverflowMenuStyle=31;
     /**
@@ -6182,11 +6314,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:activityChooserViewStyle
+     * @attr name me.awadahmed.custom_emojiboard:activityChooserViewStyle
      */
     public static final int AppCompatTheme_activityChooserViewStyle=32;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#alertDialogButtonGroupStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#alertDialogButtonGroupStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6194,21 +6326,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:alertDialogButtonGroupStyle
+     * @attr name me.awadahmed.custom_emojiboard:alertDialogButtonGroupStyle
      */
     public static final int AppCompatTheme_alertDialogButtonGroupStyle=33;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#alertDialogCenterButtons}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#alertDialogCenterButtons}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:alertDialogCenterButtons
+     * @attr name me.awadahmed.custom_emojiboard:alertDialogCenterButtons
      */
     public static final int AppCompatTheme_alertDialogCenterButtons=34;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#alertDialogStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#alertDialogStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6216,7 +6348,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:alertDialogStyle
+     * @attr name me.awadahmed.custom_emojiboard:alertDialogStyle
      */
     public static final int AppCompatTheme_alertDialogStyle=35;
     /**
@@ -6229,7 +6361,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:alertDialogTheme
+     * @attr name me.awadahmed.custom_emojiboard:alertDialogTheme
      */
     public static final int AppCompatTheme_alertDialogTheme=36;
     /**
@@ -6242,7 +6374,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:autoCompleteTextViewStyle
+     * @attr name me.awadahmed.custom_emojiboard:autoCompleteTextViewStyle
      */
     public static final int AppCompatTheme_autoCompleteTextViewStyle=37;
     /**
@@ -6255,7 +6387,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:borderlessButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:borderlessButtonStyle
      */
     public static final int AppCompatTheme_borderlessButtonStyle=38;
     /**
@@ -6268,7 +6400,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonBarButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:buttonBarButtonStyle
      */
     public static final int AppCompatTheme_buttonBarButtonStyle=39;
     /**
@@ -6281,7 +6413,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonBarNegativeButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:buttonBarNegativeButtonStyle
      */
     public static final int AppCompatTheme_buttonBarNegativeButtonStyle=40;
     /**
@@ -6294,7 +6426,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonBarNeutralButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:buttonBarNeutralButtonStyle
      */
     public static final int AppCompatTheme_buttonBarNeutralButtonStyle=41;
     /**
@@ -6307,7 +6439,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonBarPositiveButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:buttonBarPositiveButtonStyle
      */
     public static final int AppCompatTheme_buttonBarPositiveButtonStyle=42;
     /**
@@ -6320,7 +6452,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonBarStyle
+     * @attr name me.awadahmed.custom_emojiboard:buttonBarStyle
      */
     public static final int AppCompatTheme_buttonBarStyle=43;
     /**
@@ -6333,7 +6465,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonStyle
+     * @attr name me.awadahmed.custom_emojiboard:buttonStyle
      */
     public static final int AppCompatTheme_buttonStyle=44;
     /**
@@ -6346,7 +6478,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonStyleSmall
+     * @attr name me.awadahmed.custom_emojiboard:buttonStyleSmall
      */
     public static final int AppCompatTheme_buttonStyleSmall=45;
     /**
@@ -6359,7 +6491,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:checkboxStyle
+     * @attr name me.awadahmed.custom_emojiboard:checkboxStyle
      */
     public static final int AppCompatTheme_checkboxStyle=46;
     /**
@@ -6372,7 +6504,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:checkedTextViewStyle
+     * @attr name me.awadahmed.custom_emojiboard:checkedTextViewStyle
      */
     public static final int AppCompatTheme_checkedTextViewStyle=47;
     /**
@@ -6385,7 +6517,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorAccent
+     * @attr name me.awadahmed.custom_emojiboard:colorAccent
      */
     public static final int AppCompatTheme_colorAccent=48;
     /**
@@ -6397,7 +6529,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorBackgroundFloating
+     * @attr name me.awadahmed.custom_emojiboard:colorBackgroundFloating
      */
     public static final int AppCompatTheme_colorBackgroundFloating=49;
     /**
@@ -6409,7 +6541,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorButtonNormal
+     * @attr name me.awadahmed.custom_emojiboard:colorButtonNormal
      */
     public static final int AppCompatTheme_colorButtonNormal=50;
     /**
@@ -6421,7 +6553,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorControlActivated
+     * @attr name me.awadahmed.custom_emojiboard:colorControlActivated
      */
     public static final int AppCompatTheme_colorControlActivated=51;
     /**
@@ -6433,7 +6565,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorControlHighlight
+     * @attr name me.awadahmed.custom_emojiboard:colorControlHighlight
      */
     public static final int AppCompatTheme_colorControlHighlight=52;
     /**
@@ -6445,7 +6577,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorControlNormal
+     * @attr name me.awadahmed.custom_emojiboard:colorControlNormal
      */
     public static final int AppCompatTheme_colorControlNormal=53;
     /**
@@ -6462,7 +6594,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorError
+     * @attr name me.awadahmed.custom_emojiboard:colorError
      */
     public static final int AppCompatTheme_colorError=54;
     /**
@@ -6475,7 +6607,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorPrimary
+     * @attr name me.awadahmed.custom_emojiboard:colorPrimary
      */
     public static final int AppCompatTheme_colorPrimary=55;
     /**
@@ -6488,7 +6620,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorPrimaryDark
+     * @attr name me.awadahmed.custom_emojiboard:colorPrimaryDark
      */
     public static final int AppCompatTheme_colorPrimaryDark=56;
     /**
@@ -6500,7 +6632,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:colorSwitchThumbNormal
+     * @attr name me.awadahmed.custom_emojiboard:colorSwitchThumbNormal
      */
     public static final int AppCompatTheme_colorSwitchThumbNormal=57;
     /**
@@ -6513,7 +6645,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:controlBackground
+     * @attr name me.awadahmed.custom_emojiboard:controlBackground
      */
     public static final int AppCompatTheme_controlBackground=58;
     /**
@@ -6527,7 +6659,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:dialogCornerRadius
+     * @attr name me.awadahmed.custom_emojiboard:dialogCornerRadius
      */
     public static final int AppCompatTheme_dialogCornerRadius=59;
     /**
@@ -6541,7 +6673,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:dialogPreferredPadding
+     * @attr name me.awadahmed.custom_emojiboard:dialogPreferredPadding
      */
     public static final int AppCompatTheme_dialogPreferredPadding=60;
     /**
@@ -6554,7 +6686,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:dialogTheme
+     * @attr name me.awadahmed.custom_emojiboard:dialogTheme
      */
     public static final int AppCompatTheme_dialogTheme=61;
     /**
@@ -6567,7 +6699,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:dividerHorizontal
+     * @attr name me.awadahmed.custom_emojiboard:dividerHorizontal
      */
     public static final int AppCompatTheme_dividerHorizontal=62;
     /**
@@ -6580,7 +6712,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:dividerVertical
+     * @attr name me.awadahmed.custom_emojiboard:dividerVertical
      */
     public static final int AppCompatTheme_dividerVertical=63;
     /**
@@ -6593,7 +6725,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:dropDownListViewStyle
+     * @attr name me.awadahmed.custom_emojiboard:dropDownListViewStyle
      */
     public static final int AppCompatTheme_dropDownListViewStyle=64;
     /**
@@ -6607,7 +6739,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:dropdownListPreferredItemHeight
+     * @attr name me.awadahmed.custom_emojiboard:dropdownListPreferredItemHeight
      */
     public static final int AppCompatTheme_dropdownListPreferredItemHeight=65;
     /**
@@ -6620,7 +6752,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:editTextBackground
+     * @attr name me.awadahmed.custom_emojiboard:editTextBackground
      */
     public static final int AppCompatTheme_editTextBackground=66;
     /**
@@ -6636,7 +6768,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:editTextColor
+     * @attr name me.awadahmed.custom_emojiboard:editTextColor
      */
     public static final int AppCompatTheme_editTextColor=67;
     /**
@@ -6649,7 +6781,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:editTextStyle
+     * @attr name me.awadahmed.custom_emojiboard:editTextStyle
      */
     public static final int AppCompatTheme_editTextStyle=68;
     /**
@@ -6662,7 +6794,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:homeAsUpIndicator
+     * @attr name me.awadahmed.custom_emojiboard:homeAsUpIndicator
      */
     public static final int AppCompatTheme_homeAsUpIndicator=69;
     /**
@@ -6675,7 +6807,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:imageButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:imageButtonStyle
      */
     public static final int AppCompatTheme_imageButtonStyle=70;
     /**
@@ -6688,7 +6820,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:listChoiceBackgroundIndicator
+     * @attr name me.awadahmed.custom_emojiboard:listChoiceBackgroundIndicator
      */
     public static final int AppCompatTheme_listChoiceBackgroundIndicator=71;
     /**
@@ -6701,7 +6833,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:listChoiceIndicatorMultipleAnimated
+     * @attr name me.awadahmed.custom_emojiboard:listChoiceIndicatorMultipleAnimated
      */
     public static final int AppCompatTheme_listChoiceIndicatorMultipleAnimated=72;
     /**
@@ -6714,7 +6846,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:listChoiceIndicatorSingleAnimated
+     * @attr name me.awadahmed.custom_emojiboard:listChoiceIndicatorSingleAnimated
      */
     public static final int AppCompatTheme_listChoiceIndicatorSingleAnimated=73;
     /**
@@ -6727,7 +6859,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:listDividerAlertDialog
+     * @attr name me.awadahmed.custom_emojiboard:listDividerAlertDialog
      */
     public static final int AppCompatTheme_listDividerAlertDialog=74;
     /**
@@ -6740,11 +6872,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:listMenuViewStyle
+     * @attr name me.awadahmed.custom_emojiboard:listMenuViewStyle
      */
     public static final int AppCompatTheme_listMenuViewStyle=75;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#listPopupWindowStyle}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#listPopupWindowStyle}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -6752,7 +6884,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:listPopupWindowStyle
+     * @attr name me.awadahmed.custom_emojiboard:listPopupWindowStyle
      */
     public static final int AppCompatTheme_listPopupWindowStyle=76;
     /**
@@ -6766,7 +6898,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:listPreferredItemHeight
+     * @attr name me.awadahmed.custom_emojiboard:listPreferredItemHeight
      */
     public static final int AppCompatTheme_listPreferredItemHeight=77;
     /**
@@ -6780,7 +6912,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:listPreferredItemHeightLarge
+     * @attr name me.awadahmed.custom_emojiboard:listPreferredItemHeightLarge
      */
     public static final int AppCompatTheme_listPreferredItemHeightLarge=78;
     /**
@@ -6794,7 +6926,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:listPreferredItemHeightSmall
+     * @attr name me.awadahmed.custom_emojiboard:listPreferredItemHeightSmall
      */
     public static final int AppCompatTheme_listPreferredItemHeightSmall=79;
     /**
@@ -6808,7 +6940,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:listPreferredItemPaddingEnd
+     * @attr name me.awadahmed.custom_emojiboard:listPreferredItemPaddingEnd
      */
     public static final int AppCompatTheme_listPreferredItemPaddingEnd=80;
     /**
@@ -6822,7 +6954,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:listPreferredItemPaddingLeft
+     * @attr name me.awadahmed.custom_emojiboard:listPreferredItemPaddingLeft
      */
     public static final int AppCompatTheme_listPreferredItemPaddingLeft=81;
     /**
@@ -6836,7 +6968,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:listPreferredItemPaddingRight
+     * @attr name me.awadahmed.custom_emojiboard:listPreferredItemPaddingRight
      */
     public static final int AppCompatTheme_listPreferredItemPaddingRight=82;
     /**
@@ -6850,7 +6982,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:listPreferredItemPaddingStart
+     * @attr name me.awadahmed.custom_emojiboard:listPreferredItemPaddingStart
      */
     public static final int AppCompatTheme_listPreferredItemPaddingStart=83;
     /**
@@ -6863,7 +6995,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:panelBackground
+     * @attr name me.awadahmed.custom_emojiboard:panelBackground
      */
     public static final int AppCompatTheme_panelBackground=84;
     /**
@@ -6876,7 +7008,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:panelMenuListTheme
+     * @attr name me.awadahmed.custom_emojiboard:panelMenuListTheme
      */
     public static final int AppCompatTheme_panelMenuListTheme=85;
     /**
@@ -6890,7 +7022,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:panelMenuListWidth
+     * @attr name me.awadahmed.custom_emojiboard:panelMenuListWidth
      */
     public static final int AppCompatTheme_panelMenuListWidth=86;
     /**
@@ -6903,7 +7035,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:popupMenuStyle
+     * @attr name me.awadahmed.custom_emojiboard:popupMenuStyle
      */
     public static final int AppCompatTheme_popupMenuStyle=87;
     /**
@@ -6916,7 +7048,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:popupWindowStyle
+     * @attr name me.awadahmed.custom_emojiboard:popupWindowStyle
      */
     public static final int AppCompatTheme_popupWindowStyle=88;
     /**
@@ -6929,7 +7061,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:radioButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:radioButtonStyle
      */
     public static final int AppCompatTheme_radioButtonStyle=89;
     /**
@@ -6942,7 +7074,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:ratingBarStyle
+     * @attr name me.awadahmed.custom_emojiboard:ratingBarStyle
      */
     public static final int AppCompatTheme_ratingBarStyle=90;
     /**
@@ -6955,7 +7087,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:ratingBarStyleIndicator
+     * @attr name me.awadahmed.custom_emojiboard:ratingBarStyleIndicator
      */
     public static final int AppCompatTheme_ratingBarStyleIndicator=91;
     /**
@@ -6968,7 +7100,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:ratingBarStyleSmall
+     * @attr name me.awadahmed.custom_emojiboard:ratingBarStyleSmall
      */
     public static final int AppCompatTheme_ratingBarStyleSmall=92;
     /**
@@ -6981,7 +7113,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:searchViewStyle
+     * @attr name me.awadahmed.custom_emojiboard:searchViewStyle
      */
     public static final int AppCompatTheme_searchViewStyle=93;
     /**
@@ -6994,7 +7126,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:seekBarStyle
+     * @attr name me.awadahmed.custom_emojiboard:seekBarStyle
      */
     public static final int AppCompatTheme_seekBarStyle=94;
     /**
@@ -7009,7 +7141,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:selectableItemBackground
+     * @attr name me.awadahmed.custom_emojiboard:selectableItemBackground
      */
     public static final int AppCompatTheme_selectableItemBackground=95;
     /**
@@ -7022,7 +7154,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:selectableItemBackgroundBorderless
+     * @attr name me.awadahmed.custom_emojiboard:selectableItemBackgroundBorderless
      */
     public static final int AppCompatTheme_selectableItemBackgroundBorderless=96;
     /**
@@ -7035,7 +7167,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:spinnerDropDownItemStyle
+     * @attr name me.awadahmed.custom_emojiboard:spinnerDropDownItemStyle
      */
     public static final int AppCompatTheme_spinnerDropDownItemStyle=97;
     /**
@@ -7048,7 +7180,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:spinnerStyle
+     * @attr name me.awadahmed.custom_emojiboard:spinnerStyle
      */
     public static final int AppCompatTheme_spinnerStyle=98;
     /**
@@ -7061,7 +7193,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:switchStyle
+     * @attr name me.awadahmed.custom_emojiboard:switchStyle
      */
     public static final int AppCompatTheme_switchStyle=99;
     /**
@@ -7074,7 +7206,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textAppearanceLargePopupMenu
+     * @attr name me.awadahmed.custom_emojiboard:textAppearanceLargePopupMenu
      */
     public static final int AppCompatTheme_textAppearanceLargePopupMenu=100;
     /**
@@ -7087,7 +7219,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textAppearanceListItem
+     * @attr name me.awadahmed.custom_emojiboard:textAppearanceListItem
      */
     public static final int AppCompatTheme_textAppearanceListItem=101;
     /**
@@ -7100,7 +7232,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textAppearanceListItemSecondary
+     * @attr name me.awadahmed.custom_emojiboard:textAppearanceListItemSecondary
      */
     public static final int AppCompatTheme_textAppearanceListItemSecondary=102;
     /**
@@ -7113,7 +7245,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textAppearanceListItemSmall
+     * @attr name me.awadahmed.custom_emojiboard:textAppearanceListItemSmall
      */
     public static final int AppCompatTheme_textAppearanceListItemSmall=103;
     /**
@@ -7126,7 +7258,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textAppearancePopupMenuHeader
+     * @attr name me.awadahmed.custom_emojiboard:textAppearancePopupMenuHeader
      */
     public static final int AppCompatTheme_textAppearancePopupMenuHeader=104;
     /**
@@ -7139,7 +7271,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textAppearanceSearchResultSubtitle
+     * @attr name me.awadahmed.custom_emojiboard:textAppearanceSearchResultSubtitle
      */
     public static final int AppCompatTheme_textAppearanceSearchResultSubtitle=105;
     /**
@@ -7152,7 +7284,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textAppearanceSearchResultTitle
+     * @attr name me.awadahmed.custom_emojiboard:textAppearanceSearchResultTitle
      */
     public static final int AppCompatTheme_textAppearanceSearchResultTitle=106;
     /**
@@ -7165,7 +7297,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textAppearanceSmallPopupMenu
+     * @attr name me.awadahmed.custom_emojiboard:textAppearanceSmallPopupMenu
      */
     public static final int AppCompatTheme_textAppearanceSmallPopupMenu=107;
     /**
@@ -7181,7 +7313,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textColorAlertDialogListItem
+     * @attr name me.awadahmed.custom_emojiboard:textColorAlertDialogListItem
      */
     public static final int AppCompatTheme_textColorAlertDialogListItem=108;
     /**
@@ -7197,7 +7329,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:textColorSearchUrl
+     * @attr name me.awadahmed.custom_emojiboard:textColorSearchUrl
      */
     public static final int AppCompatTheme_textColorSearchUrl=109;
     /**
@@ -7210,7 +7342,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:toolbarNavigationButtonStyle
+     * @attr name me.awadahmed.custom_emojiboard:toolbarNavigationButtonStyle
      */
     public static final int AppCompatTheme_toolbarNavigationButtonStyle=110;
     /**
@@ -7223,7 +7355,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:toolbarStyle
+     * @attr name me.awadahmed.custom_emojiboard:toolbarStyle
      */
     public static final int AppCompatTheme_toolbarStyle=111;
     /**
@@ -7239,7 +7371,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:tooltipForegroundColor
+     * @attr name me.awadahmed.custom_emojiboard:tooltipForegroundColor
      */
     public static final int AppCompatTheme_tooltipForegroundColor=112;
     /**
@@ -7252,17 +7384,17 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:tooltipFrameBackground
+     * @attr name me.awadahmed.custom_emojiboard:tooltipFrameBackground
      */
     public static final int AppCompatTheme_tooltipFrameBackground=113;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#viewInflaterClass}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#viewInflaterClass}
      * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:viewInflaterClass
+     * @attr name me.awadahmed.custom_emojiboard:viewInflaterClass
      */
     public static final int AppCompatTheme_viewInflaterClass=114;
     /**
@@ -7274,7 +7406,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:windowActionBar
+     * @attr name me.awadahmed.custom_emojiboard:windowActionBar
      */
     public static final int AppCompatTheme_windowActionBar=115;
     /**
@@ -7287,7 +7419,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:windowActionBarOverlay
+     * @attr name me.awadahmed.custom_emojiboard:windowActionBarOverlay
      */
     public static final int AppCompatTheme_windowActionBarOverlay=116;
     /**
@@ -7299,7 +7431,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:windowActionModeOverlay
+     * @attr name me.awadahmed.custom_emojiboard:windowActionModeOverlay
      */
     public static final int AppCompatTheme_windowActionModeOverlay=117;
     /**
@@ -7319,7 +7451,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.example.custom_emojiboard:windowFixedHeightMajor
+     * @attr name me.awadahmed.custom_emojiboard:windowFixedHeightMajor
      */
     public static final int AppCompatTheme_windowFixedHeightMajor=118;
     /**
@@ -7339,7 +7471,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.example.custom_emojiboard:windowFixedHeightMinor
+     * @attr name me.awadahmed.custom_emojiboard:windowFixedHeightMinor
      */
     public static final int AppCompatTheme_windowFixedHeightMinor=119;
     /**
@@ -7359,7 +7491,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.example.custom_emojiboard:windowFixedWidthMajor
+     * @attr name me.awadahmed.custom_emojiboard:windowFixedWidthMajor
      */
     public static final int AppCompatTheme_windowFixedWidthMajor=120;
     /**
@@ -7379,7 +7511,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.example.custom_emojiboard:windowFixedWidthMinor
+     * @attr name me.awadahmed.custom_emojiboard:windowFixedWidthMinor
      */
     public static final int AppCompatTheme_windowFixedWidthMinor=121;
     /**
@@ -7400,7 +7532,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.example.custom_emojiboard:windowMinWidthMajor
+     * @attr name me.awadahmed.custom_emojiboard:windowMinWidthMajor
      */
     public static final int AppCompatTheme_windowMinWidthMajor=122;
     /**
@@ -7421,7 +7553,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name com.example.custom_emojiboard:windowMinWidthMinor
+     * @attr name me.awadahmed.custom_emojiboard:windowMinWidthMinor
      */
     public static final int AppCompatTheme_windowMinWidthMinor=123;
     /**
@@ -7432,7 +7564,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:windowNoTitle
+     * @attr name me.awadahmed.custom_emojiboard:windowNoTitle
      */
     public static final int AppCompatTheme_windowNoTitle=124;
     /**
@@ -7442,7 +7574,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.example.custom_emojiboard:allowStacking}</code></td><td>Whether to automatically stack the buttons when there is not
+     * <tr><td><code>{@link #ButtonBarLayout_allowStacking me.awadahmed.custom_emojiboard:allowStacking}</code></td><td>Whether to automatically stack the buttons when there is not
      * enough space to lay them out side-by-side.</td></tr>
      * </table>
      * @see #ButtonBarLayout_allowStacking
@@ -7459,7 +7591,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:allowStacking
+     * @attr name me.awadahmed.custom_emojiboard:allowStacking
      */
     public static final int ButtonBarLayout_allowStacking=0;
     /**
@@ -7471,7 +7603,7 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_alpha com.example.custom_emojiboard:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_alpha me.awadahmed.custom_emojiboard:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
      * </table>
      * @see #ColorStateListItem_android_color
      * @see #ColorStateListItem_android_alpha
@@ -7508,7 +7640,7 @@ public final class R {
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.example.custom_emojiboard:alpha
+     * @attr name me.awadahmed.custom_emojiboard:alpha
      */
     public static final int ColorStateListItem_alpha=2;
     /**
@@ -7519,9 +7651,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonCompat com.example.custom_emojiboard:buttonCompat}</code></td><td>Compat attr to load backported drawable types</td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTint com.example.custom_emojiboard:buttonTint}</code></td><td>Tint to apply to the button drawable.</td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.example.custom_emojiboard:buttonTintMode}</code></td><td>Blending mode used to apply the button tint.</td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonCompat me.awadahmed.custom_emojiboard:buttonCompat}</code></td><td>Compat attr to load backported drawable types</td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTint me.awadahmed.custom_emojiboard:buttonTint}</code></td><td>Tint to apply to the button drawable.</td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTintMode me.awadahmed.custom_emojiboard:buttonTintMode}</code></td><td>Blending mode used to apply the button tint.</td></tr>
      * </table>
      * @see #CompoundButton_android_button
      * @see #CompoundButton_buttonCompat
@@ -7529,7 +7661,7 @@ public final class R {
      * @see #CompoundButton_buttonTintMode
      */
     public static final int[] CompoundButton={
-      0x01010107, 0x7f02003d, 0x7f020043, 0x7f020044
+      0x01010107, 0x7f02003d, 0x7f020044, 0x7f020045
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#button}
@@ -7553,7 +7685,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonCompat
+     * @attr name me.awadahmed.custom_emojiboard:buttonCompat
      */
     public static final int CompoundButton_buttonCompat=1;
     /**
@@ -7565,7 +7697,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:buttonTint
+     * @attr name me.awadahmed.custom_emojiboard:buttonTint
      */
     public static final int CompoundButton_buttonTint=2;
     /**
@@ -7592,7 +7724,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:buttonTintMode
+     * @attr name me.awadahmed.custom_emojiboard:buttonTintMode
      */
     public static final int CompoundButton_buttonTintMode=3;
     /**
@@ -7602,14 +7734,14 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.example.custom_emojiboard:arrowHeadLength}</code></td><td>The length of the arrow head when formed to make an arrow</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.example.custom_emojiboard:arrowShaftLength}</code></td><td>The length of the shaft when formed to make an arrow</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.example.custom_emojiboard:barLength}</code></td><td>The length of the bars when they are parallel to each other</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_color com.example.custom_emojiboard:color}</code></td><td>The drawing color for the bars</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.example.custom_emojiboard:drawableSize}</code></td><td>The total size of the drawable</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.example.custom_emojiboard:gapBetweenBars}</code></td><td>The max gap between the bars when they are parallel to each other</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.example.custom_emojiboard:spinBars}</code></td><td>Whether bars should rotate or not during transition</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.example.custom_emojiboard:thickness}</code></td><td>The thickness (stroke size) for the bar paint</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength me.awadahmed.custom_emojiboard:arrowHeadLength}</code></td><td>The length of the arrow head when formed to make an arrow</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength me.awadahmed.custom_emojiboard:arrowShaftLength}</code></td><td>The length of the shaft when formed to make an arrow</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_barLength me.awadahmed.custom_emojiboard:barLength}</code></td><td>The length of the bars when they are parallel to each other</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_color me.awadahmed.custom_emojiboard:color}</code></td><td>The drawing color for the bars</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize me.awadahmed.custom_emojiboard:drawableSize}</code></td><td>The total size of the drawable</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars me.awadahmed.custom_emojiboard:gapBetweenBars}</code></td><td>The max gap between the bars when they are parallel to each other</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_spinBars me.awadahmed.custom_emojiboard:spinBars}</code></td><td>Whether bars should rotate or not during transition</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_thickness me.awadahmed.custom_emojiboard:thickness}</code></td><td>The thickness (stroke size) for the bar paint</td></tr>
      * </table>
      * @see #DrawerArrowToggle_arrowHeadLength
      * @see #DrawerArrowToggle_arrowShaftLength
@@ -7621,8 +7753,8 @@ public final class R {
      * @see #DrawerArrowToggle_thickness
      */
     public static final int[] DrawerArrowToggle={
-      0x7f020029, 0x7f02002a, 0x7f020036, 0x7f02004b, 
-      0x7f02006d, 0x7f020086, 0x7f0200d0, 0x7f0200ee
+      0x7f020029, 0x7f02002a, 0x7f020036, 0x7f02004d, 
+      0x7f020070, 0x7f020089, 0x7f0200d6, 0x7f0200f4
     };
     /**
      * <p>
@@ -7635,7 +7767,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:arrowHeadLength
+     * @attr name me.awadahmed.custom_emojiboard:arrowHeadLength
      */
     public static final int DrawerArrowToggle_arrowHeadLength=0;
     /**
@@ -7649,7 +7781,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:arrowShaftLength
+     * @attr name me.awadahmed.custom_emojiboard:arrowShaftLength
      */
     public static final int DrawerArrowToggle_arrowShaftLength=1;
     /**
@@ -7663,7 +7795,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:barLength
+     * @attr name me.awadahmed.custom_emojiboard:barLength
      */
     public static final int DrawerArrowToggle_barLength=2;
     /**
@@ -7675,7 +7807,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:color
+     * @attr name me.awadahmed.custom_emojiboard:color
      */
     public static final int DrawerArrowToggle_color=3;
     /**
@@ -7689,7 +7821,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:drawableSize
+     * @attr name me.awadahmed.custom_emojiboard:drawableSize
      */
     public static final int DrawerArrowToggle_drawableSize=4;
     /**
@@ -7703,7 +7835,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:gapBetweenBars
+     * @attr name me.awadahmed.custom_emojiboard:gapBetweenBars
      */
     public static final int DrawerArrowToggle_gapBetweenBars=5;
     /**
@@ -7714,7 +7846,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:spinBars
+     * @attr name me.awadahmed.custom_emojiboard:spinBars
      */
     public static final int DrawerArrowToggle_spinBars=6;
     /**
@@ -7728,7 +7860,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:thickness
+     * @attr name me.awadahmed.custom_emojiboard:thickness
      */
     public static final int DrawerArrowToggle_thickness=7;
     /**
@@ -7738,12 +7870,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.example.custom_emojiboard:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.example.custom_emojiboard:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.example.custom_emojiboard:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.example.custom_emojiboard:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.example.custom_emojiboard:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.example.custom_emojiboard:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority me.awadahmed.custom_emojiboard:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts me.awadahmed.custom_emojiboard:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy me.awadahmed.custom_emojiboard:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout me.awadahmed.custom_emojiboard:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage me.awadahmed.custom_emojiboard:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery me.awadahmed.custom_emojiboard:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -7753,8 +7885,8 @@ public final class R {
      * @see #FontFamily_fontProviderQuery
      */
     public static final int[] FontFamily={
-      0x7f02007d, 0x7f02007e, 0x7f02007f, 0x7f020080, 
-      0x7f020081, 0x7f020082
+      0x7f020080, 0x7f020081, 0x7f020082, 0x7f020083, 
+      0x7f020084, 0x7f020085
     };
     /**
      * <p>
@@ -7764,7 +7896,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:fontProviderAuthority
+     * @attr name me.awadahmed.custom_emojiboard:fontProviderAuthority
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
@@ -7781,7 +7913,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:fontProviderCerts
+     * @attr name me.awadahmed.custom_emojiboard:fontProviderCerts
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
@@ -7813,7 +7945,7 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:fontProviderFetchStrategy
+     * @attr name me.awadahmed.custom_emojiboard:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
@@ -7832,7 +7964,7 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:fontProviderFetchTimeout
+     * @attr name me.awadahmed.custom_emojiboard:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
@@ -7844,7 +7976,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:fontProviderPackage
+     * @attr name me.awadahmed.custom_emojiboard:fontProviderPackage
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
@@ -7856,7 +7988,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:fontProviderQuery
+     * @attr name me.awadahmed.custom_emojiboard:fontProviderQuery
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
@@ -7871,11 +8003,11 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.example.custom_emojiboard:font}</code></td><td>The reference to the font file to be used.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.example.custom_emojiboard:fontStyle}</code></td><td>The style of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.example.custom_emojiboard:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.example.custom_emojiboard:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.example.custom_emojiboard:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font me.awadahmed.custom_emojiboard:font}</code></td><td>The reference to the font file to be used.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle me.awadahmed.custom_emojiboard:fontStyle}</code></td><td>The style of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings me.awadahmed.custom_emojiboard:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight me.awadahmed.custom_emojiboard:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex me.awadahmed.custom_emojiboard:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
@@ -7890,8 +8022,8 @@ public final class R {
      */
     public static final int[] FontFamilyFont={
       0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
-      0x01010570, 0x7f02007b, 0x7f020083, 0x7f020084, 
-      0x7f020085, 0x7f020109
+      0x01010570, 0x7f02007e, 0x7f020086, 0x7f020087, 
+      0x7f020088, 0x7f02010f
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -7962,7 +8094,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:font
+     * @attr name me.awadahmed.custom_emojiboard:font
      */
     public static final int FontFamilyFont_font=5;
     /**
@@ -7982,7 +8114,7 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:fontStyle
+     * @attr name me.awadahmed.custom_emojiboard:fontStyle
      */
     public static final int FontFamilyFont_fontStyle=6;
     /**
@@ -7996,7 +8128,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:fontVariationSettings
+     * @attr name me.awadahmed.custom_emojiboard:fontVariationSettings
      */
     public static final int FontFamilyFont_fontVariationSettings=7;
     /**
@@ -8010,7 +8142,7 @@ public final class R {
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.example.custom_emojiboard:fontWeight
+     * @attr name me.awadahmed.custom_emojiboard:fontWeight
      */
     public static final int FontFamilyFont_fontWeight=8;
     /**
@@ -8021,7 +8153,7 @@ public final class R {
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.example.custom_emojiboard:ttcIndex
+     * @attr name me.awadahmed.custom_emojiboard:ttcIndex
      */
     public static final int FontFamilyFont_ttcIndex=9;
     /**
@@ -8279,11 +8411,11 @@ public final class R {
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAligned android:baselineAligned}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAlignedChildIndex android:baselineAlignedChildIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_divider com.example.custom_emojiboard:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.example.custom_emojiboard:dividerPadding}</code></td><td>Size of padding on either end of a divider.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.example.custom_emojiboard:measureWithLargestChild}</code></td><td>When set to true, all children with a weight will be considered having
+     * <tr><td><code>{@link #LinearLayoutCompat_divider me.awadahmed.custom_emojiboard:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding me.awadahmed.custom_emojiboard:dividerPadding}</code></td><td>Size of padding on either end of a divider.</td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild me.awadahmed.custom_emojiboard:measureWithLargestChild}</code></td><td>When set to true, all children with a weight will be considered having
      * the minimum size of the largest child.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.example.custom_emojiboard:showDividers}</code></td><td>Setting for which dividers to show.</td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_showDividers me.awadahmed.custom_emojiboard:showDividers}</code></td><td>Setting for which dividers to show.</td></tr>
      * </table>
      * @see #LinearLayoutCompat_android_gravity
      * @see #LinearLayoutCompat_android_orientation
@@ -8297,8 +8429,8 @@ public final class R {
      */
     public static final int[] LinearLayoutCompat={
       0x010100af, 0x010100c4, 0x01010126, 0x01010127, 
-      0x01010128, 0x7f020065, 0x7f020067, 0x7f0200aa, 
-      0x7f0200cc
+      0x01010128, 0x7f020068, 0x7f02006a, 0x7f0200af, 
+      0x7f0200d2
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -8398,7 +8530,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:divider
+     * @attr name me.awadahmed.custom_emojiboard:divider
      */
     public static final int LinearLayoutCompat_divider=5;
     /**
@@ -8412,7 +8544,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:dividerPadding
+     * @attr name me.awadahmed.custom_emojiboard:dividerPadding
      */
     public static final int LinearLayoutCompat_dividerPadding=6;
     /**
@@ -8425,7 +8557,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:measureWithLargestChild
+     * @attr name me.awadahmed.custom_emojiboard:measureWithLargestChild
      */
     public static final int LinearLayoutCompat_measureWithLargestChild=7;
     /**
@@ -8445,7 +8577,7 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:showDividers
+     * @attr name me.awadahmed.custom_emojiboard:showDividers
      */
     public static final int LinearLayoutCompat_showDividers=8;
     /**
@@ -8597,6 +8729,61 @@ public final class R {
      */
     public static final int ListPopupWindow_android_dropDownVerticalOffset=1;
     /**
+     * Attributes that can be used with a LoadingImageView.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #LoadingImageView_circleCrop me.awadahmed.custom_emojiboard:circleCrop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio me.awadahmed.custom_emojiboard:imageAspectRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust me.awadahmed.custom_emojiboard:imageAspectRatioAdjust}</code></td><td></td></tr>
+     * </table>
+     * @see #LoadingImageView_circleCrop
+     * @see #LoadingImageView_imageAspectRatio
+     * @see #LoadingImageView_imageAspectRatioAdjust
+     */
+    public static final int[] LoadingImageView={
+      0x7f020048, 0x7f020093, 0x7f020094
+    };
+    /**
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#circleCrop}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name me.awadahmed.custom_emojiboard:circleCrop
+     */
+    public static final int LoadingImageView_circleCrop=0;
+    /**
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#imageAspectRatio}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name me.awadahmed.custom_emojiboard:imageAspectRatio
+     */
+    public static final int LoadingImageView_imageAspectRatio=1;
+    /**
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#imageAspectRatioAdjust}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>adjust_height</td><td>2</td><td></td></tr>
+     * <tr><td>adjust_width</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name me.awadahmed.custom_emojiboard:imageAspectRatioAdjust
+     */
+    public static final int LoadingImageView_imageAspectRatioAdjust=2;
+    /**
      * Attributes that can be used with a MenuGroup.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -8727,18 +8914,18 @@ public final class R {
      * <tr><td><code>{@link #MenuItem_android_numericShortcut android:numericShortcut}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_onClick android:onClick}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionLayout com.example.custom_emojiboard:actionLayout}</code></td><td>An optional layout to be used as an action view.</td></tr>
-     * <tr><td><code>{@link #MenuItem_actionProviderClass com.example.custom_emojiboard:actionProviderClass}</code></td><td>The name of an optional ActionProvider class to instantiate an action view
+     * <tr><td><code>{@link #MenuItem_actionLayout me.awadahmed.custom_emojiboard:actionLayout}</code></td><td>An optional layout to be used as an action view.</td></tr>
+     * <tr><td><code>{@link #MenuItem_actionProviderClass me.awadahmed.custom_emojiboard:actionProviderClass}</code></td><td>The name of an optional ActionProvider class to instantiate an action view
      * and perform operations such as default action for that menu item.</td></tr>
-     * <tr><td><code>{@link #MenuItem_actionViewClass com.example.custom_emojiboard:actionViewClass}</code></td><td>The name of an optional View class to instantiate and use as an
+     * <tr><td><code>{@link #MenuItem_actionViewClass me.awadahmed.custom_emojiboard:actionViewClass}</code></td><td>The name of an optional View class to instantiate and use as an
      * action view.</td></tr>
-     * <tr><td><code>{@link #MenuItem_alphabeticModifiers com.example.custom_emojiboard:alphabeticModifiers}</code></td><td>The alphabetic modifier key.</td></tr>
-     * <tr><td><code>{@link #MenuItem_contentDescription com.example.custom_emojiboard:contentDescription}</code></td><td>The content description associated with the item.</td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTint com.example.custom_emojiboard:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTintMode com.example.custom_emojiboard:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
-     * <tr><td><code>{@link #MenuItem_numericModifiers com.example.custom_emojiboard:numericModifiers}</code></td><td>The numeric modifier key.</td></tr>
-     * <tr><td><code>{@link #MenuItem_showAsAction com.example.custom_emojiboard:showAsAction}</code></td><td>How this item should display in the Action Bar, if present.</td></tr>
-     * <tr><td><code>{@link #MenuItem_tooltipText com.example.custom_emojiboard:tooltipText}</code></td><td>The tooltip text associated with the item.</td></tr>
+     * <tr><td><code>{@link #MenuItem_alphabeticModifiers me.awadahmed.custom_emojiboard:alphabeticModifiers}</code></td><td>The alphabetic modifier key.</td></tr>
+     * <tr><td><code>{@link #MenuItem_contentDescription me.awadahmed.custom_emojiboard:contentDescription}</code></td><td>The content description associated with the item.</td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTint me.awadahmed.custom_emojiboard:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTintMode me.awadahmed.custom_emojiboard:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
+     * <tr><td><code>{@link #MenuItem_numericModifiers me.awadahmed.custom_emojiboard:numericModifiers}</code></td><td>The numeric modifier key.</td></tr>
+     * <tr><td><code>{@link #MenuItem_showAsAction me.awadahmed.custom_emojiboard:showAsAction}</code></td><td>How this item should display in the Action Bar, if present.</td></tr>
+     * <tr><td><code>{@link #MenuItem_tooltipText me.awadahmed.custom_emojiboard:tooltipText}</code></td><td>The tooltip text associated with the item.</td></tr>
      * </table>
      * @see #MenuItem_android_icon
      * @see #MenuItem_android_enabled
@@ -8769,8 +8956,8 @@ public final class R {
       0x01010194, 0x010101de, 0x010101df, 0x010101e1, 
       0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5, 
       0x0101026f, 0x7f02000d, 0x7f02001f, 0x7f020020, 
-      0x7f020028, 0x7f020057, 0x7f02008d, 0x7f02008e, 
-      0x7f0200b0, 0x7f0200cb, 0x7f020105
+      0x7f020028, 0x7f02005a, 0x7f020090, 0x7f020091, 
+      0x7f0200b5, 0x7f0200d1, 0x7f02010b
     };
     /**
      * <p>
@@ -8947,7 +9134,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:actionLayout
+     * @attr name me.awadahmed.custom_emojiboard:actionLayout
      */
     public static final int MenuItem_actionLayout=13;
     /**
@@ -8961,7 +9148,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:actionProviderClass
+     * @attr name me.awadahmed.custom_emojiboard:actionProviderClass
      */
     public static final int MenuItem_actionProviderClass=14;
     /**
@@ -8974,7 +9161,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:actionViewClass
+     * @attr name me.awadahmed.custom_emojiboard:actionViewClass
      */
     public static final int MenuItem_actionViewClass=15;
     /**
@@ -8997,7 +9184,7 @@ public final class R {
      * <tr><td>SYM</td><td>4</td><td></td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:alphabeticModifiers
+     * @attr name me.awadahmed.custom_emojiboard:alphabeticModifiers
      */
     public static final int MenuItem_alphabeticModifiers=16;
     /**
@@ -9008,7 +9195,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:contentDescription
+     * @attr name me.awadahmed.custom_emojiboard:contentDescription
      */
     public static final int MenuItem_contentDescription=17;
     /**
@@ -9020,7 +9207,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:iconTint
+     * @attr name me.awadahmed.custom_emojiboard:iconTint
      */
     public static final int MenuItem_iconTint=18;
     /**
@@ -9047,7 +9234,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:iconTintMode
+     * @attr name me.awadahmed.custom_emojiboard:iconTintMode
      */
     public static final int MenuItem_iconTintMode=19;
     /**
@@ -9070,7 +9257,7 @@ public final class R {
      * <tr><td>SYM</td><td>4</td><td></td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:numericModifiers
+     * @attr name me.awadahmed.custom_emojiboard:numericModifiers
      */
     public static final int MenuItem_numericModifiers=20;
     /**
@@ -9100,7 +9287,7 @@ public final class R {
      * label with it even if it has an icon representation.</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:showAsAction
+     * @attr name me.awadahmed.custom_emojiboard:showAsAction
      */
     public static final int MenuItem_showAsAction=21;
     /**
@@ -9111,7 +9298,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:tooltipText
+     * @attr name me.awadahmed.custom_emojiboard:tooltipText
      */
     public static final int MenuItem_tooltipText=22;
     /**
@@ -9128,8 +9315,8 @@ public final class R {
      * <tr><td><code>{@link #MenuView_android_headerBackground android:headerBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemBackground android:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemIconDisabledAlpha android:itemIconDisabledAlpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.example.custom_emojiboard:preserveIconSpacing}</code></td><td>Whether space should be reserved in layout when an icon is missing.</td></tr>
-     * <tr><td><code>{@link #MenuView_subMenuArrow com.example.custom_emojiboard:subMenuArrow}</code></td><td>Drawable for the arrow icon indicating a particular item is a submenu.</td></tr>
+     * <tr><td><code>{@link #MenuView_preserveIconSpacing me.awadahmed.custom_emojiboard:preserveIconSpacing}</code></td><td>Whether space should be reserved in layout when an icon is missing.</td></tr>
+     * <tr><td><code>{@link #MenuView_subMenuArrow me.awadahmed.custom_emojiboard:subMenuArrow}</code></td><td>Drawable for the arrow icon indicating a particular item is a submenu.</td></tr>
      * </table>
      * @see #MenuView_android_windowAnimationStyle
      * @see #MenuView_android_itemTextAppearance
@@ -9143,8 +9330,8 @@ public final class R {
      */
     public static final int[] MenuView={
       0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e, 
-      0x0101012f, 0x01010130, 0x01010131, 0x7f0200bc, 
-      0x7f0200d6
+      0x0101012f, 0x01010130, 0x01010131, 0x7f0200c1, 
+      0x7f0200dc
     };
     /**
      * <p>
@@ -9248,7 +9435,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:preserveIconSpacing
+     * @attr name me.awadahmed.custom_emojiboard:preserveIconSpacing
      */
     public static final int MenuView_preserveIconSpacing=7;
     /**
@@ -9261,7 +9448,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:subMenuArrow
+     * @attr name me.awadahmed.custom_emojiboard:subMenuArrow
      */
     public static final int MenuView_subMenuArrow=8;
     /**
@@ -9273,14 +9460,14 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupAnimationStyle android:popupAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.example.custom_emojiboard:overlapAnchor}</code></td><td>Whether the popup window should overlap its anchor view.</td></tr>
+     * <tr><td><code>{@link #PopupWindow_overlapAnchor me.awadahmed.custom_emojiboard:overlapAnchor}</code></td><td>Whether the popup window should overlap its anchor view.</td></tr>
      * </table>
      * @see #PopupWindow_android_popupBackground
      * @see #PopupWindow_android_popupAnimationStyle
      * @see #PopupWindow_overlapAnchor
      */
     public static final int[] PopupWindow={
-      0x01010176, 0x010102c9, 0x7f0200b1
+      0x01010176, 0x010102c9, 0x7f0200b6
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
@@ -9317,7 +9504,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:overlapAnchor
+     * @attr name me.awadahmed.custom_emojiboard:overlapAnchor
      */
     public static final int PopupWindow_overlapAnchor=2;
     /**
@@ -9327,12 +9514,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.example.custom_emojiboard:state_above_anchor}</code></td><td>State identifier indicating the popup will be above the anchor.</td></tr>
+     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor me.awadahmed.custom_emojiboard:state_above_anchor}</code></td><td>State identifier indicating the popup will be above the anchor.</td></tr>
      * </table>
      * @see #PopupWindowBackgroundState_state_above_anchor
      */
     public static final int[] PopupWindowBackgroundState={
-      0x7f0200d5
+      0x7f0200db
     };
     /**
      * <p>
@@ -9342,7 +9529,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:state_above_anchor
+     * @attr name me.awadahmed.custom_emojiboard:state_above_anchor
      */
     public static final int PopupWindowBackgroundState_state_above_anchor=0;
     /**
@@ -9352,14 +9539,14 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.example.custom_emojiboard:paddingBottomNoButtons}</code></td><td>Bottom padding to use when no buttons are present.</td></tr>
-     * <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.example.custom_emojiboard:paddingTopNoTitle}</code></td><td>Top padding to use when no title is present.</td></tr>
+     * <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons me.awadahmed.custom_emojiboard:paddingBottomNoButtons}</code></td><td>Bottom padding to use when no buttons are present.</td></tr>
+     * <tr><td><code>{@link #RecycleListView_paddingTopNoTitle me.awadahmed.custom_emojiboard:paddingTopNoTitle}</code></td><td>Top padding to use when no title is present.</td></tr>
      * </table>
      * @see #RecycleListView_paddingBottomNoButtons
      * @see #RecycleListView_paddingTopNoTitle
      */
     public static final int[] RecycleListView={
-      0x7f0200b2, 0x7f0200b5
+      0x7f0200b7, 0x7f0200ba
     };
     /**
      * <p>
@@ -9372,7 +9559,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:paddingBottomNoButtons
+     * @attr name me.awadahmed.custom_emojiboard:paddingBottomNoButtons
      */
     public static final int RecycleListView_paddingBottomNoButtons=0;
     /**
@@ -9386,7 +9573,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:paddingTopNoTitle
+     * @attr name me.awadahmed.custom_emojiboard:paddingTopNoTitle
      */
     public static final int RecycleListView_paddingTopNoTitle=1;
     /**
@@ -9400,20 +9587,20 @@ public final class R {
      * <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_closeIcon com.example.custom_emojiboard:closeIcon}</code></td><td>Close button icon</td></tr>
-     * <tr><td><code>{@link #SearchView_commitIcon com.example.custom_emojiboard:commitIcon}</code></td><td>Commit icon shown in the query suggestion row</td></tr>
-     * <tr><td><code>{@link #SearchView_defaultQueryHint com.example.custom_emojiboard:defaultQueryHint}</code></td><td>Default query hint used when {@code queryHint} is undefined and
+     * <tr><td><code>{@link #SearchView_closeIcon me.awadahmed.custom_emojiboard:closeIcon}</code></td><td>Close button icon</td></tr>
+     * <tr><td><code>{@link #SearchView_commitIcon me.awadahmed.custom_emojiboard:commitIcon}</code></td><td>Commit icon shown in the query suggestion row</td></tr>
+     * <tr><td><code>{@link #SearchView_defaultQueryHint me.awadahmed.custom_emojiboard:defaultQueryHint}</code></td><td>Default query hint used when {@code queryHint} is undefined and
      * the search view's {@code SearchableInfo} does not provide a hint.</td></tr>
-     * <tr><td><code>{@link #SearchView_goIcon com.example.custom_emojiboard:goIcon}</code></td><td>Go button icon</td></tr>
-     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.example.custom_emojiboard:iconifiedByDefault}</code></td><td>The default state of the SearchView.</td></tr>
-     * <tr><td><code>{@link #SearchView_layout com.example.custom_emojiboard:layout}</code></td><td>The layout to use for the search view.</td></tr>
-     * <tr><td><code>{@link #SearchView_queryBackground com.example.custom_emojiboard:queryBackground}</code></td><td>Background for the section containing the search query</td></tr>
-     * <tr><td><code>{@link #SearchView_queryHint com.example.custom_emojiboard:queryHint}</code></td><td>An optional user-defined query hint string to be displayed in the empty query field.</td></tr>
-     * <tr><td><code>{@link #SearchView_searchHintIcon com.example.custom_emojiboard:searchHintIcon}</code></td><td>Search icon displayed as a text field hint</td></tr>
-     * <tr><td><code>{@link #SearchView_searchIcon com.example.custom_emojiboard:searchIcon}</code></td><td>Search icon</td></tr>
-     * <tr><td><code>{@link #SearchView_submitBackground com.example.custom_emojiboard:submitBackground}</code></td><td>Background for the section containing the action (e.g.</td></tr>
-     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.example.custom_emojiboard:suggestionRowLayout}</code></td><td>Layout for query suggestion rows</td></tr>
-     * <tr><td><code>{@link #SearchView_voiceIcon com.example.custom_emojiboard:voiceIcon}</code></td><td>Voice button icon</td></tr>
+     * <tr><td><code>{@link #SearchView_goIcon me.awadahmed.custom_emojiboard:goIcon}</code></td><td>Go button icon</td></tr>
+     * <tr><td><code>{@link #SearchView_iconifiedByDefault me.awadahmed.custom_emojiboard:iconifiedByDefault}</code></td><td>The default state of the SearchView.</td></tr>
+     * <tr><td><code>{@link #SearchView_layout me.awadahmed.custom_emojiboard:layout}</code></td><td>The layout to use for the search view.</td></tr>
+     * <tr><td><code>{@link #SearchView_queryBackground me.awadahmed.custom_emojiboard:queryBackground}</code></td><td>Background for the section containing the search query</td></tr>
+     * <tr><td><code>{@link #SearchView_queryHint me.awadahmed.custom_emojiboard:queryHint}</code></td><td>An optional user-defined query hint string to be displayed in the empty query field.</td></tr>
+     * <tr><td><code>{@link #SearchView_searchHintIcon me.awadahmed.custom_emojiboard:searchHintIcon}</code></td><td>Search icon displayed as a text field hint</td></tr>
+     * <tr><td><code>{@link #SearchView_searchIcon me.awadahmed.custom_emojiboard:searchIcon}</code></td><td>Search icon</td></tr>
+     * <tr><td><code>{@link #SearchView_submitBackground me.awadahmed.custom_emojiboard:submitBackground}</code></td><td>Background for the section containing the action (e.g.</td></tr>
+     * <tr><td><code>{@link #SearchView_suggestionRowLayout me.awadahmed.custom_emojiboard:suggestionRowLayout}</code></td><td>Layout for query suggestion rows</td></tr>
+     * <tr><td><code>{@link #SearchView_voiceIcon me.awadahmed.custom_emojiboard:voiceIcon}</code></td><td>Voice button icon</td></tr>
      * </table>
      * @see #SearchView_android_focusable
      * @see #SearchView_android_maxWidth
@@ -9435,10 +9622,10 @@ public final class R {
      */
     public static final int[] SearchView={
       0x010100da, 0x0101011f, 0x01010220, 0x01010264, 
-      0x7f020047, 0x7f020056, 0x7f020060, 0x7f020087, 
-      0x7f02008f, 0x7f020096, 0x7f0200bf, 0x7f0200c0, 
-      0x7f0200c5, 0x7f0200c6, 0x7f0200d7, 0x7f0200dc, 
-      0x7f02011b
+      0x7f020049, 0x7f020059, 0x7f020063, 0x7f02008a, 
+      0x7f020092, 0x7f02009b, 0x7f0200c4, 0x7f0200c5, 
+      0x7f0200cb, 0x7f0200cc, 0x7f0200dd, 0x7f0200e2, 
+      0x7f020121
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#focusable}
@@ -9563,7 +9750,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:closeIcon
+     * @attr name me.awadahmed.custom_emojiboard:closeIcon
      */
     public static final int SearchView_closeIcon=4;
     /**
@@ -9576,7 +9763,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:commitIcon
+     * @attr name me.awadahmed.custom_emojiboard:commitIcon
      */
     public static final int SearchView_commitIcon=5;
     /**
@@ -9588,7 +9775,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:defaultQueryHint
+     * @attr name me.awadahmed.custom_emojiboard:defaultQueryHint
      */
     public static final int SearchView_defaultQueryHint=6;
     /**
@@ -9601,7 +9788,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:goIcon
+     * @attr name me.awadahmed.custom_emojiboard:goIcon
      */
     public static final int SearchView_goIcon=7;
     /**
@@ -9613,7 +9800,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:iconifiedByDefault
+     * @attr name me.awadahmed.custom_emojiboard:iconifiedByDefault
      */
     public static final int SearchView_iconifiedByDefault=8;
     /**
@@ -9626,7 +9813,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:layout
+     * @attr name me.awadahmed.custom_emojiboard:layout
      */
     public static final int SearchView_layout=9;
     /**
@@ -9639,7 +9826,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:queryBackground
+     * @attr name me.awadahmed.custom_emojiboard:queryBackground
      */
     public static final int SearchView_queryBackground=10;
     /**
@@ -9650,7 +9837,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:queryHint
+     * @attr name me.awadahmed.custom_emojiboard:queryHint
      */
     public static final int SearchView_queryHint=11;
     /**
@@ -9663,7 +9850,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:searchHintIcon
+     * @attr name me.awadahmed.custom_emojiboard:searchHintIcon
      */
     public static final int SearchView_searchHintIcon=12;
     /**
@@ -9676,7 +9863,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:searchIcon
+     * @attr name me.awadahmed.custom_emojiboard:searchIcon
      */
     public static final int SearchView_searchIcon=13;
     /**
@@ -9689,7 +9876,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:submitBackground
+     * @attr name me.awadahmed.custom_emojiboard:submitBackground
      */
     public static final int SearchView_submitBackground=14;
     /**
@@ -9702,7 +9889,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:suggestionRowLayout
+     * @attr name me.awadahmed.custom_emojiboard:suggestionRowLayout
      */
     public static final int SearchView_suggestionRowLayout=15;
     /**
@@ -9715,9 +9902,85 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:voiceIcon
+     * @attr name me.awadahmed.custom_emojiboard:voiceIcon
      */
     public static final int SearchView_voiceIcon=16;
+    /**
+     * Attributes that can be used with a SignInButton.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #SignInButton_buttonSize me.awadahmed.custom_emojiboard:buttonSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_colorScheme me.awadahmed.custom_emojiboard:colorScheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_scopeUris me.awadahmed.custom_emojiboard:scopeUris}</code></td><td></td></tr>
+     * </table>
+     * @see #SignInButton_buttonSize
+     * @see #SignInButton_colorScheme
+     * @see #SignInButton_scopeUris
+     */
+    public static final int[] SignInButton={
+      0x7f020041, 0x7f020057, 0x7f0200ca
+    };
+    /**
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#buttonSize}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>icon_only</td><td>2</td><td></td></tr>
+     * <tr><td>standard</td><td>0</td><td></td></tr>
+     * <tr><td>wide</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name me.awadahmed.custom_emojiboard:buttonSize
+     */
+    public static final int SignInButton_buttonSize=0;
+    /**
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#colorScheme}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>auto</td><td>2</td><td></td></tr>
+     * <tr><td>dark</td><td>0</td><td></td></tr>
+     * <tr><td>light</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name me.awadahmed.custom_emojiboard:colorScheme
+     */
+    public static final int SignInButton_colorScheme=1;
+    /**
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#scopeUris}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name me.awadahmed.custom_emojiboard:scopeUris
+     */
+    public static final int SignInButton_scopeUris=2;
     /**
      * Attributes that can be used with a Spinner.
      * <p>Includes the following attributes:</p>
@@ -9729,7 +9992,7 @@ public final class R {
      * <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Spinner_popupTheme com.example.custom_emojiboard:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
+     * <tr><td><code>{@link #Spinner_popupTheme me.awadahmed.custom_emojiboard:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
      * shown by widgets in the action bar.</td></tr>
      * </table>
      * @see #Spinner_android_entries
@@ -9740,7 +10003,7 @@ public final class R {
      */
     public static final int[] Spinner={
       0x010100b2, 0x01010176, 0x0101017b, 0x01010262, 
-      0x7f0200ba
+      0x7f0200bf
     };
     /**
      * <p>
@@ -9818,7 +10081,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:popupTheme
+     * @attr name me.awadahmed.custom_emojiboard:popupTheme
      */
     public static final int Spinner_popupTheme=4;
     /**
@@ -9958,17 +10221,17 @@ public final class R {
      * <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_showText com.example.custom_emojiboard:showText}</code></td><td>Whether to draw on/off text.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_splitTrack com.example.custom_emojiboard:splitTrack}</code></td><td>Whether to split the track and leave a gap for the thumb drawable.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.example.custom_emojiboard:switchMinWidth}</code></td><td>Minimum width for the switch component</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchPadding com.example.custom_emojiboard:switchPadding}</code></td><td>Minimum space between the switch and caption text</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.example.custom_emojiboard:switchTextAppearance}</code></td><td>TextAppearance style for text displayed on the switch thumb.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.example.custom_emojiboard:thumbTextPadding}</code></td><td>Amount of padding on either side of text within the switch thumb.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTint com.example.custom_emojiboard:thumbTint}</code></td><td>Tint to apply to the thumb drawable.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTintMode com.example.custom_emojiboard:thumbTintMode}</code></td><td>Blending mode used to apply the thumb tint.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_track com.example.custom_emojiboard:track}</code></td><td>Drawable to use as the "track" that the switch thumb slides within.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_trackTint com.example.custom_emojiboard:trackTint}</code></td><td>Tint to apply to the track.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_trackTintMode com.example.custom_emojiboard:trackTintMode}</code></td><td>Blending mode used to apply the track tint.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_showText me.awadahmed.custom_emojiboard:showText}</code></td><td>Whether to draw on/off text.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_splitTrack me.awadahmed.custom_emojiboard:splitTrack}</code></td><td>Whether to split the track and leave a gap for the thumb drawable.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchMinWidth me.awadahmed.custom_emojiboard:switchMinWidth}</code></td><td>Minimum width for the switch component</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchPadding me.awadahmed.custom_emojiboard:switchPadding}</code></td><td>Minimum space between the switch and caption text</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance me.awadahmed.custom_emojiboard:switchTextAppearance}</code></td><td>TextAppearance style for text displayed on the switch thumb.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding me.awadahmed.custom_emojiboard:thumbTextPadding}</code></td><td>Amount of padding on either side of text within the switch thumb.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTint me.awadahmed.custom_emojiboard:thumbTint}</code></td><td>Tint to apply to the thumb drawable.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTintMode me.awadahmed.custom_emojiboard:thumbTintMode}</code></td><td>Blending mode used to apply the thumb tint.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_track me.awadahmed.custom_emojiboard:track}</code></td><td>Drawable to use as the "track" that the switch thumb slides within.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_trackTint me.awadahmed.custom_emojiboard:trackTint}</code></td><td>Tint to apply to the track.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_trackTintMode me.awadahmed.custom_emojiboard:trackTintMode}</code></td><td>Blending mode used to apply the track tint.</td></tr>
      * </table>
      * @see #SwitchCompat_android_textOn
      * @see #SwitchCompat_android_textOff
@@ -9986,10 +10249,10 @@ public final class R {
      * @see #SwitchCompat_trackTintMode
      */
     public static final int[] SwitchCompat={
-      0x01010124, 0x01010125, 0x01010142, 0x7f0200cd, 
-      0x7f0200d3, 0x7f0200dd, 0x7f0200de, 0x7f0200e0, 
-      0x7f0200ef, 0x7f0200f0, 0x7f0200f1, 0x7f020106, 
-      0x7f020107, 0x7f020108
+      0x01010124, 0x01010125, 0x01010142, 0x7f0200d3, 
+      0x7f0200d9, 0x7f0200e3, 0x7f0200e4, 0x7f0200e6, 
+      0x7f0200f5, 0x7f0200f6, 0x7f0200f7, 0x7f02010c, 
+      0x7f02010d, 0x7f02010e
     };
     /**
      * <p>
@@ -10034,7 +10297,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:showText
+     * @attr name me.awadahmed.custom_emojiboard:showText
      */
     public static final int SwitchCompat_showText=3;
     /**
@@ -10045,7 +10308,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:splitTrack
+     * @attr name me.awadahmed.custom_emojiboard:splitTrack
      */
     public static final int SwitchCompat_splitTrack=4;
     /**
@@ -10059,7 +10322,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:switchMinWidth
+     * @attr name me.awadahmed.custom_emojiboard:switchMinWidth
      */
     public static final int SwitchCompat_switchMinWidth=5;
     /**
@@ -10073,7 +10336,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:switchPadding
+     * @attr name me.awadahmed.custom_emojiboard:switchPadding
      */
     public static final int SwitchCompat_switchPadding=6;
     /**
@@ -10086,7 +10349,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:switchTextAppearance
+     * @attr name me.awadahmed.custom_emojiboard:switchTextAppearance
      */
     public static final int SwitchCompat_switchTextAppearance=7;
     /**
@@ -10100,7 +10363,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:thumbTextPadding
+     * @attr name me.awadahmed.custom_emojiboard:thumbTextPadding
      */
     public static final int SwitchCompat_thumbTextPadding=8;
     /**
@@ -10112,7 +10375,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:thumbTint
+     * @attr name me.awadahmed.custom_emojiboard:thumbTint
      */
     public static final int SwitchCompat_thumbTint=9;
     /**
@@ -10139,7 +10402,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:thumbTintMode
+     * @attr name me.awadahmed.custom_emojiboard:thumbTintMode
      */
     public static final int SwitchCompat_thumbTintMode=10;
     /**
@@ -10152,7 +10415,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:track
+     * @attr name me.awadahmed.custom_emojiboard:track
      */
     public static final int SwitchCompat_track=11;
     /**
@@ -10164,7 +10427,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:trackTint
+     * @attr name me.awadahmed.custom_emojiboard:trackTint
      */
     public static final int SwitchCompat_trackTint=12;
     /**
@@ -10191,7 +10454,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:trackTintMode
+     * @attr name me.awadahmed.custom_emojiboard:trackTintMode
      */
     public static final int SwitchCompat_trackTintMode=13;
     /**
@@ -10213,10 +10476,10 @@ public final class R {
      * <tr><td><code>{@link #TextAppearance_android_shadowRadius android:shadowRadius}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_fontFamily android:fontFamily}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_textFontWeight android:textFontWeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #TextAppearance_fontFamily com.example.custom_emojiboard:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
-     * <tr><td><code>{@link #TextAppearance_fontVariationSettings com.example.custom_emojiboard:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #TextAppearance_textAllCaps com.example.custom_emojiboard:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
-     * <tr><td><code>{@link #TextAppearance_textLocale com.example.custom_emojiboard:textLocale}</code></td><td>Set the textLocale by a comma-separated language tag string,
+     * <tr><td><code>{@link #TextAppearance_fontFamily me.awadahmed.custom_emojiboard:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
+     * <tr><td><code>{@link #TextAppearance_fontVariationSettings me.awadahmed.custom_emojiboard:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
+     * <tr><td><code>{@link #TextAppearance_textAllCaps me.awadahmed.custom_emojiboard:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
+     * <tr><td><code>{@link #TextAppearance_textLocale me.awadahmed.custom_emojiboard:textLocale}</code></td><td>Set the textLocale by a comma-separated language tag string,
      * for example "ja-JP,zh-CN".</td></tr>
      * </table>
      * @see #TextAppearance_android_textSize
@@ -10240,7 +10503,7 @@ public final class R {
       0x01010095, 0x01010096, 0x01010097, 0x01010098, 
       0x0101009a, 0x0101009b, 0x01010161, 0x01010162, 
       0x01010163, 0x01010164, 0x010103ac, 0x01010585, 
-      0x7f02007c, 0x7f020084, 0x7f0200e1, 0x7f0200ec
+      0x7f02007f, 0x7f020087, 0x7f0200e7, 0x7f0200f2
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textSize}
@@ -10423,7 +10686,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:fontFamily
+     * @attr name me.awadahmed.custom_emojiboard:fontFamily
      */
     public static final int TextAppearance_fontFamily=12;
     /**
@@ -10434,7 +10697,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:fontVariationSettings
+     * @attr name me.awadahmed.custom_emojiboard:fontVariationSettings
      */
     public static final int TextAppearance_fontVariationSettings=13;
     /**
@@ -10449,7 +10712,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:textAllCaps
+     * @attr name me.awadahmed.custom_emojiboard:textAllCaps
      */
     public static final int TextAppearance_textAllCaps=14;
     /**
@@ -10464,7 +10727,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:textLocale
+     * @attr name me.awadahmed.custom_emojiboard:textLocale
      */
     public static final int TextAppearance_textLocale=15;
     /**
@@ -10476,41 +10739,41 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_buttonGravity com.example.custom_emojiboard:buttonGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.example.custom_emojiboard:collapseContentDescription}</code></td><td>Text to set as the content description for the collapse button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseIcon com.example.custom_emojiboard:collapseIcon}</code></td><td>Icon drawable to use for the collapse button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.example.custom_emojiboard:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.example.custom_emojiboard:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
+     * <tr><td><code>{@link #Toolbar_buttonGravity me.awadahmed.custom_emojiboard:buttonGravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseContentDescription me.awadahmed.custom_emojiboard:collapseContentDescription}</code></td><td>Text to set as the content description for the collapse button.</td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseIcon me.awadahmed.custom_emojiboard:collapseIcon}</code></td><td>Icon drawable to use for the collapse button.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEnd me.awadahmed.custom_emojiboard:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEndWithActions me.awadahmed.custom_emojiboard:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
      * are present.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.example.custom_emojiboard:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetRight com.example.custom_emojiboard:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStart com.example.custom_emojiboard:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.example.custom_emojiboard:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
+     * <tr><td><code>{@link #Toolbar_contentInsetLeft me.awadahmed.custom_emojiboard:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetRight me.awadahmed.custom_emojiboard:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStart me.awadahmed.custom_emojiboard:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation me.awadahmed.custom_emojiboard:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
      * is present, such as the Up button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_logo com.example.custom_emojiboard:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
-     * <tr><td><code>{@link #Toolbar_logoDescription com.example.custom_emojiboard:logoDescription}</code></td><td>A content description string to describe the appearance of the
+     * <tr><td><code>{@link #Toolbar_logo me.awadahmed.custom_emojiboard:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
+     * <tr><td><code>{@link #Toolbar_logoDescription me.awadahmed.custom_emojiboard:logoDescription}</code></td><td>A content description string to describe the appearance of the
      * associated logo image.</td></tr>
-     * <tr><td><code>{@link #Toolbar_maxButtonHeight com.example.custom_emojiboard:maxButtonHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_menu com.example.custom_emojiboard:menu}</code></td><td>Menu resource to inflate to be shown in the toolbar</td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.example.custom_emojiboard:navigationContentDescription}</code></td><td>Text to set as the content description for the navigation button
+     * <tr><td><code>{@link #Toolbar_maxButtonHeight me.awadahmed.custom_emojiboard:maxButtonHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_menu me.awadahmed.custom_emojiboard:menu}</code></td><td>Menu resource to inflate to be shown in the toolbar</td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationContentDescription me.awadahmed.custom_emojiboard:navigationContentDescription}</code></td><td>Text to set as the content description for the navigation button
      * located at the start of the toolbar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationIcon com.example.custom_emojiboard:navigationIcon}</code></td><td>Icon drawable to use for the navigation button located at
+     * <tr><td><code>{@link #Toolbar_navigationIcon me.awadahmed.custom_emojiboard:navigationIcon}</code></td><td>Icon drawable to use for the navigation button located at
      * the start of the toolbar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_popupTheme com.example.custom_emojiboard:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
+     * <tr><td><code>{@link #Toolbar_popupTheme me.awadahmed.custom_emojiboard:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
      * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitle com.example.custom_emojiboard:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.example.custom_emojiboard:subtitleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.example.custom_emojiboard:subtitleTextColor}</code></td><td>A color to apply to the subtitle string.</td></tr>
-     * <tr><td><code>{@link #Toolbar_title com.example.custom_emojiboard:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargin com.example.custom_emojiboard:titleMargin}</code></td><td>Specifies extra space on the left, start, right and end sides
+     * <tr><td><code>{@link #Toolbar_subtitle me.awadahmed.custom_emojiboard:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitleTextAppearance me.awadahmed.custom_emojiboard:subtitleTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitleTextColor me.awadahmed.custom_emojiboard:subtitleTextColor}</code></td><td>A color to apply to the subtitle string.</td></tr>
+     * <tr><td><code>{@link #Toolbar_title me.awadahmed.custom_emojiboard:title}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargin me.awadahmed.custom_emojiboard:titleMargin}</code></td><td>Specifies extra space on the left, start, right and end sides
      * of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.example.custom_emojiboard:titleMarginBottom}</code></td><td>Specifies extra space on the bottom side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.example.custom_emojiboard:titleMarginEnd}</code></td><td>Specifies extra space on the end side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginStart com.example.custom_emojiboard:titleMarginStart}</code></td><td>Specifies extra space on the start side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginTop com.example.custom_emojiboard:titleMarginTop}</code></td><td>Specifies extra space on the top side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargins com.example.custom_emojiboard:titleMargins}</code></td><td>{@deprecated Use titleMargin}</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleTextAppearance com.example.custom_emojiboard:titleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleTextColor com.example.custom_emojiboard:titleTextColor}</code></td><td>A color to apply to the title string.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginBottom me.awadahmed.custom_emojiboard:titleMarginBottom}</code></td><td>Specifies extra space on the bottom side of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginEnd me.awadahmed.custom_emojiboard:titleMarginEnd}</code></td><td>Specifies extra space on the end side of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginStart me.awadahmed.custom_emojiboard:titleMarginStart}</code></td><td>Specifies extra space on the start side of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginTop me.awadahmed.custom_emojiboard:titleMarginTop}</code></td><td>Specifies extra space on the top side of the toolbar's title.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargins me.awadahmed.custom_emojiboard:titleMargins}</code></td><td>{@deprecated Use titleMargin}</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleTextAppearance me.awadahmed.custom_emojiboard:titleTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleTextColor me.awadahmed.custom_emojiboard:titleTextColor}</code></td><td>A color to apply to the title string.</td></tr>
      * </table>
      * @see #Toolbar_android_gravity
      * @see #Toolbar_android_minHeight
@@ -10545,14 +10808,14 @@ public final class R {
      */
     @Deprecated
     public static final int[] Toolbar={
-      0x010100af, 0x01010140, 0x7f02003e, 0x7f020049, 
-      0x7f02004a, 0x7f020058, 0x7f020059, 0x7f02005a, 
-      0x7f02005b, 0x7f02005c, 0x7f02005d, 0x7f0200a7, 
-      0x7f0200a8, 0x7f0200a9, 0x7f0200ab, 0x7f0200ad, 
-      0x7f0200ae, 0x7f0200ba, 0x7f0200d8, 0x7f0200d9, 
-      0x7f0200da, 0x7f0200f7, 0x7f0200f8, 0x7f0200f9, 
-      0x7f0200fa, 0x7f0200fb, 0x7f0200fc, 0x7f0200fd, 
-      0x7f0200fe, 0x7f0200ff
+      0x010100af, 0x01010140, 0x7f02003e, 0x7f02004b, 
+      0x7f02004c, 0x7f02005b, 0x7f02005c, 0x7f02005d, 
+      0x7f02005e, 0x7f02005f, 0x7f020060, 0x7f0200ac, 
+      0x7f0200ad, 0x7f0200ae, 0x7f0200b0, 0x7f0200b2, 
+      0x7f0200b3, 0x7f0200bf, 0x7f0200de, 0x7f0200df, 
+      0x7f0200e0, 0x7f0200fd, 0x7f0200fe, 0x7f0200ff, 
+      0x7f020100, 0x7f020101, 0x7f020102, 0x7f020103, 
+      0x7f020104, 0x7f020105
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -10597,7 +10860,7 @@ public final class R {
      */
     public static final int Toolbar_android_minHeight=1;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#buttonGravity}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#buttonGravity}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -10611,7 +10874,7 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:buttonGravity
+     * @attr name me.awadahmed.custom_emojiboard:buttonGravity
      */
     public static final int Toolbar_buttonGravity=2;
     /**
@@ -10622,7 +10885,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:collapseContentDescription
+     * @attr name me.awadahmed.custom_emojiboard:collapseContentDescription
      */
     public static final int Toolbar_collapseContentDescription=3;
     /**
@@ -10635,7 +10898,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:collapseIcon
+     * @attr name me.awadahmed.custom_emojiboard:collapseIcon
      */
     public static final int Toolbar_collapseIcon=4;
     /**
@@ -10650,7 +10913,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetEnd
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetEnd
      */
     public static final int Toolbar_contentInsetEnd=5;
     /**
@@ -10665,7 +10928,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetEndWithActions
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetEndWithActions
      */
     public static final int Toolbar_contentInsetEndWithActions=6;
     /**
@@ -10680,7 +10943,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetLeft
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetLeft
      */
     public static final int Toolbar_contentInsetLeft=7;
     /**
@@ -10695,7 +10958,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetRight
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetRight
      */
     public static final int Toolbar_contentInsetRight=8;
     /**
@@ -10710,7 +10973,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetStart
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetStart
      */
     public static final int Toolbar_contentInsetStart=9;
     /**
@@ -10725,7 +10988,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:contentInsetStartWithNavigation
+     * @attr name me.awadahmed.custom_emojiboard:contentInsetStartWithNavigation
      */
     public static final int Toolbar_contentInsetStartWithNavigation=10;
     /**
@@ -10739,7 +11002,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:logo
+     * @attr name me.awadahmed.custom_emojiboard:logo
      */
     public static final int Toolbar_logo=11;
     /**
@@ -10751,11 +11014,11 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:logoDescription
+     * @attr name me.awadahmed.custom_emojiboard:logoDescription
      */
     public static final int Toolbar_logoDescription=12;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#maxButtonHeight}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#maxButtonHeight}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -10764,7 +11027,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:maxButtonHeight
+     * @attr name me.awadahmed.custom_emojiboard:maxButtonHeight
      */
     public static final int Toolbar_maxButtonHeight=13;
     /**
@@ -10777,7 +11040,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:menu
+     * @attr name me.awadahmed.custom_emojiboard:menu
      */
     public static final int Toolbar_menu=14;
     /**
@@ -10789,7 +11052,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:navigationContentDescription
+     * @attr name me.awadahmed.custom_emojiboard:navigationContentDescription
      */
     public static final int Toolbar_navigationContentDescription=15;
     /**
@@ -10803,7 +11066,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:navigationIcon
+     * @attr name me.awadahmed.custom_emojiboard:navigationIcon
      */
     public static final int Toolbar_navigationIcon=16;
     /**
@@ -10817,7 +11080,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:popupTheme
+     * @attr name me.awadahmed.custom_emojiboard:popupTheme
      */
     public static final int Toolbar_popupTheme=17;
     /**
@@ -10828,11 +11091,11 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:subtitle
+     * @attr name me.awadahmed.custom_emojiboard:subtitle
      */
     public static final int Toolbar_subtitle=18;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#subtitleTextAppearance}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#subtitleTextAppearance}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -10840,7 +11103,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:subtitleTextAppearance
+     * @attr name me.awadahmed.custom_emojiboard:subtitleTextAppearance
      */
     public static final int Toolbar_subtitleTextAppearance=19;
     /**
@@ -10852,17 +11115,17 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:subtitleTextColor
+     * @attr name me.awadahmed.custom_emojiboard:subtitleTextColor
      */
     public static final int Toolbar_subtitleTextColor=20;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#title}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#title}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:title
+     * @attr name me.awadahmed.custom_emojiboard:title
      */
     public static final int Toolbar_title=21;
     /**
@@ -10877,7 +11140,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:titleMargin
+     * @attr name me.awadahmed.custom_emojiboard:titleMargin
      */
     public static final int Toolbar_titleMargin=22;
     /**
@@ -10893,7 +11156,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:titleMarginBottom
+     * @attr name me.awadahmed.custom_emojiboard:titleMarginBottom
      */
     public static final int Toolbar_titleMarginBottom=23;
     /**
@@ -10909,7 +11172,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:titleMarginEnd
+     * @attr name me.awadahmed.custom_emojiboard:titleMarginEnd
      */
     public static final int Toolbar_titleMarginEnd=24;
     /**
@@ -10925,7 +11188,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:titleMarginStart
+     * @attr name me.awadahmed.custom_emojiboard:titleMarginStart
      */
     public static final int Toolbar_titleMarginStart=25;
     /**
@@ -10941,7 +11204,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:titleMarginTop
+     * @attr name me.awadahmed.custom_emojiboard:titleMarginTop
      */
     public static final int Toolbar_titleMarginTop=26;
     /**
@@ -10955,12 +11218,12 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:titleMargins
+     * @attr name me.awadahmed.custom_emojiboard:titleMargins
      */
     @Deprecated
     public static final int Toolbar_titleMargins=27;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#titleTextAppearance}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#titleTextAppearance}
      * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -10968,7 +11231,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:titleTextAppearance
+     * @attr name me.awadahmed.custom_emojiboard:titleTextAppearance
      */
     public static final int Toolbar_titleTextAppearance=28;
     /**
@@ -10980,7 +11243,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:titleTextColor
+     * @attr name me.awadahmed.custom_emojiboard:titleTextColor
      */
     public static final int Toolbar_titleTextColor=29;
     /**
@@ -10992,9 +11255,9 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
      * <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_paddingEnd com.example.custom_emojiboard:paddingEnd}</code></td><td>Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
-     * <tr><td><code>{@link #View_paddingStart com.example.custom_emojiboard:paddingStart}</code></td><td>Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
-     * <tr><td><code>{@link #View_theme com.example.custom_emojiboard:theme}</code></td><td>Deprecated.</td></tr>
+     * <tr><td><code>{@link #View_paddingEnd me.awadahmed.custom_emojiboard:paddingEnd}</code></td><td>Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
+     * <tr><td><code>{@link #View_paddingStart me.awadahmed.custom_emojiboard:paddingStart}</code></td><td>Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
+     * <tr><td><code>{@link #View_theme me.awadahmed.custom_emojiboard:theme}</code></td><td>Deprecated.</td></tr>
      * </table>
      * @see #View_android_theme
      * @see #View_android_focusable
@@ -11003,8 +11266,8 @@ public final class R {
      * @see #View_theme
      */
     public static final int[] View={
-      0x01010000, 0x010100da, 0x7f0200b3, 0x7f0200b4, 
-      0x7f0200ed
+      0x01010000, 0x010100da, 0x7f0200b8, 0x7f0200b9, 
+      0x7f0200f3
     };
     /**
      * <p>
@@ -11056,7 +11319,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:paddingEnd
+     * @attr name me.awadahmed.custom_emojiboard:paddingEnd
      */
     public static final int View_paddingEnd=2;
     /**
@@ -11070,7 +11333,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:paddingStart
+     * @attr name me.awadahmed.custom_emojiboard:paddingStart
      */
     public static final int View_paddingStart=3;
     /**
@@ -11083,7 +11346,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:theme
+     * @attr name me.awadahmed.custom_emojiboard:theme
      */
     public static final int View_theme=4;
     /**
@@ -11094,8 +11357,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.example.custom_emojiboard:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.example.custom_emojiboard:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint me.awadahmed.custom_emojiboard:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode me.awadahmed.custom_emojiboard:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
      * </table>
      * @see #ViewBackgroundHelper_android_background
      * @see #ViewBackgroundHelper_backgroundTint
@@ -11128,7 +11391,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:backgroundTint
+     * @attr name me.awadahmed.custom_emojiboard:backgroundTint
      */
     public static final int ViewBackgroundHelper_backgroundTint=1;
     /**
@@ -11155,7 +11418,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      *
-     * @attr name com.example.custom_emojiboard:backgroundTintMode
+     * @attr name me.awadahmed.custom_emojiboard:backgroundTintMode
      */
     public static final int ViewBackgroundHelper_backgroundTintMode=2;
     /**
@@ -11223,43 +11486,43 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ucrop_AspectRatioTextView_ucrop_artv_ratio_title com.example.custom_emojiboard:ucrop_artv_ratio_title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_AspectRatioTextView_ucrop_artv_ratio_x com.example.custom_emojiboard:ucrop_artv_ratio_x}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_AspectRatioTextView_ucrop_artv_ratio_y com.example.custom_emojiboard:ucrop_artv_ratio_y}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_AspectRatioTextView_ucrop_artv_ratio_title me.awadahmed.custom_emojiboard:ucrop_artv_ratio_title}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_AspectRatioTextView_ucrop_artv_ratio_x me.awadahmed.custom_emojiboard:ucrop_artv_ratio_x}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_AspectRatioTextView_ucrop_artv_ratio_y me.awadahmed.custom_emojiboard:ucrop_artv_ratio_y}</code></td><td></td></tr>
      * </table>
      * @see #ucrop_AspectRatioTextView_ucrop_artv_ratio_title
      * @see #ucrop_AspectRatioTextView_ucrop_artv_ratio_x
      * @see #ucrop_AspectRatioTextView_ucrop_artv_ratio_y
      */
     public static final int[] ucrop_AspectRatioTextView={
-      0x7f02010a, 0x7f02010b, 0x7f02010c
+      0x7f020110, 0x7f020111, 0x7f020112
     };
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_artv_ratio_title}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_artv_ratio_title}
      * attribute's value can be found in the {@link #ucrop_AspectRatioTextView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.example.custom_emojiboard:ucrop_artv_ratio_title
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_artv_ratio_title
      */
     public static final int ucrop_AspectRatioTextView_ucrop_artv_ratio_title=0;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_artv_ratio_x}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_artv_ratio_x}
      * attribute's value can be found in the {@link #ucrop_AspectRatioTextView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_artv_ratio_x
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_artv_ratio_x
      */
     public static final int ucrop_AspectRatioTextView_ucrop_artv_ratio_x=1;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_artv_ratio_y}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_artv_ratio_y}
      * attribute's value can be found in the {@link #ucrop_AspectRatioTextView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_artv_ratio_y
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_artv_ratio_y
      */
     public static final int ucrop_AspectRatioTextView_ucrop_artv_ratio_y=2;
     /**
@@ -11269,19 +11532,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_aspect_ratio_x com.example.custom_emojiboard:ucrop_aspect_ratio_x}</code></td><td>Crop image view</td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_aspect_ratio_y com.example.custom_emojiboard:ucrop_aspect_ratio_y}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_circle_dimmed_layer com.example.custom_emojiboard:ucrop_circle_dimmed_layer}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_dimmed_color com.example.custom_emojiboard:ucrop_dimmed_color}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_frame_color com.example.custom_emojiboard:ucrop_frame_color}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_frame_stroke_size com.example.custom_emojiboard:ucrop_frame_stroke_size}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_grid_color com.example.custom_emojiboard:ucrop_grid_color}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_grid_column_count com.example.custom_emojiboard:ucrop_grid_column_count}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_grid_row_count com.example.custom_emojiboard:ucrop_grid_row_count}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_grid_stroke_size com.example.custom_emojiboard:ucrop_grid_stroke_size}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_show_frame com.example.custom_emojiboard:ucrop_show_frame}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_show_grid com.example.custom_emojiboard:ucrop_show_grid}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ucrop_UCropView_ucrop_show_oval_crop_frame com.example.custom_emojiboard:ucrop_show_oval_crop_frame}</code></td><td>Overlay view</td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_aspect_ratio_x me.awadahmed.custom_emojiboard:ucrop_aspect_ratio_x}</code></td><td>Crop image view</td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_aspect_ratio_y me.awadahmed.custom_emojiboard:ucrop_aspect_ratio_y}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_circle_dimmed_layer me.awadahmed.custom_emojiboard:ucrop_circle_dimmed_layer}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_dimmed_color me.awadahmed.custom_emojiboard:ucrop_dimmed_color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_frame_color me.awadahmed.custom_emojiboard:ucrop_frame_color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_frame_stroke_size me.awadahmed.custom_emojiboard:ucrop_frame_stroke_size}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_grid_color me.awadahmed.custom_emojiboard:ucrop_grid_color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_grid_column_count me.awadahmed.custom_emojiboard:ucrop_grid_column_count}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_grid_row_count me.awadahmed.custom_emojiboard:ucrop_grid_row_count}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_grid_stroke_size me.awadahmed.custom_emojiboard:ucrop_grid_stroke_size}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_show_frame me.awadahmed.custom_emojiboard:ucrop_show_frame}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_show_grid me.awadahmed.custom_emojiboard:ucrop_show_grid}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ucrop_UCropView_ucrop_show_oval_crop_frame me.awadahmed.custom_emojiboard:ucrop_show_oval_crop_frame}</code></td><td>Overlay view</td></tr>
      * </table>
      * @see #ucrop_UCropView_ucrop_aspect_ratio_x
      * @see #ucrop_UCropView_ucrop_aspect_ratio_y
@@ -11298,10 +11561,10 @@ public final class R {
      * @see #ucrop_UCropView_ucrop_show_oval_crop_frame
      */
     public static final int[] ucrop_UCropView={
-      0x7f02010d, 0x7f02010e, 0x7f02010f, 0x7f020110, 
-      0x7f020111, 0x7f020112, 0x7f020113, 0x7f020114, 
-      0x7f020115, 0x7f020116, 0x7f020117, 0x7f020118, 
-      0x7f020119
+      0x7f020113, 0x7f020114, 0x7f020115, 0x7f020116, 
+      0x7f020117, 0x7f020118, 0x7f020119, 0x7f02011a, 
+      0x7f02011b, 0x7f02011c, 0x7f02011d, 0x7f02011e, 
+      0x7f02011f
     };
     /**
      * <p>
@@ -11310,52 +11573,52 @@ public final class R {
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_aspect_ratio_x
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_aspect_ratio_x
      */
     public static final int ucrop_UCropView_ucrop_aspect_ratio_x=0;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_aspect_ratio_y}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_aspect_ratio_y}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_aspect_ratio_y
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_aspect_ratio_y
      */
     public static final int ucrop_UCropView_ucrop_aspect_ratio_y=1;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_circle_dimmed_layer}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_circle_dimmed_layer}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_circle_dimmed_layer
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_circle_dimmed_layer
      */
     public static final int ucrop_UCropView_ucrop_circle_dimmed_layer=2;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_dimmed_color}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_dimmed_color}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_dimmed_color
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_dimmed_color
      */
     public static final int ucrop_UCropView_ucrop_dimmed_color=3;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_frame_color}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_frame_color}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_frame_color
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_frame_color
      */
     public static final int ucrop_UCropView_ucrop_frame_color=4;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_frame_stroke_size}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_frame_stroke_size}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -11364,40 +11627,40 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:ucrop_frame_stroke_size
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_frame_stroke_size
      */
     public static final int ucrop_UCropView_ucrop_frame_stroke_size=5;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_grid_color}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_grid_color}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_grid_color
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_grid_color
      */
     public static final int ucrop_UCropView_ucrop_grid_color=6;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_grid_column_count}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_grid_column_count}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_grid_column_count
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_grid_column_count
      */
     public static final int ucrop_UCropView_ucrop_grid_column_count=7;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_grid_row_count}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_grid_row_count}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_grid_row_count
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_grid_row_count
      */
     public static final int ucrop_UCropView_ucrop_grid_row_count=8;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_grid_stroke_size}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_grid_stroke_size}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -11406,27 +11669,27 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.example.custom_emojiboard:ucrop_grid_stroke_size
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_grid_stroke_size
      */
     public static final int ucrop_UCropView_ucrop_grid_stroke_size=9;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_show_frame}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_show_frame}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_show_frame
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_show_frame
      */
     public static final int ucrop_UCropView_ucrop_show_frame=10;
     /**
-     * <p>This symbol is the offset where the {@link com.example.custom_emojiboard.R.attr#ucrop_show_grid}
+     * <p>This symbol is the offset where the {@link me.awadahmed.custom_emojiboard.R.attr#ucrop_show_grid}
      * attribute's value can be found in the {@link #ucrop_UCropView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_show_grid
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_show_grid
      */
     public static final int ucrop_UCropView_ucrop_show_grid=11;
     /**
@@ -11437,7 +11700,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.example.custom_emojiboard:ucrop_show_oval_crop_frame
+     * @attr name me.awadahmed.custom_emojiboard:ucrop_show_oval_crop_frame
      */
     public static final int ucrop_UCropView_ucrop_show_oval_crop_frame=12;
   }

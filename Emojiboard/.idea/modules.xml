@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/custom_emojiboard.iml" filepath="$PROJECT_DIR$/custom_emojiboard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/custom_emojiboard_android.iml" filepath="$PROJECT_DIR$/android/custom_emojiboard_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/source code.iml" filepath="$PROJECT_DIR$/.idea/source code.iml" />
     </modules>
   </component>
 </project>
