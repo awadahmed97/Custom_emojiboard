@@ -1,4 +1,0 @@
-com/capstone/custkey/BuildConfig.java
- com.capstone.custkey.BuildConfig
-com/capstone/custkey/CustKeyIME.java
- com.capstone.custkey.CustKeyIME

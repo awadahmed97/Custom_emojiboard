@@ -1,7 +1,0 @@
-#Tue Oct 20 23:20:24 EDT 2020
-base.0=/Users/awadahmed/Desktop/custom_emojiboard/source code/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.1=classes2.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=/Users/awadahmed/Desktop/custom_emojiboard/source code/build/app/intermediates/dex/debug/mergeDexDebug/out/classes2.dex
