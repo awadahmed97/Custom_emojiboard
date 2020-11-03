@@ -1,7 +1,9 @@
 package capstone.dev.customkeyboard;
 
+import android.app.AppOpsManager;
 import android.content.ClipDescription;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
@@ -12,16 +14,20 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputBinding;
 import android.view.inputmethod.InputConnection;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 //import com.bumptech.glide.Glide;
 //import com.google.firebase.storage.FirebaseStorage;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RawRes;
 import androidx.core.content.FileProvider;
+import androidx.core.view.inputmethod.EditorInfoCompat;
 import androidx.core.view.inputmethod.InputConnectionCompat;
 import androidx.core.view.inputmethod.InputContentInfoCompat;
 
@@ -40,7 +46,7 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
     //Keyboard variables
     private RelativeLayout kl;
     private KeyboardView kv;
-    private LinearLayout iv;
+    private RelativeLayout iv;
 //    private LinearLayout toolb;
     private Keyboard keyboard;
     private boolean isSymbolVisible = false;
@@ -48,12 +54,15 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
     private boolean isCaps = false;
 
     //ImageKeyboard Variables
+    private static final String TAG = "ImageKeyboard";
     private static final String AUTHORITY = "com.capstone.customkeyboard.inputcontent";
     private static final String MIME_TYPE_PNG = "image/png";
     private String[] rawFiles;
     private boolean pngSupported;
 
-//    private boolean imageButtonPressed = false;
+
+
+
 
 
 
@@ -64,11 +73,11 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
         kv = kl.findViewById(R.id.keyboard_view);
         iv = kl.findViewById(R.id.images_view);
 
-
+        //
         final File imagesDir = new File(getFilesDir(), "images");
         imagesDir.mkdirs();
         LinearLayout ImageContainer = (LinearLayout) kl.findViewById(R.id.imageContainer);
-//
+
         LinearLayout ImageContainerColumn = (LinearLayout) getLayoutInflater().inflate(R.layout.image_container_column, ImageContainer, false);
 
         for (int i = 0; i < rawFiles.length; i++) {
@@ -87,24 +96,9 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
                     String emojiName = view.getTag().toString().replaceAll("_", "-");
 
 
-                    //DEBUG
-//                    String shakeel = "${view.getTag().toString()}.png";
-//                    Log.i("test1", "value: " + R.raw.analyzeloop);
-//                    final File file = getFileForResource(CustomKeyboard.this, R.raw.analyzeloop, imagesDir, "image.png");
-//                    if (file == null)
-//                    {
-//                        Log.i("fileIs", "NULL!");
-//
-//                    }
-//                    else{
-//                        Log.i("fileIs", "NOT NULL!");
-//                    }
-
-
-
                     final File file = getFileForResource(CustomKeyboard.this, getResources().getIdentifier(view.getTag().toString(), "raw", getPackageName()), imagesDir, "image.png");
 
-                    CustomKeyboard.this.commitImage("A ${emojiName} logo", MIME_TYPE_PNG, file);
+                    CustomKeyboard.this.doCommitContent("A ${emojiName} logo", MIME_TYPE_PNG, file);
                 }
             });
 
@@ -127,13 +121,128 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
 
 
+
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        rawFiles = getAllRawResources();
+    }
+
+
+
+
+
+    @Override
+    public void onStartInputView(EditorInfo info, boolean restarting) {
+        pngSupported = isCommitContentSupported(info, MIME_TYPE_PNG);
+        if(!pngSupported) {
+            Toast.makeText(getApplicationContext(),
+                    "Images not supported here. Please use standard keyboard.",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        //TODO: Maybe instead of the above, let is input the
+        // //URL or File path of the image selected into the text field
+    }
+
+
+
+
+
+
+
+    private boolean isCommitContentSupported(
+            @Nullable EditorInfo editorInfo, @NonNull String mimeType) {
+        if (editorInfo == null) {
+            return false;
+        }
+
+        final InputConnection ic = getCurrentInputConnection();
+        if (ic == null) {
+            return false;
+        }
+
+        if (!validatePackageName(editorInfo)) {
+            return false;
+        }
+
+        final String[] supportedMimeTypes = EditorInfoCompat.getContentMimeTypes(editorInfo);
+        for (String supportedMimeType : supportedMimeTypes) {
+            if (ClipDescription.compareMimeTypes(mimeType, supportedMimeType)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+
+    private boolean validatePackageName(@Nullable EditorInfo editorInfo) {
+        if (editorInfo == null) {
+            return false;
+        }
+        final String packageName = editorInfo.packageName;
+        if (packageName == null) {
+            return false;
+        }
+
+        // In Android L MR-1 and prior devices, EditorInfo.packageName is not a reliable identifier
+        // of the target application because:
+        //   1. the system does not verify it [1]
+        //   2. InputMethodManager.startInputInner() had filled EditorInfo.packageName with
+        //      view.getContext().getPackageName() [2]
+        // [1]: https://android.googlesource.com/platform/frameworks/base/+/a0f3ad1b5aabe04d9eb1df8bad34124b826ab641
+        // [2]: https://android.googlesource.com/platform/frameworks/base/+/02df328f0cd12f2af87ca96ecf5819c8a3470dc8
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return true;
+        }
+
+        final InputBinding inputBinding = getCurrentInputBinding();
+        if (inputBinding == null) {
+            // Due to b.android.com/225029, it is possible that getCurrentInputBinding() returns
+            // null even after onStartInputView() is called.
+            // TODO: Come up with a way to work around this bug....
+            Log.e(TAG, "inputBinding should not be null here. "
+                    + "You are likely to be hitting b.android.com/225029");
+            return false;
+        }
+        final int packageUid = inputBinding.getUid();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            final AppOpsManager appOpsManager =
+                    (AppOpsManager) getSystemService(Context.APP_OPS_SERVICE);
+            try {
+                appOpsManager.checkPackage(packageUid, packageName);
+            } catch (Exception e) {
+                return false;
+            }
+            return true;
+        }
+
+        final PackageManager packageManager = getPackageManager();
+        final String possiblePackageNames[] = packageManager.getPackagesForUid(packageUid);
+        for (final String possiblePackageName : possiblePackageNames) {
+            if (packageName.equals(possiblePackageName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+
+
+
     /**
      * Commits a PNG image
      *
      * @param mimeType
      * @param imageDescription Description of the PNG image to be sent
      */
-    public void commitImage(String imageDescription, String mimeType,
+    public void doCommitContent(String imageDescription, String mimeType,
                             File file)
     {
 
@@ -161,11 +270,6 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
 
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        rawFiles = getAllRawResources();
-    }
 
 
 
@@ -182,7 +286,9 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
 
 
-
+    /**
+     * what to do when certain special keys are pressed
+     */
     public void onKey(int i, int[] ints) {
         InputConnection ic = getCurrentInputConnection();
         playClick(i);
@@ -229,10 +335,6 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
                 if(Character.isLetter(code) && isCaps)
                     code = Character.toUpperCase(code);
                 ic.commitText(String.valueOf(code), 1);
-
-
-
-
         }
     }
 
@@ -256,9 +358,10 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
         this.isSymbolVisible = true;
     }
 
-    /*
-  Qwerty layout view
 
+
+    /**
+     * Qwerty layout view
    */
     private void setMainView(){
         keyboard = new Keyboard(this, R.xml.qwerty);
@@ -267,17 +370,6 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
         this.isSymbolVisible = false;
     }
 
-
-//    public void showKeys()
-//    {
-//
-//        Button button = (Button) findViewById(R.id.return_to_keys);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                // Do something in response to button click
-//            }
-//        });
-//    }
 
 
 
@@ -293,9 +385,9 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
 
 
-    /*
-    Image View Function
-   TODO: implement Emoji/sticker upload function
+    /**
+     * Image View Function
+     * Sets image view to visible
     */
     private void changeToImageView()
     {
@@ -306,6 +398,10 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
 
 
+
+    /**
+     *
+     */
     private static File getFileForResource(
             @NonNull Context context, @RawRes int res, @NonNull File outputDir,
             @NonNull String filename) {
@@ -367,6 +463,7 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
         return names ;
     }
+
 
 
 
@@ -547,8 +644,24 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 //                    String emojiName = view.getTag().toString().replaceAll("_", "-");
 //                    String shakeel = "${view.getTag().toString()}.png";
 ////
-//                    Log.i("test1", "value: " + R.raw.analyzeloop);
 //
+//                    //DEBUG
+//                    Log.i("test1", "value: " + R.raw.analyzeloop);
+
+//                    String shakeel = "${view.getTag().toString()}.png";
+//                    Log.i("test1", "value: " + R.raw.analyzeloop);
+//                    final File file = getFileForResource(CustomKeyboard.this, R.raw.analyzeloop, imagesDir, "image.png");
+//                    if (file == null)
+//                    {
+//                        Log.i("fileIs", "NULL!");
+//
+//                    }
+//                    else{
+//                        Log.i("fileIs", "NOT NULL!");
+//                    }
+//
+
+
 //                    final File file = getFileForResource(CustomKeyboard.this, R.raw.analyzeloop, imagesDir, "image.png");
 //                    CustomKeyboard.this.commitImage("A ${emojiName} logo", MIME_TYPE_PNG, file);
 //                }
@@ -567,4 +680,20 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 //        setMainView();
 //        return kl;
 //
+//    }
+
+
+
+
+
+
+//    public void showKeys()
+//    {
+//
+//        Button button = (Button) findViewById(R.id.return_to_keys);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                // Do something in response to button click
+//            }
+//        });
 //    }
