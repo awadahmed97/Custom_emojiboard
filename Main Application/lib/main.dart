@@ -81,8 +81,8 @@ class UploaderState extends State<Uploader> {
 
     // Add image reference data to database
     databaseReference.child("All_Emoji_Uploads_Database/").push().set({
-      'Image Name': name,
-      'Image URL': url
+      'imageName': name,
+      'imageURL': url
     });
 
 
