@@ -5,29 +5,146 @@
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'dart:io';
+
+
 
 
 
 
 void main()
 {
-  
+
   runApp(MaterialApp(
     title: "CustomEmojiApp",
     home: HomePage(),
   ));
 }
 
+class Uploader extends StatefulWidget {
+  final File file;
+  Uploader({Key key, this.file}) : super(key: key);
 
+  createState() => UploaderState();
+}
+
+class UploaderState extends State<Uploader> {
+
+  // Realtime Database Path for images
+  final String database_path = "All_Emoji_Uploads";
+
+  // Realtime Database Reference
+  final databaseReference = FirebaseDatabase.instance.reference();
+
+  // Firebase Storage
+  final FirebaseStorage _storage = FirebaseStorage(storageBucket: 'gs://custom-emojiboard.appspot.com');
+
+  //
+  StorageUploadTask _uploadTask;
+
+
+
+
+  //
+  void _startUpload() {
+    //generate name for image under storage path
+    String storageFilePath = 'All_Emoji_Uploads/${DateTime.now().millisecondsSinceEpoch}';
+
+    // Get extension of image file to be uploaded
+    String complete_local_file_path = widget.file.path;
+    String file_extension = complete_local_file_path.split('.').last;
+  
+
+    // Set state
+    setState(() {
+      // Upload Image to storage path using generated name and extention
+      _uploadTask = _storage.ref().child(storageFilePath + '.' + file_extension).putFile(widget.file); 
+
+      // Saave reference of uploaded image to RTD
+      saveReferenceToRealtimeDatabase(_uploadTask);   
+    });
+  }
+
+
+  // Function to save image url and name in realtime database
+  Future<void> saveReferenceToRealtimeDatabase(StorageUploadTask uploadTask) async {
+    // Get image URL
+    String url = await (await uploadTask.onComplete).ref.getDownloadURL();
+
+    // Get Name
+    String name = await (await uploadTask.onComplete).ref.getName();
+    
+    // print("This is the URL: " + url);
+    // print("This is the name: " + name);
+
+    // Add image reference data to database
+    databaseReference.child("All_Emoji_Uploads_Database/").push().set({
+      'Image Name': name,
+      'Image URL': url
+    });
+
+
+    
+  }
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    if (_uploadTask != null) {
+      return StreamBuilder<StorageTaskEvent>(
+          stream: _uploadTask.events,
+          builder: (context, snapshot) {
+            var event = snapshot?.data?.snapshot;
+
+            double progressPercent = event != null
+            ? event.bytesTransferred / event.totalByteCount
+                : 0;
+            return Column(
+
+              children: [
+                if (_uploadTask.isComplete)
+                  Text('Uploaded'),
+                if (_uploadTask.isPaused)
+                  FlatButton(
+                    child: Icon(Icons.play_arrow),
+                  ),
+                if (_uploadTask.isInProgress)
+                  FlatButton(
+                    child: Icon(Icons.pause),
+                    onPressed: _uploadTask.pause,
+                  ),
+                LinearProgressIndicator(value: progressPercent),
+                Text(
+                  '${(progressPercent * 100).toStringAsFixed(2)} % '
+                ),
+              ],
+            );
+
+          });
+
+    } else {
+
+      return RaisedButton(
+        child: Icon(Icons.done),
+        color: Colors.deepPurple,
+        textColor: Colors.white,
+        onPressed: _startUpload,
+      );
+      
+    }
+  }
+}
 
 
 class HomePage extends StatefulWidget
 {
-  
+
   @override
   State<StatefulWidget> createState() {
-    
+
     return _HomePageState();
   }
 }
@@ -47,15 +164,15 @@ class _HomePageState extends State<HomePage>
 
   //openGallery funtion definition
   /**
-   * 
-   * 
-   * 
+   *
+   *
+   *
    */
   _openGallery(BuildContext context) async  //Tells app to wait untill user selects image, however long that takes them to complete that action.
   {
     var picture = await ImagePicker.pickImage(
-      source: ImageSource.gallery, 
-      maxWidth: 512, 
+      source: ImageSource.gallery,
+      maxWidth: 512,
       maxHeight: 512,
     );
     this.setState(() {
@@ -66,18 +183,18 @@ class _HomePageState extends State<HomePage>
     Navigator.of(context).pop();
   }
 
- 
+
   //openCamera funtion definition
   /**
-   * 
-   * 
-   * 
+   *
+   *
+   *
    */
   _openCamera(BuildContext context) async
   {
     var picture = await ImagePicker.pickImage(
-      source: ImageSource.camera, 
-    maxWidth: 512, 
+      source: ImageSource.camera,
+    maxWidth: 512,
     maxHeight: 512,
   );
     this.setState(() {
@@ -91,9 +208,9 @@ class _HomePageState extends State<HomePage>
 
   //image cropper function
   /**
-   * 
-   * 
-   * 
+   *
+   *
+   *
    */
   Future<void> _cropImage() async
   {
@@ -112,7 +229,7 @@ class _HomePageState extends State<HomePage>
     );
 
     this.setState(() {
-      _imageFile = cropped ?? _imageFile;  
+      _imageFile = cropped ?? _imageFile;
       //Dart's null aware "double questionmark" operator
       //if user cancels cropping, cropped = null
       // '??' => if _imageFile is null, cropped = _imageFile 
@@ -120,12 +237,12 @@ class _HomePageState extends State<HomePage>
   }
 
 
-  
+
   //clear [option for user to clear image after an image is picked]
   /**
-   * 
-   * 
-   * 
+   *
+   *
+   *
    */
   void _clear()
   {
@@ -139,11 +256,11 @@ class _HomePageState extends State<HomePage>
 
 
   /**
-   * 
-   * 
-   * 
+   *
+   *
+   *
    */
-  Future<void> showChoiceDialog(BuildContext context) 
+  Future<void> showChoiceDialog(BuildContext context)
   {
     return showDialog(context: context, builder: (BuildContext context)
     {
@@ -154,7 +271,7 @@ class _HomePageState extends State<HomePage>
             children: <Widget>
             [
               GestureDetector(
-                child: Text('Gallery'), 
+                child: Text('Gallery'),
 
                 onTap:()
                 {
@@ -186,13 +303,13 @@ class _HomePageState extends State<HomePage>
 
 
   /**
-   * 
-   * 
-   * 
+   *
+   *
+   *
    */
   @override
   Widget build(BuildContext context) {
-    
+
     return Scaffold(
       backgroundColor: Colors.white,
 
@@ -208,11 +325,11 @@ class _HomePageState extends State<HomePage>
             fit: BoxFit.cover,
           ),
         ),
-    
+
         child: ListView(
           children: <Widget>
           [
-            // if imageFile is NOT null, Body will show below children widgets. 
+            // if imageFile is NOT null, Body will show below children widgets.
             // Else, just the above container widgets
             if (_imageFile != null) ...
             [
@@ -240,25 +357,24 @@ class _HomePageState extends State<HomePage>
               ),
 
 
-              // Uploader(file: _imageFile)
+              Uploader(file: _imageFile),
+              Padding(padding: EdgeInsets.all (20.0)),
 
-            ],  
+            ],
           ],
         ),
       ),
 
-
-        
       //Floating action bar
       floatingActionButton: FloatingActionButton(
         onPressed: ()
         {
-          showChoiceDialog(context);            
+          showChoiceDialog(context);
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.deepPurple,
       ),
-      
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
 

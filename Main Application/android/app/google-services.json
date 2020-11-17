@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "144584323945",
+    "firebase_url": "https://custom-keyboard-37e5e.firebaseio.com",
+    "project_id": "custom-keyboard-37e5e",
+    "storage_bucket": "custom-keyboard-37e5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144584323945:android:2517b43c159b3f3822c3f8",
+        "android_client_info": {
+          "package_name": "capstone.dev.customkeyboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144584323945-p7ko6puv0d4a2eoa4ldc2ne41ag2udok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2T4HnnS9GYAoxfWL6fU6cc_1zVDZSxnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144584323945-p7ko6puv0d4a2eoa4ldc2ne41ag2udok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144584323945:android:dee865eb993f295e22c3f8",
+        "android_client_info": {
+          "package_name": "com.capstone.imagekeyboardtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144584323945-p7ko6puv0d4a2eoa4ldc2ne41ag2udok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2T4HnnS9GYAoxfWL6fU6cc_1zVDZSxnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144584323945-p7ko6puv0d4a2eoa4ldc2ne41ag2udok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144584323945:android:9cc500e563f9dc8a22c3f8",
+        "android_client_info": {
+          "package_name": "com.example.custom_emojiboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144584323945-p7ko6puv0d4a2eoa4ldc2ne41ag2udok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2T4HnnS9GYAoxfWL6fU6cc_1zVDZSxnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144584323945-p7ko6puv0d4a2eoa4ldc2ne41ag2udok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
