@@ -1,34 +1,92 @@
 {
   "project_info": {
-    "project_number": "144584323945",
-    "firebase_url": "https://custom-keyboard-37e5e.firebaseio.com",
-    "project_id": "custom-keyboard-37e5e",
-    "storage_bucket": "custom-keyboard-37e5e.appspot.com"
+    "project_number": "835880965185",
+    "firebase_url": "https://custom-emojiboard.firebaseio.com",
+    "project_id": "custom-emojiboard",
+    "storage_bucket": "custom-emojiboard.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:144584323945:android:2517b43c159b3f3822c3f8",
+        "mobilesdk_app_id": "1:835880965185:android:fbb637dd64c9d4036fa2c0",
         "android_client_info": {
           "package_name": "capstone.dev.customkeyboard"
         }
       },
       "oauth_client": [
         {
-          "client_id": "144584323945-p7ko6puv0d4a2eoa4ldc2ne41ag2udok.apps.googleusercontent.com",
+          "client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB2T4HnnS9GYAoxfWL6fU6cc_1zVDZSxnQ"
+          "current_key": "AIzaSyDspGH0PUgNQSpzHn_vk2zKBOGGwijkfzU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "144584323945-p7ko6puv0d4a2eoa4ldc2ne41ag2udok.apps.googleusercontent.com",
+              "client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835880965185:android:bddae9814c3624c86fa2c0",
+        "android_client_info": {
+          "package_name": "com.capstone.imagekeyboardtwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDspGH0PUgNQSpzHn_vk2zKBOGGwijkfzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835880965185:android:ec2b9c742107ce1f6fa2c0",
+        "android_client_info": {
+          "package_name": "me.awadahmed.custom_emojiboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDspGH0PUgNQSpzHn_vk2zKBOGGwijkfzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

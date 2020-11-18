@@ -31,35 +31,74 @@ import androidx.core.view.inputmethod.EditorInfoCompat;
 import androidx.core.view.inputmethod.InputConnectionCompat;
 import androidx.core.view.inputmethod.InputContentInfoCompat;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Field;
-
-import static java.sql.DriverManager.println;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CustomKeyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 
     //Keyboard variables
-    private RelativeLayout kl;
-    private KeyboardView kv;
-    private RelativeLayout iv;
-//    private LinearLayout toolb;
+    private RelativeLayout KeyboardLayout;
+    private KeyboardView keyboardView;
+    private RelativeLayout ImageView;
     private Keyboard keyboard;
+    private LinearLayout ImageContainer;
     private boolean isSymbolVisible = false;
     private boolean isImageViewVisible = false;
     private boolean isCaps = false;
 
     //ImageKeyboard Variables
     private static final String TAG = "ImageKeyboard";
-    private static final String AUTHORITY = "com.capstone.customkeyboard.inputcontent";
+    private static final String AUTHORITY = "capstone.dev.customkeyboard.inputcontent";
     private static final String MIME_TYPE_PNG = "image/png";
+    private static final String MIME_TYPE_JPG = "image/jpg";
+
     private String[] rawFiles;
     private boolean pngSupported;
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    //****Firebase
+
+    // Folder path for Firebase Storage.
+    String Storage_Path = "All_Emoji_Uploads/";
+
+    // Root Database Name for Firebase Database.
+    public static final String Database_Path = "All_Emoji_Uploads_Database/";    //"All_Emoji_Uploads_Database";
+
+    // Creating StorageReference and DatabaseReference object.
+    StorageReference storageReference;
+    DatabaseReference databaseReference;
+
+    StorageReference myStorageRef;  //second storage reference for testing purposes
+
+    // Creating URI.
+    Uri FilePathUri;
+
+    // Creating List of ImagesModel class.
+    List<ImageModel> list = new ArrayList<>();
+
+    //string variables to hold image name and url
+    String imgUrl, imgName;
+
+    File localFile;
 
 
 
@@ -69,53 +108,189 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
     @Override
     public View onCreateInputView() {
-        kl = (RelativeLayout) getLayoutInflater().inflate(R.layout.keyboard_layout_image, null);
-        kv = kl.findViewById(R.id.keyboard_view);
-        iv = kl.findViewById(R.id.images_view);
+
+        // Inflate main layout (KeyboardLayout) and children layouts under it
+        KeyboardLayout = (RelativeLayout) getLayoutInflater().inflate(R.layout.keyboard_layout_image, null);
+        keyboardView = KeyboardLayout.findViewById(R.id.keyboard_view);
+        ImageView = KeyboardLayout.findViewById(R.id.images_view);
+        ImageContainer = (LinearLayout) KeyboardLayout.findViewById(R.id.imageContainer);
+
 
         //
         final File imagesDir = new File(getFilesDir(), "images");
         imagesDir.mkdirs();
-        LinearLayout ImageContainer = (LinearLayout) kl.findViewById(R.id.imageContainer);
-
-        LinearLayout ImageContainerColumn = (LinearLayout) getLayoutInflater().inflate(R.layout.image_container_column, ImageContainer, false);
-
-        for (int i = 0; i < rawFiles.length; i++) {
-            System.out.println(i);
-            if ((i % 2) == 0) {
-                ImageContainerColumn = (LinearLayout) getLayoutInflater().inflate(R.layout.image_container_column, ImageContainer, false);
-            }
-
-            // Creating button
-            ImageButton ImgButton = (ImageButton) getLayoutInflater().inflate(R.layout.image_button, ImageContainerColumn, false);
-            ImgButton.setImageResource(getResources().getIdentifier(rawFiles[i], "raw", getPackageName()));
-            ImgButton.setTag(rawFiles[i]);
-            ImgButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    String emojiName = view.getTag().toString().replaceAll("_", "-");
 
 
-                    final File file = getFileForResource(CustomKeyboard.this, getResources().getIdentifier(view.getTag().toString(), "raw", getPackageName()), imagesDir, "image.png");
+        // Assign FirebaseStorage instance to storageReference.
+        storageReference = FirebaseStorage.getInstance().getReference();
 
-                    CustomKeyboard.this.doCommitContent("A ${emojiName} logo", MIME_TYPE_PNG, file);
-                }
-            });
+        // Assign FirebaseDatabase instance with root database name.
+        // Setting up Firebase image upload folder path in databaseReference.
+        databaseReference = FirebaseDatabase.getInstance().getReference().child(Database_Path);
 
 
-
-            ImageContainerColumn.addView(ImgButton);
-
-            if ((i % 2) == 0) {
-                ImageContainer.addView(ImageContainerColumn);
-            }
+        // Create temp file to store image data from firebase
+        try {
+            localFile = File.createTempFile("images", "jpg");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+
+
+        // Make Realtime Database connection.
+        // Listen for changes in data at given database location (in Realtime Database)
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+
+                //Get all objects in realtime database into ImagesModel class List
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+
+                    ImageModel imagesModel = postSnapshot.getValue(ImageModel.class);
+
+                    list.add(imagesModel);  //List is an array of ImagesModel objects. contains names and url's of all objects in RT database
+                }
+
+
+                // Inflate image container column layout
+                LinearLayout ImageContainerColumn = (LinearLayout) getLayoutInflater().inflate(R.layout.image_container_column, ImageContainer, false);
+
+
+
+
+                // For each ImagesModel object, get url's of images in firebase storage to display on image button using Glide method
+                for (int i = 0; i < list.size(); i++)
+                {
+                    System.out.println(i);
+                    if ((i % 2) == 0)    // Each image column contains 2 image button. Create a column after every 2 iterations
+                    {
+                        ImageContainerColumn = (LinearLayout) getLayoutInflater().inflate(R.layout.image_container_column, ImageContainer, false);
+                    }
+
+                    // Creating button
+                    ImageButton ImgButton = (ImageButton) getLayoutInflater().inflate(R.layout.image_button, ImageContainerColumn, false);
+
+                    // Get url of image from the realtime database. (URL points to actual image in Firebase Storage)
+                    imgUrl = list.get(i).getUrl();
+
+
+                    //Cast image into ImgButton view.
+                    Glide.with(CustomKeyboard.this)
+                            .load(imgUrl)
+                            .into(ImgButton);
+
+
+
+
+                    //Set image tag using image name
+                    imgName = list.get(i).getName();
+                    ImgButton.setTag(imgName);
+
+
+                    //** Now Download actual image and commit as MIME type object
+
+                    String secName = imgName;
+
+
+
+
+
+
+
+//                    myStorageRef = storageReference.child("All_Emoji_Uploads/" + imgName);
+                    //TODO: Using specific image in storage for now. Awaiting database creation from Flutter app
+                    //TODO: When done, names of each specific image can be obtained in a
+                    // loop using realtime database methods and ImagesModel class
+
+
+
+
+
+
+//                    ImgButton.setImageResource(getResources().getIdentifier(rawFiles[i], "raw", getPackageName()));
+
+
+
+
+                    // Callback to be called when image button is pressed. Download actual image here to pass to doCommitContent()
+                    ImgButton.setOnClickListener(view -> {
+
+
+                        //Second storage reference to hold full image location in the storage.
+                        //      using specific name of image being viewed on image button
+                        myStorageRef = storageReference.child("All_Emoji_Uploads/" + ImgButton.getTag());
+
+
+
+
+                        String emojiName = view.getTag().toString().replaceAll("_", "-");
+//
+//                        file = getFileForResource(ImageKeyboard.this,
+//                                getResources().getIdentifier(view.getTag().toString(), "raw", getPackageName()),
+//                                imagesDir, "${view.getTag().toString()}.png");
+
+
+                        // Put image into localFile. If successful, pass it over to doCommitContent()
+                        myStorageRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>()
+                        {
+                            @Override
+                            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                // Local temp file has been created
+//                                localFile = getFileForResource(ImageKeyboard.this,
+//                                getResources().getIdentifier(view.getTag().toString(), null, null),
+//                                imagesDir, "${view.getTag().toString()}.png");
+
+                                // Pass Image file to doCommitContent()
+                                CustomKeyboard.this.doCommitContent("A ${emojiName} logo", MIME_TYPE_PNG, localFile);
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception exception) {
+                                //TODO: Handle any errors if failure
+                            }
+                        });
+
+
+//                        ImageKeyboard.this.doCommitContent("A ${emojiName} logo", MIME_TYPE_PNG, localFile);
+                    });
+
+                    // Add image to view
+                    ImageContainerColumn.addView(ImgButton);
+
+                    if ((i % 2) == 0) {
+                        ImageContainer.addView(ImageContainerColumn);
+                    }
+                }
+
+            }
+
+            //TODO: Handle errors
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+
+
 
         this.isSymbolVisible = false;
         setMainView();
-        return kl;
+        return KeyboardLayout;
 
     }
+
+
+
+
+
+
+
 
 
 
@@ -127,6 +302,10 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
     public void onCreate() {
         super.onCreate();
         rawFiles = getAllRawResources();
+
+
+        //firebase storage reference initialization
+//        mStorageRef = FirebaseStorage.getInstance().getReference();
     }
 
 
@@ -313,7 +492,7 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
                 isCaps = !isCaps;
                 keyboard.setShifted(isCaps);
 
-                kv.invalidateAllKeys();
+                keyboardView.invalidateAllKeys();
                 break;
 
 
@@ -353,8 +532,8 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
      */
     private void setSymbolView(){
         keyboard = new Keyboard(this, R.xml.symbols);
-        kv.setKeyboard(keyboard);
-        kv.setOnKeyboardActionListener(this);
+        keyboardView.setKeyboard(keyboard);
+        keyboardView.setOnKeyboardActionListener(this);
         this.isSymbolVisible = true;
     }
 
@@ -365,8 +544,8 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
    */
     private void setMainView(){
         keyboard = new Keyboard(this, R.xml.qwerty);
-        kv.setKeyboard(keyboard);
-        kv.setOnKeyboardActionListener(this);
+        keyboardView.setKeyboard(keyboard);
+        keyboardView.setOnKeyboardActionListener(this);
         this.isSymbolVisible = false;
     }
 
@@ -379,8 +558,8 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
      * */
     public void showKeys(View view) {
         // Do something in response to button click
-        kv.setVisibility(View.VISIBLE);
-        iv.setVisibility(View.GONE);
+        keyboardView.setVisibility(View.VISIBLE);
+        ImageView.setVisibility(View.GONE);
     }
 
 
@@ -391,8 +570,8 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
     */
     private void changeToImageView()
     {
-        kv.setVisibility(View.GONE);
-        iv.setVisibility(View.VISIBLE);
+        keyboardView.setVisibility(View.GONE);
+        ImageView.setVisibility(View.VISIBLE);
     }
 
 
@@ -697,3 +876,42 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 //            }
 //        });
 //    }
+
+
+
+
+
+
+//    LinearLayout ImageContainerColumn = (LinearLayout) getLayoutInflater().inflate(R.layout.image_container_column, ImageContainer, false);
+
+//for (int i = 0; i < rawFiles.length; i++) {
+//        System.out.println(i);
+//        if ((i % 2) == 0) {
+//        ImageContainerColumn = (LinearLayout) getLayoutInflater().inflate(R.layout.image_container_column, ImageContainer, false);
+//        }
+//
+//        // Creating button
+//        ImageButton ImgButton = (ImageButton) getLayoutInflater().inflate(R.layout.image_button, ImageContainerColumn, false);
+//        ImgButton.setImageResource(getResources().getIdentifier(rawFiles[i], "raw", getPackageName()));
+//        ImgButton.setTag(rawFiles[i]);
+//        ImgButton.setOnClickListener(new View.OnClickListener() {
+//@Override
+//public void onClick(View view) {
+//        String emojiName = view.getTag().toString().replaceAll("_", "-");
+//
+//
+//final File file = getFileForResource(CustomKeyboard.this, getResources().getIdentifier(view.getTag().toString(), "raw", getPackageName()), imagesDir, "image.png");
+//
+//        CustomKeyboard.this.doCommitContent("A ${emojiName} logo", MIME_TYPE_PNG, file);
+//
+//        }
+//        });
+//
+//
+//
+//        ImageContainerColumn.addView(ImgButton);
+//
+//        if ((i % 2) == 0) {
+//        ImageContainer.addView(ImageContainerColumn);
+//        }
+////        }
