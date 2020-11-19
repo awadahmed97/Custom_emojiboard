@@ -1,0 +1,98 @@
+{
+"project_info": {
+"project_number": "835880965185",
+"firebase_url": "https://custom-emojiboard.firebaseio.com",
+"project_id": "custom-emojiboard",
+"storage_bucket": "custom-emojiboard.appspot.com"
+},
+"client": [
+{
+"client_info": {
+"mobilesdk_app_id": "1:835880965185:android:fbb637dd64c9d4036fa2c0",
+"android_client_info": {
+"package_name": "capstone.dev.customkeyboard"
+}
+},
+"oauth_client": [
+{
+"client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+"client_type": 3
+}
+],
+"api_key": [
+{
+"current_key": "AIzaSyDspGH0PUgNQSpzHn_vk2zKBOGGwijkfzU"
+}
+],
+"services": {
+"appinvite_service": {
+"other_platform_oauth_client": [
+{
+"client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+"client_type": 3
+}
+]
+}
+}
+},
+{
+"client_info": {
+"mobilesdk_app_id": "1:835880965185:android:bddae9814c3624c86fa2c0",
+"android_client_info": {
+"package_name": "com.capstone.imagekeyboardtwo"
+}
+},
+"oauth_client": [
+{
+"client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+"client_type": 3
+}
+],
+"api_key": [
+{
+"current_key": "AIzaSyDspGH0PUgNQSpzHn_vk2zKBOGGwijkfzU"
+}
+],
+"services": {
+"appinvite_service": {
+"other_platform_oauth_client": [
+{
+"client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+"client_type": 3
+}
+]
+}
+}
+},
+{
+"client_info": {
+"mobilesdk_app_id": "1:835880965185:android:ec2b9c742107ce1f6fa2c0",
+"android_client_info": {
+"package_name": "me.awadahmed.custom_emojiboard"
+}
+},
+"oauth_client": [
+{
+"client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+"client_type": 3
+}
+],
+"api_key": [
+{
+"current_key": "AIzaSyDspGH0PUgNQSpzHn_vk2zKBOGGwijkfzU"
+}
+],
+"services": {
+"appinvite_service": {
+"other_platform_oauth_client": [
+{
+"client_id": "835880965185-duill8v7os8amvjsnb5vfi4i6pp6r5pd.apps.googleusercontent.com",
+"client_type": 3
+}
+]
+}
+}
+}
+],
+"configuration_version": "1"
+}
