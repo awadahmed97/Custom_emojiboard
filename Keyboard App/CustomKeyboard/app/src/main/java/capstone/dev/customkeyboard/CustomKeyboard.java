@@ -142,9 +142,17 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
         // Listen for changes in data at given database location (in Realtime Database)
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(DataSnapshot dataSnapshot ) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
+
+
+                // Clear the image container layout and the array list before its repopulated to avoid duplicates.
+                ImageContainer.removeAllViews();
+                list.clear();
+//                Log.i("gg1", Integer.toString(list.size()));
+
+
 
                 //Get all objects in realtime database into ImagesModel class List
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
@@ -152,6 +160,10 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
                     ImageModel imagesModel = postSnapshot.getValue(ImageModel.class);
 
                     list.add(imagesModel);  //List is an array of ImagesModel objects. contains names and url's of all objects in RT database
+
+//                    Log.i("gg2", Integer.toString(list.size()));
+
+
                 }
 
 
@@ -159,6 +171,7 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
                 LinearLayout ImageContainerColumn = (LinearLayout) getLayoutInflater().inflate(R.layout.image_container_column, ImageContainer, false);
 
 
+//                Log.i("gg3", Integer.toString(list.size()));
 
 
                 // For each ImagesModel object, get url's of images in firebase storage to display on image button using Glide method

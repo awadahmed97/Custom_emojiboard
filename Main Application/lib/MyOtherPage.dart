@@ -15,8 +15,7 @@ class OtherPage extends StatefulWidget {
 class _OtherPageState extends State<OtherPage> {
   Widget makeImagesGrid() {
     return GridView.builder(
-        itemCount:
-            12, ////////////////////////////////////////************************ */
+        itemCount: 12, ////////////////////////////////////////************************ */
         gridDelegate:
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {

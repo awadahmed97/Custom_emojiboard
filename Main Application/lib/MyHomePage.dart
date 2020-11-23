@@ -153,6 +153,7 @@ class UploaderState extends State<Uploader> {
                 if (_uploadTask.isPaused)
                   FlatButton(
                     child: Icon(Icons.play_arrow),
+                    onPressed: null  //TODO: Code to resume upload
                   ),
                 if (_uploadTask.isInProgress)
                   FlatButton(
@@ -353,18 +354,25 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
 
-        child: ListView(
+        child: Column(
           children: <Widget>
           [
             // if imageFile is NOT null, Body will show below children widgets.
             // Else, just the above container widgets
             if (_imageFile != null) ...
             [
-              Image.file(_imageFile),
+              Padding(padding: EdgeInsets.all(8.0)),
+              
+              // Expanded makes image scale to fit without having to scroll
+              Expanded(
+              child: Image.file(_imageFile),
+              ),
 
               Row(
                 children: <Widget>
                 [
+                  Padding(padding: EdgeInsets.all(20.0)),
+
                   RaisedButton(
                     child: Icon(Icons.crop),
                     color: Colors.deepPurple,
@@ -379,15 +387,24 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.deepPurple,
                     textColor: Colors.white,
                     onPressed: _clear,
-                  )
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10.0)),
+
+
+                  Uploader(file: _imageFile),
                 ],
               ),
 
 
-              Uploader(file: _imageFile),
+              // Uploader(file: _imageFile),
               Padding(padding: EdgeInsets.all(20.0)),
+              
 
-            ],
+            ],  // if[]
+            
+            Container()  // else ..load -> body: Container()
+            
           ],
         ),
       ),
