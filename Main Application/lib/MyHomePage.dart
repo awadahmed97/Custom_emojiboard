@@ -41,27 +41,58 @@ class UploaderState extends State<Uploader> {
 
 
 
+ 
+
+
+
 
 
 
   //
   Future<void> _startUpload() async{
+
+    String storageFilePath;
+
+     // Realtime Database Reference to JPG's
+    final rtJpgRefPath = storagePath + "JPGs/";
+
+    // Realtime Database Reference to PNG's
+    final rtPngRefPath = storagePath + "PNGs/";
+
+
+    // Realtime Database Reference to GIF's
+    final rtGifRefPath = storagePath + "GIFs/";
+
+
+
+
     
     //Generate new sequential image name
     String name = await genSeqImageName();
 
-    //Assign new name to path
-    String storageFilePath = 'All_Emoji_Uploads/${name}.png';
-
     // Get extension of image file to be uploaded
-    String complete_local_file_path = widget.file.path;
-    String file_extension = complete_local_file_path.split('.').last;
+    String full_local_file_path = widget.file.path;
+    String file_extension = full_local_file_path.split('.').last;
+
+    //Assign new name to path
+    if (file_extension == "jpg")
+    {
+      storageFilePath = rtJpgRefPath + name + "jpg";
+    }
+      if (file_extension == "png")
+    {
+      storageFilePath = rtPngRefPath + name + ".png";
+    }
+      if (file_extension == "gif")
+    {
+      storageFilePath = rtGifRefPath + name + ".gif";
+    }
 
 
     // Set state
     setState(() {
       // Upload Image to storage path using generated name and extention
-      _uploadTask = (_storage.ref()).child(storageFilePath).putFile(widget.file);   ////////PNG for now
+      _uploadTask = (_storage.ref()).child(storageFilePath).putFile(widget.file);  
 
       // Save reference of uploaded image to RTD
       saveReferenceToRealtimeDatabase(_uploadTask);
@@ -79,10 +110,10 @@ class UploaderState extends State<Uploader> {
     
     //Get number of emoji uploads from Realtime Database
     await dbRefSeq.once().then((DataSnapshot snapshot) {
-      tempstr = snapshot.value.toString();
-      uploadsNumStr = tempstr.substring(5, tempstr.length - 1);
+      tempstr = snapshot.value.toString();                      //Number is retuned in this format: {NUM: 27}
+      uploadsNumStr = tempstr.substring(5, tempstr.length - 1); //Use substring to get number only
       // myList.add(uploadsNumStr);
-      // print("This Is: " + uploadsNumStr);
+      // print("This Is: " + tempstr);
     });
       
   
@@ -169,13 +200,19 @@ class UploaderState extends State<Uploader> {
 
           });
 
-    } else {
+    } 
+    else {
 
-      return RaisedButton(
-        child: Icon(Icons.done),
-        color: Colors.deepPurple,
-        textColor: Colors.white,
-        onPressed: _startUpload,
+      return ButtonTheme(
+        minWidth:150,
+
+        child: RaisedButton(
+          child: Icon(Icons.done),
+          color: Colors.deepPurple,
+          textColor: Colors.white,
+          onPressed: _startUpload,
+        )
+
       );
 
     }
@@ -215,8 +252,8 @@ class _HomePageState extends State<HomePage> {
       {
     var picture = await ImagePicker.pickImage(
       source: ImageSource.gallery,
-      maxWidth: 512,
-      maxHeight: 512,
+      // maxWidth: 512,
+      // maxHeight: 512,   //NOTE: Commented out because it causes GIF's to lose animation
     );
     this.setState(() {
       _imageFile = picture;
@@ -237,8 +274,8 @@ class _HomePageState extends State<HomePage> {
   {
     var picture = await ImagePicker.pickImage(
       source: ImageSource.camera,
-      maxWidth: 512,
-      maxHeight: 512,
+      // maxWidth: 512,
+      // maxHeight: 512,
     );
     this.setState(() {
       _imageFile = picture;
@@ -364,44 +401,65 @@ class _HomePageState extends State<HomePage> {
               Padding(padding: EdgeInsets.all(8.0)),
               
               // Expanded makes image scale to fit without having to scroll
-              Expanded(
-              child: Image.file(_imageFile),
+              Expanded(child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(width: 4.0),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                
+                child: Image.file(_imageFile),
+ 
+                ),
               ),
+              
 
               Row(
                 children: <Widget>
                 [
-                  Padding(padding: EdgeInsets.all(20.0)),
+                  Padding(padding: EdgeInsets.all(20)),
 
-                  RaisedButton(
-                    child: Icon(Icons.crop),
-                    color: Colors.deepPurple,
-                    textColor: Colors.white,
-                    onPressed: _cropImage,
+                  ButtonTheme(
+                    minWidth:120,
+
+                    child: RaisedButton(
+                      child: Icon(Icons.crop),
+                      color: Colors.deepPurple,
+                      textColor: Colors.white,
+
+                      onPressed: _cropImage,
+                    ),
+
+                  ),
+                  
+
+                  Padding(padding: EdgeInsets.all(35)),
+
+
+                  ButtonTheme(
+                    minWidth:120,
+
+                    child: RaisedButton(
+                      child: Icon(Icons.clear),
+                      color: Colors.deepPurple,
+                      textColor: Colors.white,
+                      onPressed: _clear,
+                    ),
+
                   ),
 
-                  Padding(padding: EdgeInsets.all(10.0)),
+                  Padding(padding: EdgeInsets.all(20))
 
-                  RaisedButton(
-                    child: Icon(Icons.clear),
-                    color: Colors.deepPurple,
-                    textColor: Colors.white,
-                    onPressed: _clear,
-                  ),
-
-                  Padding(padding: EdgeInsets.all(10.0)),
-
-
-                  Uploader(file: _imageFile),
+                  // Uploader(file: _imageFile),
                 ],
               ),
 
 
-              // Uploader(file: _imageFile),
-              Padding(padding: EdgeInsets.all(20.0)),
-              
+              Uploader(file: _imageFile),
 
-            ],  // if[]
+              Padding(padding: EdgeInsets.all(20.0)),
+            
+            ],  // end of if[]
             
             Container()  // else ..load -> body: Container()
             

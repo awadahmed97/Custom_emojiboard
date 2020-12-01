@@ -12,16 +12,36 @@ class OtherPage extends StatefulWidget {
   }
 }
 
+
+
 class _OtherPageState extends State<OtherPage> {
+
+  // Realtime Database Reference for Number of Uploads
+  final dbUploadCount = FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
+
+  
+
+
+  
   Widget makeImagesGrid() {
     return GridView.builder(
-        itemCount: 12, ////////////////////////////////////////************************ */
+        itemCount: 40, ////////////////////////////////////////************************ */
         gridDelegate:
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {
           return ImageGridItem(index + 1);
         });
   }
+
+
+
+
+
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +63,10 @@ class _OtherPageState extends State<OtherPage> {
   }
 }
 
+
+
+
+
 class ImageGridItem extends StatefulWidget {
   int _index;
 
@@ -61,18 +85,24 @@ class _ImageGridItemState extends State<ImageGridItem> {
       .reference()
       .child("All_Emoji_Uploads_Database/");
 
-  StorageReference emojisReference =
-      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/");
+  StorageReference emojisReferenceJpg =
+      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/JPGs");
+
+    StorageReference emojisReferencePng =
+      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/PNGs");
+
+    StorageReference emojisReferenceGif =
+      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/GIFs");
 
   String img_name;
   int MAX_SIZE = 7 * 1024 * 1024; //7mb
   var arr = [];
   Uint8List imageFile;
 
-  getImage() {
+  getImagePng() {
     if (!requestedIndexes.contains(widget._index)) {
       //checks if index is requested yet
-      emojisReference
+      emojisReferencePng
           .child("emoji_${widget._index}.png") //PNG for now
           .getData(MAX_SIZE)
           .then((data) {
@@ -91,6 +121,59 @@ class _ImageGridItemState extends State<ImageGridItem> {
     // print("qqq: ${arr.length} ")
   }
 
+
+
+
+  getImageJpg() {
+    if (!requestedIndexes.contains(widget._index)) {
+      //checks if index is requested yet
+      emojisReferenceJpg
+          .child("emoji_${widget._index}.jpg") 
+          .getData(MAX_SIZE)
+          .then((data) {
+        this.setState(() {
+          imageFile = data;
+        });
+        imageData.putIfAbsent(widget._index, () {
+          return data; //keeps image file data saved
+        });
+      }).catchError((error) {
+        //return nothing incase of error
+      });
+      requestedIndexes.add(widget._index);
+    }
+
+    // print("qqq: ${arr.length} ")
+  }
+
+
+
+
+  getImageGif() {
+    if (!requestedIndexes.contains(widget._index)) {
+      //checks if index is requested yet
+      emojisReferenceGif
+          .child("emoji_${widget._index}.gif") 
+          .getData(MAX_SIZE)
+          .then((data) {
+        this.setState(() {
+          imageFile = data;
+        });
+        imageData.putIfAbsent(widget._index, () {
+          return data; //keeps image file data saved
+        });
+      }).catchError((error) {
+        //return nothing incase of error
+      });
+      requestedIndexes.add(widget._index);
+    }
+
+    // print("qqq: ${arr.length} ")
+  }
+
+
+
+
   Widget decideGridTileWidget() {
     if (imageFile == null) {
       return Center(child: Text("No Data"));
@@ -102,17 +185,26 @@ class _ImageGridItemState extends State<ImageGridItem> {
     }
   }
 
+
+
+
   @override
   void initState() {
     super.initState();
     if (!imageData.containsKey(widget._index)) {
-      getImage();
+      getImagePng();
+      //THought i could create thier own functions and call each but that did not work. 
+      // getImageJpg();  
+      // getImageGif();
     } else {
       this.setState(() {
         imageFile = imageData[widget._index];
       });
     }
   }
+
+
+
 
   @override
   Widget build(BuildContext context) {
