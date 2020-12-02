@@ -20,8 +20,6 @@ class _OtherPageState extends State<OtherPage> {
   final dbUploadCount = FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
 
   
-
-
   
   Widget makeImagesGrid() {
     return GridView.builder(
@@ -32,14 +30,6 @@ class _OtherPageState extends State<OtherPage> {
           return ImageGridItem(index + 1);
         });
   }
-
-
-
-
-
-
-
-
 
 
 
@@ -94,16 +84,18 @@ class _ImageGridItemState extends State<ImageGridItem> {
     StorageReference emojisReferenceGif =
       FirebaseStorage.instance.ref().child("All_Emoji_Uploads/GIFs");
 
-  String img_name;
+  
   int MAX_SIZE = 7 * 1024 * 1024; //7mb
   var arr = [];
   Uint8List imageFile;
+
+
 
   getImagePng() {
     if (!requestedIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferencePng
-          .child("PNG_${widget._index}.png") //PNG for now
+          .child("PNG_${widget._index}.png")
           .getData(MAX_SIZE)
           .then((data) {
         this.setState(() {
@@ -118,65 +110,17 @@ class _ImageGridItemState extends State<ImageGridItem> {
       requestedIndexes.add(widget._index);
     }
 
-    // print("qqq: ${arr.length} ")
   }
 
 
 
-
-  getImageJpg() {
-    if (!requestedIndexes.contains(widget._index)) {
-      //checks if index is requested yet
-      emojisReferenceJpg
-          .child("emoji_${widget._index}.jpg") 
-          .getData(MAX_SIZE)
-          .then((data) {
-        this.setState(() {
-          imageFile = data;
-        });
-        imageData.putIfAbsent(widget._index, () {
-          return data; //keeps image file data saved
-        });
-      }).catchError((error) {
-        //return nothing incase of error
-      });
-      requestedIndexes.add(widget._index);
-    }
-
-    // print("qqq: ${arr.length} ")
-  }
-
-
-
-
-  getImageGif() {
-    if (!requestedIndexes.contains(widget._index)) {
-      //checks if index is requested yet
-      emojisReferenceGif
-          .child("emoji_${widget._index}.gif") 
-          .getData(MAX_SIZE)
-          .then((data) {
-        this.setState(() {
-          imageFile = data;
-        });
-        imageData.putIfAbsent(widget._index, () {
-          return data; //keeps image file data saved
-        });
-      }).catchError((error) {
-        //return nothing incase of error
-      });
-      requestedIndexes.add(widget._index);
-    }
-
-    // print("qqq: ${arr.length} ")
-  }
 
 
 
 
   Widget decideGridTileWidget() {
     if (imageFile == null) {
-      return Center(child: Text("No Data"));
+      return Center(child: Text(""));
     } else {
       return Image.memory(
         imageFile,
@@ -193,9 +137,6 @@ class _ImageGridItemState extends State<ImageGridItem> {
     super.initState();
     if (!imageData.containsKey(widget._index)) {
       getImagePng();
-      //THought i could create thier own functions and call each but that did not work. 
-      // getImageJpg();  
-      // getImageGif();
     } else {
       this.setState(() {
         imageFile = imageData[widget._index];
@@ -212,28 +153,3 @@ class _ImageGridItemState extends State<ImageGridItem> {
   }
 }
 
-// getImage(){
-
-//     db.once().then((DataSnapshot snapshot){
-//       Map<dynamic, dynamic> values = snapshot.value;
-//         values.forEach((key,values) {
-//           print("Hello over here:" + values["imageName"]);
-//           img_name = values["imageName"];
-
-//           emojisReference.child(img_name)
-//           .getData(MAX_SIZE)
-//           .then((data){
-//             this.setState(() {
-//               imageFile = data;
-//             });
-
-//           })
-//           .catchError((error) {
-//             //return nothing incase of error
-
-//           });
-
-//         });
-//     });
-
-//   }

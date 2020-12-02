@@ -35,10 +35,7 @@ class UploaderState extends State<Uploader> {
   StorageUploadTask _uploadTask;
 
 
-  // Realtime Database Reference for sequence number
-  // final dbRefSeq = FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
-
-  
+  // Database Reference to uploads count
   var dbRefCount = FirebaseDatabase.instance.reference().child("Uploads_Count/");
 
 
@@ -54,6 +51,7 @@ class UploaderState extends State<Uploader> {
   //
   Future<void> _startUpload() async{
 
+    //New path for upload in Firebase
     String filePath;
 
      // Storage Reference to JPG's
@@ -67,40 +65,36 @@ class UploaderState extends State<Uploader> {
     final gifRefPath = storagePath + "GIFs/";
 
 
-
+    // Variables
+    String nextCount;   //Next upload number
+    String newName;     //New name for file to upload
 
 
     // Get extension of image file to be uploaded
-    String full_local_file_path = widget.file.path;
-    String file_extension = full_local_file_path.split('.').last; 
-    
-
-    //Generate new sequential image name
-    String seqNum; 
-    String name;
-
+    String fullLocalFilePath = widget.file.path;
+    String fileExtension = fullLocalFilePath.split('.').last; 
     
 
     //Assign new name to path
-    if (file_extension == "jpg") 
+    if (fileExtension == "jpg") 
     {
-      seqNum = await genSeqNum(file_extension);
-      name = "JPG_" + seqNum + ".jpg";
-      filePath = jpgRefPath + name;
+      nextCount = await genNextCount(fileExtension);
+      newName = "JPG_" + nextCount + ".jpg";
+      filePath = jpgRefPath + newName;
     }
 
-    if (file_extension == "png") 
+    if (fileExtension == "png") 
     {
-      seqNum = await genSeqNum(file_extension);
-      name = "PNG_" + seqNum + ".png";
-      filePath = pngRefPath + name;
+      nextCount = await genNextCount(fileExtension);
+      newName = "PNG_" + nextCount + ".png";
+      filePath = pngRefPath + newName;
     }
 
-    if (file_extension == "gif") 
+    if (fileExtension == "gif") 
     {
-      seqNum = await genSeqNum(file_extension);
-      name = "GIF_" + seqNum + ".gif";
-      filePath = gifRefPath + name;
+      nextCount = await genNextCount(fileExtension);
+      newName = "GIF_" + nextCount + ".gif";
+      filePath = gifRefPath + newName;
     }
 
 
@@ -115,8 +109,8 @@ class UploaderState extends State<Uploader> {
   }
 
 
-  //Function to generate sequential name based on number of files in RTD
-  Future<String> genSeqNum(String extenstion) async
+  //Function to generate next upload count in RTD
+  Future<String> genNextCount(String extenstion) async
   {
     //Variables
     int imgCounter = 0;
@@ -140,18 +134,14 @@ class UploaderState extends State<Uploader> {
     //Get number of emoji uploads from Realtime Database
     await dbRefCount.once().then((DataSnapshot snapshot) {
       tempstr = snapshot.value.toString();                      //Number is retuned in this format: {count: 27}
-      uploadsNumStr = tempstr.substring(7, tempstr.length - 1); //Use substring to get number only
-      // myList.add(uploadsNumStr);
-      // print("This Is: " + tempstr);
+      uploadsNumStr = tempstr.substring(7, tempstr.length - 1); //Substring to get number only
     });
       
-  
     //Convert number to int and Increment for new upload
     imgCounter = int.parse(uploadsNumStr);
     imgCounter++;
-    // print(imgCounter);
 
-    //Update new number in RTD
+    //Update new number in RTD using specified path in "dbRefCount"
     dbRefCount.set({
       'count': imgCounter,
     });
@@ -159,18 +149,10 @@ class UploaderState extends State<Uploader> {
     //Convert incremented num back to string
     uploadsNumStr = imgCounter.toString();
 
-    //return new name with template prefex  "emoji_NUM"
-    return uploadsNumStr;  ///////////////Using PNG for now 
-    // print(imgName);
+    //return updated string number
+    return uploadsNumStr;
    
   }
-
-
-
-
-
-
-
 
 
 
@@ -184,16 +166,11 @@ class UploaderState extends State<Uploader> {
     // Get Name
     String name = await (await uploadTask.onComplete).ref.getName();
 
-    // print("This is the URL: " + url);
-    // print("This is the name: " + name);
-
     // Add image reference data to database
     databaseReference.child(databasePath).push().set({
       'imageName': name,
       'imageURL': url
     });
-
-
 
   }
 
@@ -518,19 +495,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-
-
-
-
-
-// dbRefSeq.once().then((DataSnapshot snapshot) {
-//       tempstr = snapshot.value.toString();
-//       uploadsNumStr = tempstr.substring(5, tempstr.length - 1);
-//       print( int.parse(snapshot.value["NUM"].toString()));
-     
-//     });
-      
-      
-//       // print("This Is: " + uploadsNumStr);

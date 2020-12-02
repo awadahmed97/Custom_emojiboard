@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:custom_emojiboard/MyBottomNavBar.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:custom_emojiboard/JpgData.dart';
+import 'package:flutter/material.dart';
 import 'dart:typed_data';
-import 'package:custom_emojiboard/DataHolder.dart';
 
 class JpgPage extends StatefulWidget {
   @override
@@ -31,9 +31,9 @@ class _JpgPageState extends State<JpgPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(backgroundColor: Colors.blue[400], title: Text('My Uploads') //
-              ),
+      appBar: AppBar(
+          backgroundColor: Colors.blue[400], title: Text('My JPG Uploads') //
+          ),
       body: Container(
         child: makeImagesGrid(), ////ImageGrid
         decoration: BoxDecoration(
@@ -75,35 +75,15 @@ class _ImageGridItemState extends State<ImageGridItem> {
   StorageReference emojisReferenceGif =
       FirebaseStorage.instance.ref().child("All_Emoji_Uploads/GIFs");
 
-  String img_name;
+ 
   int MAX_SIZE = 7 * 1024 * 1024; //7mb
   var arr = [];
   Uint8List imageFile;
 
-  // getImagePng() {
-  //   if (!requestedIndexes.contains(widget._index)) {
-  //     //checks if index is requested yet
-  //     emojisReferencePng
-  //         .child("emoji_${widget._index}.png") //PNG for now
-  //         .getData(MAX_SIZE)
-  //         .then((data) {
-  //       this.setState(() {
-  //         imageFile = data;
-  //       });
-  //       imageData.putIfAbsent(widget._index, () {
-  //         return data; //keeps image file data saved
-  //       });
-  //     }).catchError((error) {
-  //       //return nothing incase of error
-  //     });
-  //     requestedIndexes.add(widget._index);
-  //   }
-
-  //   // print("qqq: ${arr.length} ")
-  // }
+  
 
   getImageJpg() {
-    if (!requestedIndexes.contains(widget._index)) {
+    if (!requestedJpgIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferenceJpg
           .child("JPG_${widget._index}.jpg")
@@ -112,43 +92,21 @@ class _ImageGridItemState extends State<ImageGridItem> {
         this.setState(() {
           imageFile = data;
         });
-        imageData.putIfAbsent(widget._index, () {
+        imageJpgData.putIfAbsent(widget._index, () {
           return data; //keeps image file data saved
         });
       }).catchError((error) {
         //return nothing incase of error
       });
-      requestedIndexes.add(widget._index);
+      requestedJpgIndexes.add(widget._index);
     }
-
-    // print("qqq: ${arr.length} ")
   }
 
-  // getImageGif() {
-  //   if (!requestedIndexes.contains(widget._index)) {
-  //     //checks if index is requested yet
-  //     emojisReferenceGif
-  //         .child("emoji_${widget._index}.gif")
-  //         .getData(MAX_SIZE)
-  //         .then((data) {
-  //       this.setState(() {
-  //         imageFile = data;
-  //       });
-  //       imageData.putIfAbsent(widget._index, () {
-  //         return data; //keeps image file data saved
-  //       });
-  //     }).catchError((error) {
-  //       //return nothing incase of error
-  //     });
-  //     requestedIndexes.add(widget._index);
-  //   }
-
-  //   // print("qqq: ${arr.length} ")
-  // }
+  
 
   Widget decideGridTileWidget() {
     if (imageFile == null) {
-      return Center(child: Text("No Data"));
+      return Center(child: Text(""));
     } else {
       return Image.memory(
         imageFile,
@@ -160,14 +118,11 @@ class _ImageGridItemState extends State<ImageGridItem> {
   @override
   void initState() {
     super.initState();
-    if (!imageData.containsKey(widget._index)) {
-      // getImagePng();
-      //THought i could create thier own functions and call each but that did not work.
+    if (!imageJpgData.containsKey(widget._index)) {
       getImageJpg();
-      // getImageGif();
     } else {
       this.setState(() {
-        imageFile = imageData[widget._index];
+        imageFile = imageJpgData[widget._index];
       });
     }
   }
