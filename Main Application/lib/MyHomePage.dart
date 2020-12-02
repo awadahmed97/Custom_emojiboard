@@ -36,7 +36,10 @@ class UploaderState extends State<Uploader> {
 
 
   // Realtime Database Reference for sequence number
-  final dbRefSeq = FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
+  // final dbRefSeq = FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
+
+  
+  var dbRefCount = FirebaseDatabase.instance.reference().child("Uploads_Count/");
 
 
 
@@ -51,48 +54,60 @@ class UploaderState extends State<Uploader> {
   //
   Future<void> _startUpload() async{
 
-    String storageFilePath;
+    String filePath;
 
-     // Realtime Database Reference to JPG's
-    final rtJpgRefPath = storagePath + "JPGs/";
+     // Storage Reference to JPG's
+    final jpgRefPath = storagePath + "JPGs/";
 
-    // Realtime Database Reference to PNG's
-    final rtPngRefPath = storagePath + "PNGs/";
-
-
-    // Realtime Database Reference to GIF's
-    final rtGifRefPath = storagePath + "GIFs/";
+    // Storage Reference to PNG's
+    final pngRefPath = storagePath + "PNGs/";
 
 
+    // Storage Reference to GIF's
+    final gifRefPath = storagePath + "GIFs/";
 
 
-    
-    //Generate new sequential image name
-    String name = await genSeqImageName();
+
+
 
     // Get extension of image file to be uploaded
     String full_local_file_path = widget.file.path;
-    String file_extension = full_local_file_path.split('.').last;
+    String file_extension = full_local_file_path.split('.').last; 
+    
+
+    //Generate new sequential image name
+    String seqNum; 
+    String name;
+
+    
 
     //Assign new name to path
-    if (file_extension == "jpg")
+    if (file_extension == "jpg") 
     {
-      storageFilePath = rtJpgRefPath + name + "jpg";
+      seqNum = await genSeqNum(file_extension);
+      name = "JPG_" + seqNum + ".jpg";
+      filePath = jpgRefPath + name;
     }
-      if (file_extension == "png")
+
+    if (file_extension == "png") 
     {
-      storageFilePath = rtPngRefPath + name + ".png";
+      seqNum = await genSeqNum(file_extension);
+      name = "PNG_" + seqNum + ".png";
+      filePath = pngRefPath + name;
     }
-      if (file_extension == "gif")
+
+    if (file_extension == "gif") 
     {
-      storageFilePath = rtGifRefPath + name + ".gif";
+      seqNum = await genSeqNum(file_extension);
+      name = "GIF_" + seqNum + ".gif";
+      filePath = gifRefPath + name;
     }
 
 
     // Set state
     setState(() {
       // Upload Image to storage path using generated name and extention
-      _uploadTask = (_storage.ref()).child(storageFilePath).putFile(widget.file);  
+      _uploadTask = (_storage.ref()).child(filePath).putFile(widget.file);  
 
       // Save reference of uploaded image to RTD
       saveReferenceToRealtimeDatabase(_uploadTask);
@@ -101,17 +116,31 @@ class UploaderState extends State<Uploader> {
 
 
   //Function to generate sequential name based on number of files in RTD
-  Future<String> genSeqImageName() async
+  Future<String> genSeqNum(String extenstion) async
   {
     //Variables
     int imgCounter = 0;
     String tempstr;
     String uploadsNumStr;
     
+    
+    if (extenstion == "jpg")
+    {
+      dbRefCount = dbRefCount.child("JPG");
+    }
+    if (extenstion == "png")
+    {
+      dbRefCount = dbRefCount.child("PNG");
+    }
+    if (extenstion == "gif")
+    {
+      dbRefCount = dbRefCount.child("GIF");
+    }
+    
     //Get number of emoji uploads from Realtime Database
-    await dbRefSeq.once().then((DataSnapshot snapshot) {
-      tempstr = snapshot.value.toString();                      //Number is retuned in this format: {NUM: 27}
-      uploadsNumStr = tempstr.substring(5, tempstr.length - 1); //Use substring to get number only
+    await dbRefCount.once().then((DataSnapshot snapshot) {
+      tempstr = snapshot.value.toString();                      //Number is retuned in this format: {count: 27}
+      uploadsNumStr = tempstr.substring(7, tempstr.length - 1); //Use substring to get number only
       // myList.add(uploadsNumStr);
       // print("This Is: " + tempstr);
     });
@@ -123,18 +152,23 @@ class UploaderState extends State<Uploader> {
     // print(imgCounter);
 
     //Update new number in RTD
-    dbRefSeq.set({
-      'NUM': imgCounter,
+    dbRefCount.set({
+      'count': imgCounter,
     });
 
     //Convert incremented num back to string
-    String tempCount = imgCounter.toString();
+    uploadsNumStr = imgCounter.toString();
 
     //return new name with template prefex  "emoji_NUM"
-    return "emoji_" + tempCount;  ///////////////Using PNG for now 
+    return uploadsNumStr;  ///////////////Using PNG for now 
     // print(imgName);
    
   }
+
+
+
+
+
 
 
 

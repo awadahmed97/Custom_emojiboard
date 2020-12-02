@@ -103,7 +103,7 @@ class _ImageGridItemState extends State<ImageGridItem> {
     if (!requestedIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferencePng
-          .child("emoji_${widget._index}.png") //PNG for now
+          .child("PNG_${widget._index}.png") //PNG for now
           .getData(MAX_SIZE)
           .then((data) {
         this.setState(() {

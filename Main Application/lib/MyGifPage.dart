@@ -80,55 +80,55 @@ class _ImageGridItemState extends State<ImageGridItem> {
   var arr = [];
   Uint8List imageFile;
 
-  getImagePng() {
-    if (!requestedIndexes.contains(widget._index)) {
-      //checks if index is requested yet
-      emojisReferencePng
-          .child("emoji_${widget._index}.png") //PNG for now
-          .getData(MAX_SIZE)
-          .then((data) {
-        this.setState(() {
-          imageFile = data;
-        });
-        imageData.putIfAbsent(widget._index, () {
-          return data; //keeps image file data saved
-        });
-      }).catchError((error) {
-        //return nothing incase of error
-      });
-      requestedIndexes.add(widget._index);
-    }
+  // getImagePng() {
+  //   if (!requestedIndexes.contains(widget._index)) {
+  //     //checks if index is requested yet
+  //     emojisReferencePng
+  //         .child("emoji_${widget._index}.png") //PNG for now
+  //         .getData(MAX_SIZE)
+  //         .then((data) {
+  //       this.setState(() {
+  //         imageFile = data;
+  //       });
+  //       imageData.putIfAbsent(widget._index, () {
+  //         return data; //keeps image file data saved
+  //       });
+  //     }).catchError((error) {
+  //       //return nothing incase of error
+  //     });
+  //     requestedIndexes.add(widget._index);
+  //   }
 
-    // print("qqq: ${arr.length} ")
-  }
+  //   // print("qqq: ${arr.length} ")
+  // }
 
-  getImageJpg() {
-    if (!requestedIndexes.contains(widget._index)) {
-      //checks if index is requested yet
-      emojisReferenceJpg
-          .child("emoji_${widget._index}.jpg")
-          .getData(MAX_SIZE)
-          .then((data) {
-        this.setState(() {
-          imageFile = data;
-        });
-        imageData.putIfAbsent(widget._index, () {
-          return data; //keeps image file data saved
-        });
-      }).catchError((error) {
-        //return nothing incase of error
-      });
-      requestedIndexes.add(widget._index);
-    }
+  // getImageJpg() {
+  //   if (!requestedIndexes.contains(widget._index)) {
+  //     //checks if index is requested yet
+  //     emojisReferenceJpg
+  //         .child("emoji_${widget._index}.jpg")
+  //         .getData(MAX_SIZE)
+  //         .then((data) {
+  //       this.setState(() {
+  //         imageFile = data;
+  //       });
+  //       imageData.putIfAbsent(widget._index, () {
+  //         return data; //keeps image file data saved
+  //       });
+  //     }).catchError((error) {
+  //       //return nothing incase of error
+  //     });
+  //     requestedIndexes.add(widget._index);
+  //   }
 
-    // print("qqq: ${arr.length} ")
-  }
+  //   // print("qqq: ${arr.length} ")
+  // }
 
   getImageGif() {
     if (!requestedIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferenceGif
-          .child("emoji_${widget._index}.gif")
+          .child("GIF_${widget._index}.gif")
           .getData(MAX_SIZE)
           .then((data) {
         this.setState(() {
@@ -161,10 +161,10 @@ class _ImageGridItemState extends State<ImageGridItem> {
   void initState() {
     super.initState();
     if (!imageData.containsKey(widget._index)) {
-      getImagePng();
+      // getImagePng();
       //THought i could create thier own functions and call each but that did not work.
       // getImageJpg();
-      // getImageGif();
+      getImageGif();
     } else {
       this.setState(() {
         imageFile = imageData[widget._index];
