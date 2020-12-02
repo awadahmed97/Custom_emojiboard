@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:custom_emojiboard/MyBottomNavBar.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'dart:typed_data';
 import 'package:custom_emojiboard/DataHolder.dart';
+import 'package:flutter/material.dart';
+import 'dart:typed_data';
 
 class OtherPage extends StatefulWidget {
   @override
@@ -12,36 +12,21 @@ class OtherPage extends StatefulWidget {
   }
 }
 
-
-
 class _OtherPageState extends State<OtherPage> {
-
   // Realtime Database Reference for Number of Uploads
-  final dbUploadCount = FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
+  final dbUploadCount =
+      FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
 
-  
-
-
-  
   Widget makeImagesGrid() {
     return GridView.builder(
-        itemCount: 40, ////////////////////////////////////////************************ */
+        itemCount:
+            20, ////////////////////////////////////////************************ */
         gridDelegate:
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {
           return ImageGridItem(index + 1);
         });
   }
-
-
-
-
-
-
-
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -62,10 +47,6 @@ class _OtherPageState extends State<OtherPage> {
     );
   }
 }
-
-
-
-
 
 class ImageGridItem extends StatefulWidget {
   int _index;
@@ -88,10 +69,10 @@ class _ImageGridItemState extends State<ImageGridItem> {
   StorageReference emojisReferenceJpg =
       FirebaseStorage.instance.ref().child("All_Emoji_Uploads/JPGs");
 
-    StorageReference emojisReferencePng =
+  StorageReference emojisReferencePng =
       FirebaseStorage.instance.ref().child("All_Emoji_Uploads/PNGs");
 
-    StorageReference emojisReferenceGif =
+  StorageReference emojisReferenceGif =
       FirebaseStorage.instance.ref().child("All_Emoji_Uploads/GIFs");
 
   String img_name;
@@ -121,14 +102,11 @@ class _ImageGridItemState extends State<ImageGridItem> {
     // print("qqq: ${arr.length} ")
   }
 
-
-
-
   getImageJpg() {
     if (!requestedIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferenceJpg
-          .child("emoji_${widget._index}.jpg") 
+          .child("emoji_${widget._index}.jpg")
           .getData(MAX_SIZE)
           .then((data) {
         this.setState(() {
@@ -145,15 +123,12 @@ class _ImageGridItemState extends State<ImageGridItem> {
 
     // print("qqq: ${arr.length} ")
   }
-
-
-
 
   getImageGif() {
     if (!requestedIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferenceGif
-          .child("emoji_${widget._index}.gif") 
+          .child("emoji_${widget._index}.gif")
           .getData(MAX_SIZE)
           .then((data) {
         this.setState(() {
@@ -170,9 +145,6 @@ class _ImageGridItemState extends State<ImageGridItem> {
 
     // print("qqq: ${arr.length} ")
   }
-
-
-
 
   Widget decideGridTileWidget() {
     if (imageFile == null) {
@@ -185,16 +157,13 @@ class _ImageGridItemState extends State<ImageGridItem> {
     }
   }
 
-
-
-
   @override
   void initState() {
     super.initState();
     if (!imageData.containsKey(widget._index)) {
       getImagePng();
-      //THought i could create thier own functions and call each but that did not work. 
-      // getImageJpg();  
+      //THought i could create thier own functions and call each but that did not work.
+      // getImageJpg();
       // getImageGif();
     } else {
       this.setState(() {
@@ -202,9 +171,6 @@ class _ImageGridItemState extends State<ImageGridItem> {
       });
     }
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {

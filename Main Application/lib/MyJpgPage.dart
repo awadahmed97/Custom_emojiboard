@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:custom_emojiboard/MyBottomNavBar.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:custom_emojiboard/JpgData.dart';
+import 'package:flutter/material.dart';
 import 'dart:typed_data';
-import 'package:custom_emojiboard/DataHolder.dart';
 
 class JpgPage extends StatefulWidget {
   @override
@@ -31,9 +31,9 @@ class _JpgPageState extends State<JpgPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(backgroundColor: Colors.blue[400], title: Text('My Uploads') //
-              ),
+      appBar: AppBar(
+          backgroundColor: Colors.blue[400], title: Text('My JPG Uploads') //
+          ),
       body: Container(
         child: makeImagesGrid(), ////ImageGrid
         decoration: BoxDecoration(
@@ -81,7 +81,7 @@ class _ImageGridItemState extends State<ImageGridItem> {
   Uint8List imageFile;
 
   getImagePng() {
-    if (!requestedIndexes.contains(widget._index)) {
+    if (!requestedJpgIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferencePng
           .child("emoji_${widget._index}.png") //PNG for now
@@ -90,20 +90,20 @@ class _ImageGridItemState extends State<ImageGridItem> {
         this.setState(() {
           imageFile = data;
         });
-        imageData.putIfAbsent(widget._index, () {
+        imageJpgData.putIfAbsent(widget._index, () {
           return data; //keeps image file data saved
         });
       }).catchError((error) {
         //return nothing incase of error
       });
-      requestedIndexes.add(widget._index);
+      requestedJpgIndexes.add(widget._index);
     }
 
     // print("qqq: ${arr.length} ")
   }
 
   getImageJpg() {
-    if (!requestedIndexes.contains(widget._index)) {
+    if (!requestedJpgIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferenceJpg
           .child("emoji_${widget._index}.jpg")
@@ -112,20 +112,20 @@ class _ImageGridItemState extends State<ImageGridItem> {
         this.setState(() {
           imageFile = data;
         });
-        imageData.putIfAbsent(widget._index, () {
+        imageJpgData.putIfAbsent(widget._index, () {
           return data; //keeps image file data saved
         });
       }).catchError((error) {
         //return nothing incase of error
       });
-      requestedIndexes.add(widget._index);
+      requestedJpgIndexes.add(widget._index);
     }
 
     // print("qqq: ${arr.length} ")
   }
 
   getImageGif() {
-    if (!requestedIndexes.contains(widget._index)) {
+    if (!requestedJpgIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferenceGif
           .child("emoji_${widget._index}.gif")
@@ -134,13 +134,13 @@ class _ImageGridItemState extends State<ImageGridItem> {
         this.setState(() {
           imageFile = data;
         });
-        imageData.putIfAbsent(widget._index, () {
+        imageJpgData.putIfAbsent(widget._index, () {
           return data; //keeps image file data saved
         });
       }).catchError((error) {
         //return nothing incase of error
       });
-      requestedIndexes.add(widget._index);
+      requestedJpgIndexes.add(widget._index);
     }
 
     // print("qqq: ${arr.length} ")
@@ -160,14 +160,11 @@ class _ImageGridItemState extends State<ImageGridItem> {
   @override
   void initState() {
     super.initState();
-    if (!imageData.containsKey(widget._index)) {
-      getImagePng();
-      //THought i could create thier own functions and call each but that did not work.
-      // getImageJpg();
-      // getImageGif();
+    if (!imageJpgData.containsKey(widget._index)) {
+      getImageJpg();
     } else {
       this.setState(() {
-        imageFile = imageData[widget._index];
+        imageFile = imageJpgData[widget._index];
       });
     }
   }
