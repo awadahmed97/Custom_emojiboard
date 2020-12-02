@@ -31,9 +31,9 @@ class _GifPageState extends State<GifPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(backgroundColor: Colors.blue[400], title: Text('My Uploads') //
-              ),
+      appBar: AppBar(
+          backgroundColor: Colors.blue[400], title: Text('My GIF Uploads') //
+          ),
       body: Container(
         child: makeImagesGrid(), ////ImageGrid
         decoration: BoxDecoration(

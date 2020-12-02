@@ -31,9 +31,9 @@ class _OtherPageState extends State<OtherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(backgroundColor: Colors.blue[400], title: Text('My Uploads') //
-              ),
+      appBar: AppBar(
+          backgroundColor: Colors.blue[400], title: Text('My PNG Uploads') //
+          ),
       body: Container(
         child: makeImagesGrid(), ////ImageGrid
         decoration: BoxDecoration(

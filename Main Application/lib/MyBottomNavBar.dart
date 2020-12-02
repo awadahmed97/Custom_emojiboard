@@ -32,7 +32,7 @@ class MyBottomNavBar extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(
-              Icons.camera,
+              Icons.image,
               size: 44.0,
             ),
             color: Colors.white,
@@ -42,7 +42,7 @@ class MyBottomNavBar extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(
-              Icons.grid_on,
+              Icons.gif,
               size: 44.0,
             ),
             color: Colors.white,
