@@ -15,20 +15,15 @@ class OtherPage extends StatefulWidget {
 
 
 class _OtherPageState extends State<OtherPage> {
-
-  // Realtime Database Reference for Number of Uploads
-  final dbUploadCount = FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
-
-  
   
   Widget makeImagesGrid() {
     return GridView.builder(
         itemCount: 40, ////////////////////////////////////////************************ */
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        itemBuilder: (context, index) {
-          return ImageGridItem(index + 1);
-        });
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2),
+            itemBuilder: (context, index) {
+              return ImageGridItem(index + 1);
+            });
   }
 
 
@@ -75,16 +70,12 @@ class _ImageGridItemState extends State<ImageGridItem> {
       .reference()
       .child("All_Emoji_Uploads_Database/");
 
-  StorageReference emojisReferenceJpg =
-      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/JPGs");
 
     StorageReference emojisReferencePng =
-      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/PNGs");
+      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/PNGs/");
 
-    StorageReference emojisReferenceGif =
-      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/GIFs");
 
-  
+  String img_name;
   int MAX_SIZE = 7 * 1024 * 1024; //7mb
   var arr = [];
   Uint8List imageFile;
@@ -94,19 +85,18 @@ class _ImageGridItemState extends State<ImageGridItem> {
   getImagePng() {
     if (!requestedIndexes.contains(widget._index)) {
       //checks if index is requested yet
-      emojisReferencePng
-          .child("PNG_${widget._index}.png")
+      emojisReferencePng.child("PNG_${widget._index}.png")
           .getData(MAX_SIZE)
           .then((data) {
-        this.setState(() {
-          imageFile = data;
-        });
-        imageData.putIfAbsent(widget._index, () {
-          return data; //keeps image file data saved
-        });
-      }).catchError((error) {
-        //return nothing incase of error
-      });
+            this.setState(() {
+              imageFile = data;
+            });
+            imageData.putIfAbsent(widget._index, () {
+              return data; //keeps image file data saved
+            });
+          }).catchError((error) {
+            //return nothing incase of error
+            });
       requestedIndexes.add(widget._index);
     }
 
@@ -121,7 +111,8 @@ class _ImageGridItemState extends State<ImageGridItem> {
   Widget decideGridTileWidget() {
     if (imageFile == null) {
       return Center(child: Text(""));
-    } else {
+    } 
+    else {
       return Image.memory(
         imageFile,
         fit: BoxFit.cover,

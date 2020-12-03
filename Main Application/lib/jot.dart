@@ -3,98 +3,144 @@
 // import 'package:firebase_storage/firebase_storage.dart';
 // import 'package:firebase_database/firebase_database.dart';
 // import 'dart:typed_data';
+// import 'package:custom_emojiboard/DataHolder.dart';
 
-
-
-
-
-// import 'dart:io';
-
-
-// import 'package:image_picker/image_picker.dart';
-
-// class SecondPage extends StatefulWidget {
-//   SecondPage({Key key}) : super(key: key);
-
+// class OtherPage extends StatefulWidget {
 //   @override
-//   _SecondPageState createState() => _SecondPageState();
+//   State<StatefulWidget> createState() {
+//     return _OtherPageState();
+//   }
 // }
 
-// class _SecondPageState extends State<SecondPage> {
-//   final db = FirebaseDatabase.instance ; //.reference().child("All_Emoji_Uploads_Database/");
-//   File _image;
+
+
+// class _OtherPageState extends State<OtherPage> {
+  
+//   Widget makeImagesGrid() {
+//     return GridView.builder(
+//         itemCount: 40, ////////////////////////////////////////************************ */
+//           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//             crossAxisCount: 2),
+//             itemBuilder: (context, index) {
+//               return ImageGridItem(index + 1);
+//             });
+//   }
+
+
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar:
+//           AppBar(backgroundColor: Colors.blue[400], title: Text('My Uploads') //
+//               ),
+//       body: Container(
+//         child: makeImagesGrid(), ////ImageGrid
+//         decoration: BoxDecoration(
+//           image: DecorationImage(
+//             image: AssetImage("assets/images/other.jpg"),
+//             fit: BoxFit.cover,
+//           ),
+//         ),
+//       ),
+//       bottomNavigationBar: MyBottomNavBar(),
+//     );
+//   }
+// }
+
+
+
+
+
+// class ImageGridItem extends StatefulWidget {
+//   int _index;
+
+//   ImageGridItem(int index) {
+//     this._index = index;
+//     // this.databaseReference = db;
+//   }
+
+//   // @override
+//   createState() => _ImageGridItemState();
+// }
+
+// class _ImageGridItemState extends State<ImageGridItem> {
+//   // // Realtime Database Reference
+//   final db = FirebaseDatabase.instance
+//       .reference()
+//       .child("All_Emoji_Uploads_Database/");
+
+
+//     StorageReference emojisReferencePng =
+//       FirebaseStorage.instance.ref().child("All_Emoji_Uploads/PNGs/");
+
+
+//   String img_name;
+//   int MAX_SIZE = 7 * 1024 * 1024; //7mb
+//   var arr = [];
+//   Uint8List imageFile;
+
+
+
+//   getImagePng() {
+//     if (!requestedIndexes.contains(widget._index)) {
+//       //checks if index is requested yet
+//       emojisReferencePng.child("PNG_${widget._index}.png")
+//           .getData(MAX_SIZE)
+//           .then((data) {
+//             this.setState(() {
+//               imageFile = data;
+//             });
+//             imageData.putIfAbsent(widget._index, () {
+//               return data; //keeps image file data saved
+//             });
+//           }).catchError((error) {
+//             //return nothing incase of error
+//             });
+//       requestedIndexes.add(widget._index);
+//     }
+
+//   }
+
+
+
+
+
+
+
+//   Widget decideGridTileWidget() {
+//     if (imageFile == null) {
+//       return Center(child: Text(""));
+//     } 
+//     else {
+//       return Image.memory(
+//         imageFile,
+//         fit: BoxFit.cover,
+//       );
+//     }
+//   }
+
+
+
 
 //   @override
 //   void initState() {
 //     super.initState();
+//     if (!imageData.containsKey(widget._index)) {
+//       getImagePng();
+//     } else {
+//       this.setState(() {
+//         imageFile = imageData[widget._index];
+//       });
+//     }
 //   }
+
+
+
 
 //   @override
 //   Widget build(BuildContext context) {
-//     return MaterialApp(
-//         home: Scaffold(
-//       appBar: AppBar(
-//         title: Text("Second Page"),
-//         centerTitle: true,
-//       ),
-//       body: Container(
-//         padding: EdgeInsets.all(10.0),
-//         child: Column(children: <Widget>[
-//           FutureBuilder(
-//             future: getImages(),
-//             builder: (context, AsyncSnapshot snapshot) {
-//               if (snapshot.connectionState == ConnectionState.done) {
-//                 return ListView.builder(
-//                     shrinkWrap: true,
-//                     itemCount: snapshot.data.docs.length,
-//                     itemBuilder: (BuildContext context, int index) {
-//                       return ListTile(
-//                         contentPadding: EdgeInsets.all(8.0),
-//                         title: Text(snapshot.data.docs[index].data()["name"]),
-//                         leading: Image.network(
-//                             snapshot.data.docs[index].data()["url"],
-//                             fit: BoxFit.fill),
-//                       );
-//                     });
-//               } else if (snapshot.connectionState == ConnectionState.none) {
-//                 return Text("No data");
-//               }
-//               return CircularProgressIndicator();
-//             },
-//           ),
-//           RaisedButton(child: Text("Pick Image"), onPressed: getImage),
-//           _image == null
-//               ? Text('No image selected.')
-//               : Image.file(
-//                   _image,
-//                   height: 300,
-//                 ),
-//           RaisedButton(
-//               child: Text("Save Image"),
-//               onPressed: () async {
-//                 if (_image != null) {
-//                   StorageReference ref = FirebaseStorage.instance.ref();
-//                   StorageTaskSnapshot addImg =
-//                       await ref.child("All_Emoji_Uploads").putFile(_image).onComplete;
-//                   if (addImg.error == null) {
-//                     print("added to Firebase Storage");
-//                   }
-//                 }
-//               }),
-//         ]),
-//       ),
-//     ));
-//   }
-
-//   Future getImage() async {
-//     var image = await ImagePicker.pickImage(source: ImageSource.gallery);
-
-//     setState(() {
-//       _image = image;
-//     });
-//   }
-
-//   Future getImages() {
-//     return db.reference().child("All_Images_Uploads_Database").get(); //   collection("images").get();
+//     return GridTile(child: decideGridTileWidget());
 //   }
 // }
+

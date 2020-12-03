@@ -87,7 +87,7 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
     StorageReference storageReference;
     DatabaseReference databaseReference;
 
-    StorageReference myStorageRef;  //second storage reference for testing purposes
+//    StorageReference myStorageRef;  //second storage reference for testing purposes
 
     // Creating URI.
     Uri FilePathUri;
@@ -99,6 +99,8 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
     String imgUrl, imgName;
 
     File localFile;
+
+
 
 
 
@@ -123,6 +125,7 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
         // Assign FirebaseStorage instance to storageReference.
         storageReference = FirebaseStorage.getInstance().getReference();
+        Log.i("gg6", storageReference.toString());
 
         // Assign FirebaseDatabase instance with root database name.
         // Setting up Firebase image upload folder path in databaseReference.
@@ -203,38 +206,38 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
                     ImgButton.setTag(imgName);
 
 
+
+
                     //** Now Download actual image and commit as MIME type object
 
-                    String secName = imgName;
-
-
-
-
-
-
+//                    String secName = imgName;
 
 //                    myStorageRef = storageReference.child("All_Emoji_Uploads/" + imgName);
-                    //TODO: Using specific image in storage for now. Awaiting database creation from Flutter app
-                    //TODO: When done, names of each specific image can be obtained in a
-                    // loop using realtime database methods and ImagesModel class
-
-
-
-
 
 
 //                    ImgButton.setImageResource(getResources().getIdentifier(rawFiles[i], "raw", getPackageName()));
 
 
 
-
                     // Callback to be called when image button is pressed. Download actual image here to pass to doCommitContent()
                     ImgButton.setOnClickListener(view -> {
 
-
                         //Second storage reference to hold full image location in the storage.
-                        //      using specific name of image being viewed on image button
-                        myStorageRef = storageReference.child("All_Emoji_Uploads/" + ImgButton.getTag());
+                        //      using specific name of image being viewed on image butt
+                        StorageReference myStorageRef;
+
+                        if (ImgButton.getTag().toString().endsWith(".png"))
+                        {
+                            myStorageRef = storageReference.child("All_Emoji_Uploads/PNGs/" + ImgButton.getTag());
+                        }
+                        else if (ImgButton.getTag().toString().endsWith(".jpg"))
+                        {
+                            myStorageRef = storageReference.child("All_Emoji_Uploads/JPGs/" + ImgButton.getTag());
+                        }
+                        else
+                        {
+                            myStorageRef = storageReference.child("All_Emoji_Uploads/GIFs/" + ImgButton.getTag());
+                        }
 
 
 
