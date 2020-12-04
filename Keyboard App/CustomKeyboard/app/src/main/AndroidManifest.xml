@@ -1,5 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="capstone.dev.customkeyboard">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -7,25 +13,28 @@
         android:label="CustomKeyboard"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CustomKeyboard">
+        android:theme="@style/Theme.CustomKeyboard"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <service
             android:name=".CustomKeyboard"
-            android:label="CustEmoji-Keyboard"
+            android:label="CustomEmojiKeyboard"
             android:permission="android.permission.BIND_INPUT_METHOD"
-            >
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true">
+
             <meta-data
                 android:name="android.view.im"
                 android:resource="@xml/method"/>
             <intent-filter>
                 <action android:name="android.view.InputMethod"/>
             </intent-filter>
-
         </service>
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.capstone.customkeyboard.inputcontent"
+            android:authorities="capstone.dev.customkeyboard.inputcontent"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -37,3 +46,5 @@
     </application>
 
 </manifest>
+
+<!--    android:authorities="com.capstone.customkeyboard.inputcontent"-->

@@ -3,59 +3,100 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="200dp">
+    android:layout_height="200dp"
+    android:background="#fff"
+    tools:context=".CustomKeyboard">
+
+
+
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#19314A"
+        android:keyBackground="@drawable/key_background"
+
+        android:keyPreviewLayout="@layout/key_preview"
+        android:keyTextColor="@android:color/white" />
+
 
 
 
 
     <RelativeLayout
+        android:id="@+id/images_view"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:background="#000"
-        tools:context=".CustomKeyboard">
+        android:layout_height="233dp"
+        android:visibility="gone"
 
-        <android.inputmethodservice.KeyboardView
-            android:id="@+id/keyboard_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:background="#19314A"
-            android:keyBackground="@drawable/key_background"
+        >
 
-            android:keyPreviewLayout="@layout/key_preview"
-            android:keyTextColor="@android:color/white" />
 
         <LinearLayout
-            android:id="@+id/images_view"
+            android:id="@+id/tool_bar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
+            android:layout_height="38dp"
+            android:background="#ec4"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
 
-            >
-
-            <Button
+            <ImageButton
                 android:id="@+id/return_to_keys"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#fff"
+                android:layout_height="match_parent"
+                android:background="#ec4"
+                android:src="@drawable/sym_keyboard"
+
+                android:gravity="right"
+
                 android:onClick="showKeys"
-                android:text="back" />
+                android:text="back"
+
+
+
+                />
+
+
+        </LinearLayout>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="229dp"
+
+            android:layout_below="@+id/tool_bar"
+            >
+
 
             <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:id="@+id/H_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="229dp"
 
-                <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                android:layout_below="@+id/tool_bar"
+                android:layout_marginTop="-4dp">
+
+                <LinearLayout
                     android:id="@+id/imageContainer"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="#fff"
                     android:orientation="horizontal" />
             </HorizontalScrollView>
-        </LinearLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </RelativeLayout>
+
+
+
+
+
 
 
 
