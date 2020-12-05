@@ -1,9 +1,11 @@
+import 'package:custom_emojiboard/LoginPage.dart';
 import 'package:custom_emojiboard/MyGifPage.dart';
 import 'package:flutter/material.dart';
 import 'package:custom_emojiboard/MyHomePage.dart';
 import 'package:custom_emojiboard/MyOtherPage.dart';
 import 'package:custom_emojiboard/MyBottomNavBar.dart';
 import 'package:custom_emojiboard/MyJpgPage.dart';
+import 'package:custom_emojiboard/LoginPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomePage(),
         '/other': (context) => OtherPage(),
         '/jpg': (context) => JpgPage(),
-        '/gif': (context) => GifPage()
+        '/gif': (context) => GifPage(),
+        '/login': (context) => LoginPage()
       },
     );
   }

@@ -75,12 +75,9 @@ class _ImageGridItemState extends State<ImageGridItem> {
   StorageReference emojisReferenceGif =
       FirebaseStorage.instance.ref().child("All_Emoji_Uploads/GIFs");
 
- 
   int MAX_SIZE = 7 * 1024 * 1024; //7mb
   var arr = [];
   Uint8List imageFile;
-
-  
 
   getImageJpg() {
     if (!requestedJpgIndexes.contains(widget._index)) {
@@ -101,8 +98,6 @@ class _ImageGridItemState extends State<ImageGridItem> {
       requestedJpgIndexes.add(widget._index);
     }
   }
-
-  
 
   Widget decideGridTileWidget() {
     if (imageFile == null) {

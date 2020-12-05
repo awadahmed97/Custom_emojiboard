@@ -12,6 +12,16 @@ class MyBottomNavBar extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: Icon(
+              Icons.account_circle,
+              size: 44.0,
+            ),
+            color: Colors.white,
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/login');
+            },
+          ),
+          IconButton(
+            icon: Icon(
               Icons.home,
               size: 44.0,
             ),

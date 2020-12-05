@@ -13,10 +13,6 @@ class GifPage extends StatefulWidget {
 }
 
 class _GifPageState extends State<GifPage> {
-  // Realtime Database Reference for Number of Uploads
-  final dbUploadCount =
-      FirebaseDatabase.instance.reference().child("Number_Of_Uploads");
-
   Widget makeImagesGrid() {
     return GridView.builder(
         itemCount:
@@ -75,13 +71,9 @@ class _ImageGridItemState extends State<ImageGridItem> {
   StorageReference emojisReferenceGif =
       FirebaseStorage.instance.ref().child("All_Emoji_Uploads/GIFs");
 
- 
   int MAX_SIZE = 7 * 1024 * 1024; //7mb
   var arr = [];
   Uint8List imageFile;
-
-  
-  
 
   getImageGif() {
     if (!requestedGifIndexes.contains(widget._index)) {
