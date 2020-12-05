@@ -2,7 +2,7 @@ import 'package:custom_emojiboard/LoginPage.dart';
 import 'package:custom_emojiboard/MyGifPage.dart';
 import 'package:flutter/material.dart';
 import 'package:custom_emojiboard/MyHomePage.dart';
-import 'package:custom_emojiboard/MyOtherPage.dart';
+import 'package:custom_emojiboard/MyPngPage.dart';
 import 'package:custom_emojiboard/MyBottomNavBar.dart';
 import 'package:custom_emojiboard/MyJpgPage.dart';
 import 'package:custom_emojiboard/LoginPage.dart';
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
-        '/other': (context) => OtherPage(),
+        '/other': (context) => PngPage(),
         '/jpg': (context) => JpgPage(),
         '/gif': (context) => GifPage(),
         '/login': (context) => LoginPage()

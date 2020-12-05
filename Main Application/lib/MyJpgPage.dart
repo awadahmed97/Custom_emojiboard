@@ -22,7 +22,8 @@ class _JpgPageState extends State<JpgPage> {
         itemCount:
             20, ////////////////////////////////////////************************ */
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
         itemBuilder: (context, index) {
           return ImageGridItem(index + 1);
         });
@@ -35,10 +36,11 @@ class _JpgPageState extends State<JpgPage> {
           backgroundColor: Colors.blue[400], title: Text('My JPG Uploads') //
           ),
       body: Container(
+        
         child: makeImagesGrid(), ////ImageGrid
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/other.jpg"),
+            image: AssetImage("assets/images/black.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -80,7 +82,7 @@ class _ImageGridItemState extends State<ImageGridItem> {
   Uint8List imageFile;
 
   getImageJpg() {
-    if (!requestedJpgIndexes.contains(widget._index)) {
+    // if (!requestedJpgIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferenceJpg
           .child("JPG_${widget._index}.jpg")
@@ -95,8 +97,8 @@ class _ImageGridItemState extends State<ImageGridItem> {
       }).catchError((error) {
         //return nothing incase of error
       });
-      requestedJpgIndexes.add(widget._index);
-    }
+    //   requestedJpgIndexes.add(widget._index);
+    // }
   }
 
   Widget decideGridTileWidget() {

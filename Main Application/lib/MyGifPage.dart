@@ -18,7 +18,8 @@ class _GifPageState extends State<GifPage> {
         itemCount:
             20, ////////////////////////////////////////************************ */
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
         itemBuilder: (context, index) {
           return ImageGridItem(index + 1);
         });
@@ -34,7 +35,7 @@ class _GifPageState extends State<GifPage> {
         child: makeImagesGrid(), ////ImageGrid
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/other.jpg"),
+            image: AssetImage("assets/images/white.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -76,7 +77,7 @@ class _ImageGridItemState extends State<ImageGridItem> {
   Uint8List imageFile;
 
   getImageGif() {
-    if (!requestedGifIndexes.contains(widget._index)) {
+    // if (!requestedGifIndexes.contains(widget._index)) {
       //checks if index is requested yet
       emojisReferenceGif
           .child("GIF_${widget._index}.gif")
@@ -91,8 +92,8 @@ class _ImageGridItemState extends State<ImageGridItem> {
       }).catchError((error) {
         //return nothing incase of error
       });
-      requestedGifIndexes.add(widget._index);
-    }
+    //   requestedGifIndexes.add(widget._index);
+    // }
   }
 
   Widget decideGridTileWidget() {
