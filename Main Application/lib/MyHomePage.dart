@@ -391,7 +391,22 @@ class _HomePageState extends State<HomePage> {
 
       appBar: AppBar(
           backgroundColor: Colors.blue[400],
-          title: Text('Custom Emojiboard') //
+          title: Text('Custom Emojiboard'), //
+          
+          actions: 
+          [
+            IconButton(  //LOGIN BUTTON
+            icon: Icon(
+              Icons.account_circle,
+              size: 30.0,
+            ),
+            color: Colors.white,
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/login');
+            },
+          ),
+          ],
+          
       ),
 
       body: Container(
