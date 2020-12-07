@@ -10,7 +10,7 @@ class MyBottomNavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          IconButton(
+          IconButton(  //LOGIN BUTTON
             icon: Icon(
               Icons.account_circle,
               size: 44.0,
@@ -20,7 +20,7 @@ class MyBottomNavBar extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/login');
             },
           ),
-          IconButton(
+          IconButton(   //HOME BUTTON
             icon: Icon(
               Icons.home,
               size: 44.0,
@@ -30,17 +30,17 @@ class MyBottomNavBar extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/');
             },
           ),
-          IconButton(
+          IconButton(   //PNG BUTTON
             icon: Icon(
               Icons.mood,
               size: 44.0,
             ),
             color: Colors.white,
             onPressed: () {
-              Navigator.pushReplacementNamed(context, '/other');
+              Navigator.pushReplacementNamed(context, '/png');
             },
           ),
-          IconButton(
+          IconButton(   //JPG BUTTON
             icon: Icon(
               Icons.image,
               size: 44.0,
@@ -50,7 +50,7 @@ class MyBottomNavBar extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/jpg');
             },
           ),
-          IconButton(
+          IconButton(   //GIF BUTTON
             icon: Icon(
               Icons.gif,
               size: 44.0,

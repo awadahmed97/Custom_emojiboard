@@ -68,7 +68,7 @@ class _GifPageState extends State<GifPage> {
                 child:makeImagesGrid(int.parse(snapshot.data)), ////ImageGrid
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/white.jpg"),
+                    image: AssetImage("assets/images/black.jpg"),
                     fit: BoxFit.cover,
                   ),
                 ),

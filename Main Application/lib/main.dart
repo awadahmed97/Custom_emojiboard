@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
-        '/other': (context) => PngPage(),
+        '/png': (context) => PngPage(),
         '/jpg': (context) => JpgPage(),
         '/gif': (context) => GifPage(),
         '/login': (context) => LoginPage()
