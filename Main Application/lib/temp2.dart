@@ -5,16 +5,16 @@
 // import 'dart:typed_data';
 // import 'package:custom_emojiboard/PngData.dart';
 
-// class OtherPage extends StatefulWidget {
+// class PngPage extends StatefulWidget {
 //   @override
 //   State<StatefulWidget> createState() {
-//     return _OtherPageState();
+//     return _PngPageState();
 //   }
 // }
 
 
 
-// class _OtherPageState extends State<OtherPage> {
+// class _PngPageState extends State<PngPage> {
   
 //   Widget makeImagesGrid() {
 //     return GridView.builder(
@@ -38,7 +38,7 @@
 //         child: makeImagesGrid(), ////ImageGrid
 //         decoration: BoxDecoration(
 //           image: DecorationImage(
-//             image: AssetImage("assets/images/other.jpg"),
+//             image: AssetImage("assets/images/white.jpg"),
 //             fit: BoxFit.cover,
 //           ),
 //         ),
@@ -83,22 +83,28 @@
 
 
 //   getImagePng() {
-//     if (!requestedIndexes.contains(widget._index)) {
+//     // if (!requestedIndexes.contains(widget._index)) 
+//     // {
 //       //checks if index is requested yet
-//       emojisReferencePng.child("PNG_${widget._index}.png")
-//           .getData(MAX_SIZE)
-//           .then((data) {
-//             this.setState(() {
-//               imageFile = data;
-//             });
-//             imageData.putIfAbsent(widget._index, () {
-//               return data; //keeps image file data saved
-//             });
-//           }).catchError((error) {
+//       emojisReferencePng.child("PNG_${widget._index}.png").getData(MAX_SIZE)
+//       .then((data) 
+//       {
+//         this.setState(() 
+//         {
+//           imageFile = data;
+//         });
+
+//         imageData.putIfAbsent(widget._index, () 
+//         {
+//           return data; //keeps image file data saved
+//         });
+//       }).catchError((error) 
+//         {
 //             //return nothing incase of error
-//             });
-//       requestedIndexes.add(widget._index);
-//     }
+//         });
+      
+//       // requestedIndexes.add(widget._index);
+//     // }
 
 //   }
 
@@ -128,7 +134,8 @@
 //     super.initState();
 //     if (!imageData.containsKey(widget._index)) {
 //       getImagePng();
-//     } else {
+//     } 
+//     else {
 //       this.setState(() {
 //         imageFile = imageData[widget._index];
 //       });

@@ -13,37 +13,102 @@ class GifPage extends StatefulWidget {
 }
 
 class _GifPageState extends State<GifPage> {
-  Widget makeImagesGrid() {
+
+  // Database Reference to png uploads count
+  var dbRefCount = FirebaseDatabase.instance.reference().child("Uploads_Count/GIF");  //
+
+  //Grid View builder widget
+  Widget makeImagesGrid(int gifCount) {
     return GridView.builder(
-        itemCount:
-            20, ////////////////////////////////////////************************ */
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
-        itemBuilder: (context, index) {
-          return ImageGridItem(index + 1);
-        });
+        itemCount: gifCount, //cont of GIF's uploaded to to know how many grids slots to build 
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
+          itemBuilder: (context, index) {
+            return ImageGridItem(index + 1);
+          });
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.blue[400], title: Text('My GIF Uploads') //
-          ),
-      body: Container(
-        child: makeImagesGrid(), ////ImageGrid
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/white.jpg"),
-            fit: BoxFit.cover,
-          ),
-        ),
-      ),
-      bottomNavigationBar: MyBottomNavBar(),
-    );
+
+  /*
+  Function to return total GIF uploaded to be used to build grid view.
+
+  */
+  Future<String> getUploadCount() async
+  {
+      String mySnapShot;
+      String uploadsNumStr;
+      
+      //Get number of emoji uploads from Realtime Database
+      await dbRefCount.once().then((DataSnapshot snapshot) {
+        mySnapShot = snapshot.value.toString();                      //Number is retuned in this format: {count: 10}
+        uploadsNumStr = mySnapShot.substring(7, mySnapShot.length - 1); //Substring to get number part only: 10
+      });
+        
+      return uploadsNumStr;
   }
-}
+
+
+
+
+    
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  //// Build Method. Future Builder used to get uploads count.
+  @override
+    Widget build(context) {
+      return FutureBuilder<String>(
+        future: getUploadCount(),   //returns a string number.
+        builder: (context, AsyncSnapshot<String> snapshot) {
+          if (snapshot.hasData) {
+            return  Scaffold(
+              appBar:
+                  AppBar(backgroundColor: Colors.blue[400], title: Text('My GIFs') //
+                      ),
+              body: Container(
+                child:makeImagesGrid(int.parse(snapshot.data)), ////ImageGrid
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/white.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              bottomNavigationBar: MyBottomNavBar(),
+            );
+          
+          } 
+          
+          
+          else {      //else show circular loading bar
+            return Column(
+              children: <Widget> 
+              [
+                Padding(padding: EdgeInsets.only(top: 400)),
+
+                SizedBox ( 
+                  child: CircularProgressIndicator(
+                    backgroundColor: Colors.white,
+                  ),   
+                ),
+
+                Padding(padding: EdgeInsets.only(top: 16)),
+
+                // Text('Retrieving Data...),
+                
+              ]
+            ); 
+            
+          }  //end of else
+        }
+      );
+    }
+  }
+
+
+
+
+
+
 
 class ImageGridItem extends StatefulWidget {
   int _index;

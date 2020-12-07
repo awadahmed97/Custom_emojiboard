@@ -15,10 +15,14 @@ class PngPage extends StatefulWidget {
 
 
 class _PngPageState extends State<PngPage> {
-  
-  Widget makeImagesGrid() {
+
+// Database Reference to png uploads count
+var dbRefCount = FirebaseDatabase.instance.reference().child("Uploads_Count/PNG");  //
+
+  //Grid View builder widget
+  Widget makeImagesGrid(int pngCount) {
     return GridView.builder(
-        itemCount: 40, ////////////////////////////////////////************************ */
+        itemCount: pngCount, //cont of PNG's uploaded to to know how many grids slots to build 
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
           itemBuilder: (context, index) {
@@ -27,33 +31,92 @@ class _PngPageState extends State<PngPage> {
   }
 
 
+  /*
+  Function to return total PNG uploaded to be used to build grid view.
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar:
-          AppBar(backgroundColor: Colors.blue[400], title: Text('My Uploads') //
-              ),
-      body: Container(
-        child: makeImagesGrid(), ////ImageGrid
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/white.jpg"),
-            fit: BoxFit.cover,
-          ),
-        ),
-      ),
-      bottomNavigationBar: MyBottomNavBar(),
-    );
+  */
+  Future<String> getUploadCount() async
+  {
+      String mySnapShot;
+      String uploadsNumStr;
+      
+      //Get number of emoji uploads from Realtime Database
+      await dbRefCount.once().then((DataSnapshot snapshot) {
+        mySnapShot = snapshot.value.toString();                      //Number is retuned in this format: {count: 10}
+        uploadsNumStr = mySnapShot.substring(7, mySnapShot.length - 1); //Substring to get number part only: 10
+      });
+        
+      return uploadsNumStr;
   }
+
+
+
+
+    
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  //// Build Method. Future Builder used to get uploads count.
+  @override
+    Widget build(context) {
+      return FutureBuilder<String>(
+        future: getUploadCount(),   //returns a string number.
+        builder: (context, AsyncSnapshot<String> snapshot) {
+          if (snapshot.hasData) {
+            return  Scaffold(
+              appBar:
+                  AppBar(backgroundColor: Colors.blue[400], title: Text('My PNGs') //
+                      ),
+              body: Container(
+                child:makeImagesGrid(int.parse(snapshot.data)), ////ImageGrid
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/white.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              bottomNavigationBar: MyBottomNavBar(),
+            );
+          
+          } 
+          
+          
+          else {      //else show circular loading bar
+            return Column(
+              children: <Widget> 
+              [
+                Padding(padding: EdgeInsets.only(top: 400)),
+
+                SizedBox ( 
+                  child: CircularProgressIndicator(
+                    backgroundColor: Colors.white,
+                  ),   
+                ),
+
+                Padding(padding: EdgeInsets.only(top: 16)),
+
+                // Text('Retrieving Data...),
+                
+              ]
+            ); 
+            
+          }  //end of else
+        }
+      );
+    }
 }
 
 
 
 
 
+
+
+
+
+
 class ImageGridItem extends StatefulWidget {
-  int _index;
+  int _index; 
 
   ImageGridItem(int index) {
     this._index = index;
@@ -65,14 +128,13 @@ class ImageGridItem extends StatefulWidget {
 }
 
 class _ImageGridItemState extends State<ImageGridItem> {
-  // // Realtime Database Reference
+  // Realtime Database Reference
   final db = FirebaseDatabase.instance
-      .reference()
-      .child("All_Emoji_Uploads_Database/");
+      .reference().child("All_Emoji_Uploads_Database/");
 
-
-    StorageReference emojisReferencePng =
-      FirebaseStorage.instance.ref().child("All_Emoji_Uploads/PNGs/");
+  //Storage reference to png directory
+  StorageReference emojisReferencePng =
+    FirebaseStorage.instance.ref().child("All_Emoji_Uploads/PNGs/");
 
 
   String img_name;
@@ -107,10 +169,6 @@ class _ImageGridItemState extends State<ImageGridItem> {
     // }
 
   }
-
-
-
-
 
 
 
