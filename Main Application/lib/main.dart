@@ -5,7 +5,6 @@ import 'package:custom_emojiboard/MyHomePage.dart';
 import 'package:custom_emojiboard/MyPngPage.dart';
 import 'package:custom_emojiboard/MyBottomNavBar.dart';
 import 'package:custom_emojiboard/MyJpgPage.dart';
-import 'package:custom_emojiboard/LoginPage.dart';
 
 void main() => runApp(MyApp());
 
