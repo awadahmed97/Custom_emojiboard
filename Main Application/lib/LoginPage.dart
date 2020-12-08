@@ -22,90 +22,96 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.blue[400], title: Text('Sign In')),
-      body: Form(
-        //decoration: BoxDecoration(
-        //image: DecorationImage(
-        //image: AssetImage("assets/images/home.jpg"),
-        //fit: BoxFit.cover,
-        //),
-        //),
-        key: _formKey,
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 10,
-              ),
-              TextFormField(
-                validator: (input) {
-                  if (input.isEmpty) {
-                    return 'Please enter valid email';
-                  }
-                },
-                decoration: InputDecoration(labelText: ' Email'),
-                onSaved: (input) => _email = input,
-              ),
-              TextFormField(
-                validator: (input) {
-                  if (input.length < 6) {
-                    return 'Please enter longer password';
-                  }
-                },
-                decoration: InputDecoration(labelText: ' Password'),
-                onSaved: (input) => _password = input,
-                obscureText: true,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              RaisedButton(
-                onPressed: signIn,
-                child: Text('Sign In'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              RaisedButton(
-                onPressed: navigateToSignUp,
-                child: Text('Sign Up'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              MaterialButton(
-                elevation: 0,
-                minWidth: double.maxFinite,
-                height: 50,
-                onPressed: () async {
-                  final GoogleSignInAccount googleUser =
-                      await googleSignIn.signIn();
-                  final GoogleSignInAuthentication googleAuth =
-                      await googleUser.authentication;
-                  final AuthCredential credential =
-                      GoogleAuthProvider.getCredential(
-                          idToken: googleAuth.idToken,
-                          accessToken: googleAuth.accessToken);
-                  final FirebaseUser user =
-                      (await firebaseAuth.signInWithCredential(credential))
-                          .user;
-                },
-                color: Colors.blue,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(FontAwesomeIcons.google),
-                    SizedBox(width: 10),
-                    Text('Sign-in using Google',
-                        style: TextStyle(color: Colors.black, fontSize: 16)),
-                  ],
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/home.jpg"),
+          fit: BoxFit.cover,
+          ),
+        ),
+
+        child: Form(
+        
+          key: _formKey,
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 10,
                 ),
-                textColor: Colors.white,
-              ),
-              SizedBox(height: 300),
-            ],
+                TextFormField(
+                  validator: (input) {
+                    if (input.isEmpty) {
+                      return 'Please enter valid email';
+                    }
+                  },
+                  decoration: InputDecoration(labelText: ' Email'),
+                  onSaved: (input) => _email = input,
+                ),
+                TextFormField(
+                  validator: (input) {
+                    if (input.length < 6) {
+                      return 'Please enter longer password';
+                    }
+                  },
+                  decoration: InputDecoration(labelText: ' Password'),
+                  onSaved: (input) => _password = input,
+                  obscureText: true,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                RaisedButton(
+                  onPressed: signIn,
+                  child: Text('Sign In'),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                RaisedButton(
+                  onPressed: navigateToSignUp,
+                  child: Text('Sign Up'),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                MaterialButton(
+                  elevation: 0,
+                  minWidth: double.maxFinite,
+                  height: 50,
+                  onPressed: () async {
+                    final GoogleSignInAccount googleUser =
+                        await googleSignIn.signIn();
+                    final GoogleSignInAuthentication googleAuth =
+                        await googleUser.authentication;
+                    final AuthCredential credential =
+                        GoogleAuthProvider.getCredential(
+                            idToken: googleAuth.idToken,
+                            accessToken: googleAuth.accessToken);
+                    final FirebaseUser user =
+                        (await firebaseAuth.signInWithCredential(credential))
+                            .user;
+                  },
+                  color: Colors.blue,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(FontAwesomeIcons.google),
+                      SizedBox(width: 10),
+                      Text('Sign-in using Google',
+                          style: TextStyle(color: Colors.black, fontSize: 16)),
+                    ],
+                  ),
+                  textColor: Colors.white,
+                ),
+                SizedBox(height: 300),
+              ],
+            ),
           ),
         ),
       ),
+      
+      
       bottomNavigationBar: MyBottomNavBar(),
     );
   }
