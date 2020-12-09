@@ -13,54 +13,52 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blue[400], title: Text('Sign Up')),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/home.jpg"),
-            fit: BoxFit.cover,
-          ),
-        ),
-
-        child: Form(
-        
-          key: _formKey,
-          child: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                TextFormField(
-                  validator: (input) {
-                    if (input.isEmpty) {
-                      return 'Please enter valid email';
-                    }
-                  },
-                  onSaved: (input) => _email = input,
-                  decoration: InputDecoration(labelText: ' Email'),
-                ),
-                TextFormField(
-                  validator: (input) {
-                    if (input.length < 6) {
-                      return 'Please enter password';
-                    }
-                  },
-                  onSaved: (input) => _password = input,
-                  decoration: InputDecoration(labelText: ' Password'),
-                  obscureText: true,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                RaisedButton(
-                  onPressed: signUp,
-                  child: Text('Sign Up'),
-                ),
-                SizedBox(height: 500),
-              ],
+        appBar:
+            AppBar(backgroundColor: Colors.blue[400], title: Text('Sign Up')),
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/login.jpg"),
+              fit: BoxFit.cover,
             ),
           ),
-        ),
-      ) 
-    );
+          child: Form(
+            key: _formKey,
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  TextFormField(
+                    validator: (input) {
+                      if (input.isEmpty) {
+                        return 'Please enter valid email';
+                      }
+                    },
+                    onSaved: (input) => _email = input,
+                    decoration: InputDecoration(labelText: ' Email'),
+                  ),
+                  TextFormField(
+                    validator: (input) {
+                      if (input.length < 6) {
+                        return 'Please enter password';
+                      }
+                    },
+                    onSaved: (input) => _password = input,
+                    decoration: InputDecoration(labelText: ' Password'),
+                    obscureText: true,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  RaisedButton(
+                    onPressed: signUp,
+                    child: Text('Sign Up'),
+                  ),
+                  SizedBox(height: 500),
+                ],
+              ),
+            ),
+          ),
+        ));
   }
 
   void signUp() async {
