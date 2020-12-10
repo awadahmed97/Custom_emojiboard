@@ -1,3 +1,4 @@
+import 'package:custom_emojiboard/MyAppIcons.dart';
 import 'package:flutter/material.dart';
 
 class MyBottomNavBar extends StatelessWidget {
@@ -52,8 +53,8 @@ class MyBottomNavBar extends StatelessWidget {
           ),
           IconButton(   //GIF BUTTON
             icon: Icon(
-              Icons.gif,
-              size: 44.0,
+              MyAppIcons.mygificon,
+              size: 46.0,
             ),
             color: Colors.white,
             onPressed: () {

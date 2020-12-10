@@ -25,13 +25,11 @@ class _LoginPageState extends State<LoginPage> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/home.jpg"),
-          fit: BoxFit.cover,
+            image: AssetImage("assets/images/login.jpg"),
+            fit: BoxFit.cover,
           ),
         ),
-
         child: Form(
-        
           key: _formKey,
           child: SingleChildScrollView(
             child: Column(
@@ -110,8 +108,6 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
-      
-      
       bottomNavigationBar: MyBottomNavBar(),
     );
   }
