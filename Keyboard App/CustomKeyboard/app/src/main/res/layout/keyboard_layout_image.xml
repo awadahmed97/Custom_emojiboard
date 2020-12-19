@@ -62,34 +62,21 @@
         </LinearLayout>
 
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/swiperefresh"
+        <HorizontalScrollView
+            android:id="@+id/H_scroll"
             android:layout_width="match_parent"
             android:layout_height="229dp"
 
+
             android:layout_below="@+id/tool_bar"
-            >
+            android:layout_marginTop="-4dp">
 
-
-            <HorizontalScrollView
-                android:id="@+id/H_scroll"
-                android:layout_width="match_parent"
-                android:layout_height="229dp"
-
-
-                android:layout_below="@+id/tool_bar"
-                android:layout_marginTop="-4dp">
-
-                <LinearLayout
-                    android:id="@+id/imageContainer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal" />
-            </HorizontalScrollView>
-
-
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <LinearLayout
+                android:id="@+id/imageContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
 
     </RelativeLayout>
 

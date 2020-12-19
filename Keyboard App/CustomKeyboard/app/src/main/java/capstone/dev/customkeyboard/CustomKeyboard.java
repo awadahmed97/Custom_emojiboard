@@ -333,7 +333,7 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
         pngSupported = isCommitContentSupported(info, MIME_TYPE_PNG);
         if(!pngSupported) {
             Toast.makeText(getApplicationContext(),
-                    "Images not supported here. Please use standard keyboard.",
+                    "",
                     Toast.LENGTH_SHORT).show();
         }
 
@@ -535,17 +535,18 @@ public class CustomKeyboard extends InputMethodService implements KeyboardView.O
 
 
 
-
-
-
-
+    // for Shift key for caps lock mode
+//    @Override
+//    public boolean onKeyMultiple(int keyCode, int count, KeyEvent event) {
+//        return super.onKeyMultiple(keyCode, count, event);
+//    }
 
 
 
     /*
-    Symbols Layout View
+            Symbols Layout View
 
-     */
+             */
     private void setSymbolView(){
         keyboard = new Keyboard(this, R.xml.symbols);
         keyboardView.setKeyboard(keyboard);
