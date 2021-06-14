@@ -60,7 +60,6 @@ Users can go back and forth between both standard keyboard and 'Emojiboard' layo
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Flutter](https://flutter.dev/)
 * [Java](https://www.java.com/en/)
 * [Firebase](https://firebase.google.com/)
@@ -73,12 +72,10 @@ This section should list any major frameworks that you built your project using.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * [Android Studio](https://developer.android.com/studio/install)
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [Flutter](https://flutter.dev/docs/development/tools/vs-code)
