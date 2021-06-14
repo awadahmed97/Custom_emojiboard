@@ -43,7 +43,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
 Custom Emojiboard is an Android custom keyboard and emoji application developed with Android studio using Java and Flutter (Dart) respectively. This app allows users to upload their own images and GIFs onto the emoji application. The user has the option to edit the image (cropping, tilting, etc.) before finally uploading it on the app.
