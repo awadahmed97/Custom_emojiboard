@@ -120,13 +120,13 @@ You only need to do this setup once.
 
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/38057565/121862195-93323a00-ccc8-11eb-98ef-4d04dfa98baf.png" width="100" />
-  <img src="/img2.png" width="100" /> 
-  <img src="/img3.png" width="100" />
+  <img src="https://user-images.githubusercontent.com/38057565/121862195-93323a00-ccc8-11eb-98ef-4d04dfa98baf.png" width="200" />
+  <img src="https://user-images.githubusercontent.com/38057565/121862254-a34a1980-ccc8-11eb-9701-13d37fa5ac2c.png" width="200" /> 
+  <img src="https://user-images.githubusercontent.com/38057565/121862268-a6450a00-ccc8-11eb-9961-6efa32c817e7.png" width="200" />
 </p>
 
-![Screenshot 2021-06-02 155543](https://user-images.githubusercontent.com/38057565/121862254-a34a1980-ccc8-11eb-9701-13d37fa5ac2c.png)
-![Screenshot 2021-06-02 154637](https://user-images.githubusercontent.com/38057565/121862268-a6450a00-ccc8-11eb-9961-6efa32c817e7.png)
+![Screenshot 2021-06-02 155543]()
+![Screenshot 2021-06-02 154637]()
 ![Screenshot 2021-06-02 154718](https://user-images.githubusercontent.com/38057565/121862288-a93ffa80-ccc8-11eb-9245-0bb01b89fc56.png)
 ![Screenshot 2021-06-02 154912](https://user-images.githubusercontent.com/38057565/121862294-ab09be00-ccc8-11eb-8705-b4bae4dd8c7e.png)
 ![Screenshot 2021-06-02 154955](https://user-images.githubusercontent.com/38057565/121862317-b230cc00-ccc8-11eb-9c15-22fbedc68ff3.png)
