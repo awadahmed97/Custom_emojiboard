@@ -118,7 +118,13 @@ You only need to do this setup once.
 
 <!-- INSERT IMAGES AND SNAPSHOTS-->
 
-![Screenshot 2021-06-02 154538](https://user-images.githubusercontent.com/38057565/121862195-93323a00-ccc8-11eb-98ef-4d04dfa98baf.png)
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/38057565/121862195-93323a00-ccc8-11eb-98ef-4d04dfa98baf.png" width="100" />
+  <img src="/img2.png" width="100" /> 
+  <img src="/img3.png" width="100" />
+</p>
+
 ![Screenshot 2021-06-02 155543](https://user-images.githubusercontent.com/38057565/121862254-a34a1980-ccc8-11eb-9701-13d37fa5ac2c.png)
 ![Screenshot 2021-06-02 154637](https://user-images.githubusercontent.com/38057565/121862268-a6450a00-ccc8-11eb-9961-6efa32c817e7.png)
 ![Screenshot 2021-06-02 154718](https://user-images.githubusercontent.com/38057565/121862288-a93ffa80-ccc8-11eb-9245-0bb01b89fc56.png)
